@@ -43,7 +43,7 @@ export function ConvertKitForm() {
 
   return (
     <div className="w-full flex justify-center">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full max-w-2xl">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full max-w-2xl mx-auto">
         <div className="flex flex-col sm:flex-row gap-4">
           <input
             type="text"
@@ -51,7 +51,7 @@ export function ConvertKitForm() {
             value={companyName}
             onChange={(e) => setCompanyName(e.target.value)}
             disabled={status === 'loading'}
-            className="flex-1 px-6 py-4 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-red-500/50 focus:ring-2 focus:ring-red-500/20 transition-all duration-300 disabled:opacity-50"
+            className="flex-1 px-6 py-4 bg-slate-800/60 border border-slate-600/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 disabled:opacity-50"
           />
           <input
             type="email"
@@ -60,13 +60,13 @@ export function ConvertKitForm() {
             onChange={(e) => setEmail(e.target.value)}
             required
             disabled={status === 'loading'}
-            className="flex-1 px-6 py-4 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-red-500/50 focus:ring-2 focus:ring-red-500/20 transition-all duration-300 disabled:opacity-50"
+            className="flex-1 px-6 py-4 bg-slate-800/60 border border-slate-600/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 disabled:opacity-50"
           />
         </div>
         <button
           type="submit"
           disabled={status === 'loading' || status === 'success'}
-          className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 disabled:from-gray-600 disabled:to-gray-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg shadow-red-500/30 hover:shadow-xl hover:shadow-red-500/40 transform hover:scale-105 disabled:transform-none flex items-center justify-center gap-2 mx-auto"
+          className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 disabled:from-gray-600 disabled:to-gray-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transform hover:scale-[1.02] disabled:transform-none flex items-center justify-center gap-2 mx-auto"
         >
         {status === 'loading' ? (
           <>

@@ -20,7 +20,8 @@ import {
   Calendar,
   Database,
   Layers,
-  Github
+  Github,
+  ClipboardList
 } from "lucide-react";
 import { FadeInOnScroll, AnimatedCounter } from './components/InteractiveElements';
 import { ConvertKitForm } from './components/ConvertKitForm';
@@ -684,19 +685,29 @@ export default function Home() {
       {/* Want More Info Section */}
       <section className="px-6 py-24 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
         <div className="container mx-auto max-w-4xl">
-          <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-red-500/30 rounded-2xl p-10 md:p-14 shadow-xl">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
-                Want More <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">Info?</span>
-              </h2>
-              <p className="text-gray-400 text-lg">
-                Transform your operations. Maximize profitability. Eliminate waste.
-              </p>
+          <div className="bg-gradient-to-br from-gray-900/80 to-slate-900/90 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-10 md:p-14 shadow-xl">
+            <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-10 mb-10">
+              {/* Checklist Preview Icon */}
+              <div className="flex-shrink-0 flex justify-center md:justify-start">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/40 flex items-center justify-center shadow-lg shadow-blue-500/10">
+                  <ClipboardList className="w-8 h-8 md:w-10 md:h-10 text-cyan-400" />
+                </div>
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight">
+                  Stop the <span className="text-red-400">$15,600</span> Leak
+                </h2>
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  Get the <span className="text-cyan-400 font-medium">10-Point Automation Audit</span> I use to recover 12+ hours a week for finance teams.
+                </p>
+              </div>
             </div>
             
-            <ConvertKitForm />
+            <div className="flex justify-center">
+              <ConvertKitForm />
+            </div>
             
-            <p className="text-xs text-gray-500 text-center mt-4">
+            <p className="text-xs text-gray-500 text-center mt-6">
               No spam. Unsubscribe anytime.
             </p>
           </div>
