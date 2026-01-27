@@ -32,30 +32,28 @@ export default function Home() {
   return (
     <main className="min-h-screen relative" style={{ contain: 'layout style paint', willChange: 'auto' }}>
       <PremiumBackground />
+      {/* Limited February Offer Banner */}
+      <div className="relative z-50 bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 text-white py-3 px-6 text-center font-semibold text-sm md:text-base shadow-lg">
+        <div className="container mx-auto max-w-6xl flex items-center justify-center gap-2">
+          <Sparkles className="w-4 h-4 animate-pulse" />
+          <span>Beta Launch: Only 2 spots remaining for a full Workflow Audit</span>
+          <Sparkles className="w-4 h-4 animate-pulse" />
+        </div>
+      </div>
       {/* Hero Section */}
       <section className="relative overflow-hidden px-6 py-20 md:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6">
-            <FadeInOnScroll delay={0}>
-              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass-effect border border-blue-500/20 text-blue-200 text-sm font-medium mb-6 tracking-tight">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>For Small-to-Mid Sized Businesses & Solopreneurs</span>
-              </div>
-            </FadeInOnScroll>
             <FadeInOnScroll delay={100}>
               <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6">
-                Recover Your Team's
-                <br />
-                <span className="text-gradient-premium bg-clip-text text-transparent">
-                  First 500 Hours
-                </span>
+                I recover 500+ hours of manual labor waste for Fintech teams.
               </h1>
             </FadeInOnScroll>
             <FadeInOnScroll delay={200}>
               <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed font-light">
-                <span className="text-cyan-400 font-medium">Transform your back-office operations.</span> Eliminate manual data entry and maximize profitability by automating the 80% of tasks that drain your team's time.
+                Turning 12-hour manual nightmares into 15-minute Python runs.
               </p>
             </FadeInOnScroll>
             <FadeInOnScroll delay={300}>
@@ -69,6 +67,105 @@ export default function Home() {
                   Get My Free Audit
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
+              </div>
+            </FadeInOnScroll>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet Victoria, Your Architect Section */}
+      <section className="px-6 py-24 bg-gradient-to-b from-transparent via-gray-900/20 to-transparent">
+        <div className="container mx-auto max-w-6xl">
+          <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-10 md:p-14 overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+              {/* Headshot */}
+              <div className="flex flex-col items-center md:items-start">
+                <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border border-blue-500/30 shadow-xl shadow-blue-500/10">
+                  <img
+                    src="/victoria-headshot.jpg"
+                    alt="Victoria Francis - AI Automation Specialist"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="mt-5 text-center md:text-left text-sm text-gray-400 font-medium tracking-tight">
+                  Victoria Francis | Lead Automation Architect
+                </p>
+              </div>
+
+              {/* Bio Content */}
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">
+                    Meet Victoria, Your <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">Architect</span>
+                  </h2>
+                  <div className="w-16 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+                </div>
+                <div className="space-y-5 text-gray-300 leading-relaxed">
+                  <p className="text-lg md:text-xl font-light">
+                    I'm <span className="text-white font-semibold">Victoria Francis</span>, an AI-native automation specialist.
+                  </p>
+                  <p className="text-base md:text-lg font-light">
+                    I help business owners reclaim their time and sanity by replacing manual data entry with self-healing Python pipelines.
+                  </p>
+                  <p className="text-base md:text-lg font-light">
+                    When you work with BoldScale Solutions, your project gets <span className="text-cyan-400 font-semibold">100% of our focus</span>—no middleman, just results.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The 3-Step Recovery Plan Section */}
+      <section className="px-6 py-24 bg-gradient-to-b from-transparent via-blue-900/10 to-transparent">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+              The <span className="text-cyan-400">3-Step Recovery Plan</span>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <FadeInOnScroll delay={0}>
+              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-8 text-center interactive-card hover:border-cyan-500/60 group">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-2 border-cyan-500/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <span className="text-3xl font-bold text-cyan-400">1</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-200 transition-colors">
+                  We identify your manual leaks.
+                </h3>
+                <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                  We audit your workflows to find where time and money are being wasted on manual processes.
+                </p>
+              </div>
+            </FadeInOnScroll>
+
+            <FadeInOnScroll delay={100}>
+              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-8 text-center interactive-card hover:border-cyan-500/60 group">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-2 border-cyan-500/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <span className="text-3xl font-bold text-cyan-400">2</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-200 transition-colors">
+                  I build your custom Python pipeline.
+                </h3>
+                <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                  I create production-ready automation that eliminates your manual bottlenecks.
+                </p>
+              </div>
+            </FadeInOnScroll>
+
+            <FadeInOnScroll delay={200}>
+              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-8 text-center interactive-card hover:border-cyan-500/60 group">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-2 border-cyan-500/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <span className="text-3xl font-bold text-cyan-400">3</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-200 transition-colors">
+                  You recover 70% of your work week.
+                </h3>
+                <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                  Your team gets back hundreds of hours per year to focus on high-value work.
+                </p>
               </div>
             </FadeInOnScroll>
           </div>
@@ -611,50 +708,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Meet Your Architect Section */}
-      <section className="px-6 py-24 bg-gradient-to-b from-transparent via-gray-900/20 to-transparent">
-        <div className="container mx-auto max-w-6xl">
-          <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-10 md:p-14 overflow-hidden">
-            <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-              {/* Headshot */}
-              <div className="flex flex-col items-center md:items-start">
-                <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border border-blue-500/30 shadow-xl shadow-blue-500/10">
-                  <img
-                    src="/victoria-headshot.jpg"
-                    alt="Victoria Francis - AI Automation Specialist"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <p className="mt-5 text-center md:text-left text-sm text-gray-400 font-medium tracking-tight">
-                  Victoria Francis | Lead Automation Architect
-                </p>
-              </div>
-
-              {/* Bio Content */}
-              <div className="space-y-6">
-                <div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">
-                    Meet Your <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">Architect</span>
-                  </h2>
-                  <div className="w-16 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
-                </div>
-                <div className="space-y-5 text-gray-300 leading-relaxed">
-                  <p className="text-lg md:text-xl font-light">
-                    I'm <span className="text-white font-semibold">Victoria Francis</span>, an AI-native automation specialist.
-                  </p>
-                  <p className="text-base md:text-lg font-light">
-                    I help business owners reclaim their time and sanity by replacing manual data entry with self-healing Python pipelines.
-                  </p>
-                  <p className="text-base md:text-lg font-light">
-                    When you work with me, your project gets <span className="text-cyan-400 font-semibold">100% of my focus</span>—no middleman, just results.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section id="audit" className="px-6 py-24 bg-gradient-to-br from-blue-900/30 via-cyan-900/30 to-purple-900/30">
         <div className="container mx-auto max-w-4xl">
@@ -718,7 +771,7 @@ export default function Home() {
       <footer className="px-6 py-12 border-t border-gray-800/50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-6 text-gray-400">
-            <p>&copy; {new Date().getFullYear()} Automation Solutions. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} BoldScale Solutions. All rights reserved.</p>
           </div>
           <div className="text-center space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-800/50 border border-gray-700/50">
