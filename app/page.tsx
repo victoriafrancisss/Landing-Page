@@ -251,7 +251,7 @@ export default function Home() {
               <AlertTriangle className="w-5 h-5 text-red-400" />
             </div>
             <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-red-200 font-extrabold mb-4 tracking-tight">
-              Annual Waste = <span className="text-white text-4xl sm:text-5xl md:text-6xl bg-red-600/30 px-6 py-3 rounded-xl inline-block font-extrabold">$15,600</span>
+              Annual Waste = <span className="text-white text-4xl sm:text-5xl md:text-6xl bg-red-600/30 px-6 py-3 rounded-xl inline-block font-extrabold whitespace-nowrap" style={{ whiteSpace: 'nowrap', display: 'inline-block' }}>$15,600</span>
             </p>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-200 font-medium">
               624 hours of productivity lost annually
@@ -743,7 +743,7 @@ export default function Home() {
       {/* CTA Section */}
       <section id="audit" className="px-6 py-24 bg-gradient-to-br from-blue-900/30 via-cyan-900/30 to-purple-900/30">
         <div className="container mx-auto max-w-4xl">
-          <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-12 md:p-16 text-center shadow-2xl">
+          <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-12 md:p-16 text-center shadow-2xl" style={{ overflow: 'visible' }}>
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-8 tracking-tight leading-tight">
               Ready to <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">Eliminate</span> the{" "}
               <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
@@ -757,10 +757,11 @@ export default function Home() {
               href="https://calendly.com/victoriafranciss/automation-discovery-call"
               target="_blank"
               rel="noopener noreferrer"
-              className="premium-button inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold text-base rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-xl shadow-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/70 relative z-10 tracking-tight whitespace-nowrap"
+              className="premium-button inline-flex items-center gap-3 px-6 sm:px-8 md:px-10 py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold text-sm sm:text-base rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-xl shadow-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/70 relative z-10 tracking-tight"
+              style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}
             >
-              <span className="relative z-10 whitespace-nowrap">Schedule Free Consultation</span>
-              <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
+              <span className="relative z-10" style={{ whiteSpace: 'nowrap' }}>Schedule Free Consultation</span>
+              <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </a>
             <p className="text-sm text-gray-400 mt-8 font-light">No commitment required • Results in 15 minutes</p>
           </div>

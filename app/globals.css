@@ -139,6 +139,41 @@ div[class*="bg-gradient-to-br"][class*="from-blue-900"][class*="to-cyan-900"] {
   position: relative !important;
 }
 
+/* Prevent $15,600 from breaking */
+span[class*="bg-red-600"] {
+  white-space: nowrap !important;
+  display: inline-block !important;
+}
+
+/* Prevent button text from breaking */
+.premium-button,
+a.premium-button {
+  white-space: nowrap !important;
+  overflow: visible !important;
+}
+
+.premium-button span {
+  white-space: nowrap !important;
+}
+
+/* Ensure buttons can expand on mobile */
+@media (max-width: 640px) {
+  .premium-button {
+    width: auto !important;
+    min-width: fit-content !important;
+    max-width: calc(100vw - 3rem) !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    font-size: 0.875rem !important;
+    display: inline-flex !important;
+  }
+  
+  /* Ensure parent containers don't constrain button */
+  div[class*="text-center"] {
+    overflow-x: visible !important;
+  }
+}
+
 /* Force larger mobile font sizes - override Tailwind defaults */
 @media (max-width: 640px) {
   /* Hero headline - much larger on mobile */
