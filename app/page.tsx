@@ -30,7 +30,7 @@ import { PremiumBackground } from './components/PremiumBackground';
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative overflow-x-hidden w-full max-w-full">
+    <main className="min-h-screen relative w-full max-w-full" style={{ overflowX: 'hidden' }}>
       <PremiumBackground />
       {/* Beta Launch Banner - Updated */}
       <div className="sticky top-0 z-50 bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 text-white py-3 sm:py-3.5 md:py-4 px-4 sm:px-5 md:px-6 text-center font-bold text-sm sm:text-base md:text-lg lg:text-xl shadow-lg">
@@ -536,8 +536,8 @@ export default function Home() {
       </section>
 
       {/* Offerings Section */}
-      <section className="px-6 py-24 bg-gradient-to-b from-transparent via-blue-900/10 to-transparent overflow-visible">
-        <div className="container mx-auto max-w-6xl overflow-visible">
+      <section className="px-6 py-24 bg-gradient-to-b from-transparent via-blue-900/10 to-transparent" style={{ overflow: 'visible', paddingTop: '3rem' }}>
+        <div className="container mx-auto max-w-6xl" style={{ overflow: 'visible' }}>
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight">
               Choose Your <span className="text-blue-400">Automation Path</span>
@@ -545,7 +545,7 @@ export default function Home() {
             <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 font-medium max-w-3xl mx-auto">Solutions tailored to your needs</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 overflow-visible">
+          <div className="grid md:grid-cols-3 gap-8" style={{ overflow: 'visible' }}>
             {/* Quick Win */}
             <FadeInOnScroll delay={0}>
               <div className="glass-effect-premium border border-gray-700/50 rounded-xl p-8 hover:border-blue-500/60 transition-all duration-300 interactive-card group">
@@ -582,9 +582,9 @@ export default function Home() {
 
             {/* Workflow Architect */}
             <FadeInOnScroll delay={100}>
-              <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 backdrop-blur-sm border-2 border-blue-500/50 rounded-xl p-8 pt-12 hover:border-blue-400 transition-all duration-300 transform hover:scale-105 relative interactive-card overflow-visible">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20 whitespace-nowrap">
-                <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs sm:text-sm font-bold px-4 sm:px-5 py-1.5 rounded-full shadow-lg">
+              <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 backdrop-blur-sm border-2 border-blue-500/50 rounded-xl p-8 pt-14 hover:border-blue-400 transition-all duration-300 transform hover:scale-105 relative" style={{ overflow: 'visible', marginTop: '1rem' }}>
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-50" style={{ whiteSpace: 'nowrap', overflow: 'visible' }}>
+                <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs sm:text-sm font-bold px-5 sm:px-6 py-2 rounded-full shadow-xl" style={{ whiteSpace: 'nowrap', display: 'inline-block' }}>
                   MOST POPULAR
                 </span>
               </div>

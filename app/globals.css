@@ -107,8 +107,36 @@ p, h1, h2, h3, h4, h5, h6, span, a, li, td, th, div {
 
 /* Ensure package cards and buttons don't cut off text */
 .grid > div,
-.interactive-card {
+.interactive-card,
+section[class*="Offerings"],
+section[class*="py-24"] {
   overflow: visible !important;
+}
+
+/* Force MOST POPULAR tag to be visible - very specific selectors */
+div[class*="bg-gradient-to-br"][class*="from-blue-900"] > div[class*="absolute"][class*="-top"] {
+  overflow: visible !important;
+  z-index: 999 !important;
+  position: absolute !important;
+}
+
+div[class*="bg-gradient-to-br"][class*="from-blue-900"] > div[class*="absolute"] span {
+  white-space: nowrap !important;
+  display: inline-block !important;
+  overflow: visible !important;
+}
+
+/* Ensure parent containers don't clip */
+section[class*="py-24"],
+div[class*="container"][class*="max-w-6xl"],
+div[class*="grid"][class*="md:grid-cols-3"] {
+  overflow: visible !important;
+}
+
+/* Ensure the Workflow Architect card itself */
+div[class*="bg-gradient-to-br"][class*="from-blue-900"][class*="to-cyan-900"] {
+  overflow: visible !important;
+  position: relative !important;
 }
 
 /* Force larger mobile font sizes - override Tailwind defaults */
