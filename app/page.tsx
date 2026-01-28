@@ -81,13 +81,13 @@ export default function Home() {
 
       {/* Video Section */}
       <section className="px-6 py-16 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
-        <div className="container mx-auto max-w-4xl lg:max-w-2xl">
+        <div className="container mx-auto max-w-4xl">
           <FadeInOnScroll>
             <div className="text-center space-y-4">
               <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-8 leading-tight">
                 Watch how we fix the $15,600 leak in 60 seconds.
               </h3>
-              <div className="relative aspect-video w-full max-w-2xl mx-auto rounded-xl overflow-hidden border-2 border-cyan-500/30 shadow-2xl shadow-cyan-500/20 bg-gray-900/50">
+              <div className="relative aspect-video w-full max-w-md mx-auto rounded-xl overflow-hidden border-2 border-cyan-500/30 shadow-2xl shadow-cyan-500/20 bg-gray-900/50">
                 {YOUTUBE_VIDEO_ID ? (
                   <iframe
                     className="absolute inset-0 w-full h-full"
