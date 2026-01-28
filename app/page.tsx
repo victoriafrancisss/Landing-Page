@@ -47,13 +47,13 @@ export default function Home() {
         <div className="w-full max-w-6xl mx-auto relative z-10 px-4 sm:px-6">
           <div className="text-center space-y-6 sm:space-y-8 md:space-y-10">
             <FadeInOnScroll delay={100}>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-extrabold text-white leading-[1.1] tracking-tight mb-4 sm:mb-5 md:mb-6" style={{ fontSize: 'clamp(2.5rem, 8vw, 9rem)' }}>
+              <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold text-white leading-[1.1] tracking-tight mb-4 sm:mb-5 md:mb-6" style={{ fontSize: 'clamp(2.5rem, 8vw, 4.5rem)' }}>
                 <span className="block">We recover 500+ hours of manual labor waste</span>
-                <span className="block">for small-to-mid sized businesses and <span className="whitespace-nowrap">solopreneurs</span>.</span>
+                <span className="block">for small-to-mid sized businesses and <span className="whitespace-nowrap">solopreneurs.</span></span>
               </h1>
             </FadeInOnScroll>
             <FadeInOnScroll delay={200}>
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium" style={{ fontSize: 'clamp(1.25rem, 4vw, 2.5rem)' }}>
+              <p className="text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium" style={{ fontSize: 'clamp(1.25rem, 4vw, 1.75rem)' }}>
                 Turning 12-hour manual nightmares into 15-minute Python runs.
               </p>
             </FadeInOnScroll>
@@ -63,9 +63,10 @@ export default function Home() {
                   href="https://calendly.com/victoriafranciss/automation-discovery-call"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="premium-button px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-base sm:text-lg md:text-xl rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-xl shadow-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/70 flex items-center gap-2 sm:gap-3 group transform hover:scale-105 active:scale-95 relative z-10 w-full sm:w-auto max-w-xs sm:max-w-none"
+                  className="premium-button px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-sm sm:text-base md:text-lg rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-xl shadow-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/70 flex items-center gap-2 sm:gap-3 group transform hover:scale-105 active:scale-95 relative z-10 w-full sm:w-auto"
+                  style={{ whiteSpace: 'nowrap', minWidth: 'fit-content', maxWidth: '100%' }}
                 >
-                  <span className="whitespace-nowrap">Get My Free Audit</span>
+                  <span style={{ whiteSpace: 'nowrap' }}>Get My Free Audit</span>
                   <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
                 </a>
               </div>
@@ -744,7 +745,7 @@ export default function Home() {
       <section id="audit" className="px-6 py-24 bg-gradient-to-br from-blue-900/30 via-cyan-900/30 to-purple-900/30">
         <div className="container mx-auto max-w-4xl">
           <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-12 md:p-16 text-center shadow-2xl" style={{ overflow: 'visible' }}>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-8 tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 sm:mb-8 tracking-tight leading-tight">
               Ready to <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">Eliminate</span> the{" "}
               <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
                 $15,600 Annual Leak?
@@ -757,13 +758,13 @@ export default function Home() {
               href="https://calendly.com/victoriafranciss/automation-discovery-call"
               target="_blank"
               rel="noopener noreferrer"
-              className="premium-button inline-flex items-center gap-3 px-6 sm:px-8 md:px-10 py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold text-sm sm:text-base rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-xl shadow-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/70 relative z-10 tracking-tight"
-              style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}
+              className="premium-button inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold text-xs sm:text-sm md:text-base rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-xl shadow-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/70 relative z-10 tracking-tight"
+              style={{ whiteSpace: 'nowrap', minWidth: 'fit-content', maxWidth: '100%' }}
             >
               <span className="relative z-10" style={{ whiteSpace: 'nowrap' }}>Schedule Free Consultation</span>
               <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </a>
-            <p className="text-sm text-gray-400 mt-8 font-light">No commitment required • Results in 15 minutes</p>
+            <p className="text-xs sm:text-sm text-gray-400 mt-6 sm:mt-8 font-light">No commitment required <span className="hidden sm:inline">•</span><span className="sm:hidden"><br /></span> Results in 15 minutes</p>
           </div>
         </div>
       </section>

@@ -174,9 +174,9 @@ a.premium-button {
   }
 }
 
-/* Force larger mobile font sizes - override Tailwind defaults */
+/* Responsive font sizes - larger on mobile, reasonable on desktop */
 @media (max-width: 640px) {
-  /* Hero headline - much larger on mobile */
+  /* Hero headline - larger on mobile */
   main > section:first-of-type h1,
   main section.relative:first-of-type h1 {
     font-size: 2.5rem !important;
@@ -190,6 +190,32 @@ a.premium-button {
     font-size: 1.25rem !important;
     font-weight: 500 !important;
   }
+}
+
+/* Reduce font sizes on larger screens (laptop/desktop) */
+@media (min-width: 1024px) {
+  /* Hero headline - more reasonable on desktop */
+  main > section:first-of-type h1,
+  main section.relative:first-of-type h1 {
+    font-size: 3.5rem !important;
+    line-height: 1.1 !important;
+  }
+  
+  /* Hero subheadline */
+  main > section:first-of-type p,
+  main section.relative:first-of-type p {
+    font-size: 1.5rem !important;
+  }
+  
+  /* Section headings */
+  section h2 {
+    font-size: 3rem !important;
+  }
+  
+  section h3 {
+    font-size: 2rem !important;
+  }
+}
   
   /* All section headings */
   section h2 {
