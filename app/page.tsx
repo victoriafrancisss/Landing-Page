@@ -582,23 +582,23 @@ export default function Home() {
               </ul>
               
               {/* Grand Slam Bonus */}
-              <div className="bg-gradient-to-r from-yellow-500/20 to-amber-500/20 border border-yellow-500/40 rounded-lg p-4 mb-8">
-                <div className="flex items-center gap-2 mb-3">
-                  <Sparkles className="w-5 h-5 text-yellow-400" />
-                  <h4 className="font-bold text-yellow-300 text-sm">GRAND SLAM BONUS</h4>
+              <div className="bg-gradient-to-r from-yellow-500/30 to-amber-500/30 border-2 border-yellow-500/60 rounded-lg p-5 mb-8 shadow-lg shadow-yellow-500/20">
+                <div className="flex items-center gap-2 mb-4">
+                  <Sparkles className="w-5 h-5 text-yellow-300" />
+                  <h4 className="font-bold text-yellow-200 text-base uppercase tracking-wide">GRAND SLAM BONUS</h4>
                 </div>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <Video className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-gray-200">Custom Video Onboarding</span>
+                <ul className="space-y-2.5">
+                  <li className="flex items-start gap-2.5">
+                    <Video className="w-5 h-5 text-yellow-300 mt-0.5 flex-shrink-0" />
+                    <span className="text-base text-white font-medium">Custom Video Onboarding</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <FileText className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-gray-200">Team SOP Documentation</span>
+                  <li className="flex items-start gap-2.5">
+                    <FileText className="w-5 h-5 text-yellow-300 mt-0.5 flex-shrink-0" />
+                    <span className="text-base text-white font-medium">Team SOP Documentation</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <Clock className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-gray-200">Extended 30-Day Support</span>
+                  <li className="flex items-start gap-2.5">
+                    <Clock className="w-5 h-5 text-yellow-300 mt-0.5 flex-shrink-0" />
+                    <span className="text-base text-white font-medium">Extended 30-Day Support</span>
                   </li>
                 </ul>
               </div>
