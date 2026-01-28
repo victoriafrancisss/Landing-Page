@@ -744,7 +744,7 @@ export default function Home() {
       {/* CTA Section */}
       <section id="audit" className="px-6 py-24 bg-gradient-to-br from-blue-900/30 via-cyan-900/30 to-purple-900/30">
         <div className="container mx-auto max-w-4xl">
-          <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-12 md:p-16 text-center shadow-2xl" style={{ overflow: 'visible' }}>
+          <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-6 sm:p-8 md:p-12 lg:p-16 text-center shadow-2xl" style={{ overflow: 'visible' }}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 sm:mb-8 tracking-tight leading-tight">
               Ready to <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">Eliminate</span> the{" "}
               <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
@@ -754,16 +754,18 @@ export default function Home() {
             <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
               Transform your operations in 15 minutes. Discover exactly how much time and money you're losing—and how to recover it.
             </p>
-            <a
-              href="https://calendly.com/victoriafranciss/automation-discovery-call"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="premium-button inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold text-xs sm:text-sm md:text-base rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-xl shadow-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/70 relative z-10 tracking-tight"
-              style={{ whiteSpace: 'nowrap', minWidth: 'fit-content', maxWidth: '100%' }}
-            >
-              <span className="relative z-10" style={{ whiteSpace: 'nowrap' }}>Schedule Free Consultation</span>
-              <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform flex-shrink-0" />
-            </a>
+            <div className="flex justify-center px-2 sm:px-4">
+              <a
+                href="https://calendly.com/victoriafranciss/automation-discovery-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="premium-button inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold text-xs sm:text-sm md:text-base rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-xl shadow-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/70 relative z-10 tracking-tight"
+                style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}
+              >
+                <span className="relative z-10" style={{ whiteSpace: 'nowrap' }}>Schedule Free Consultation</span>
+                <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+              </a>
+            </div>
             <p className="text-xs sm:text-sm text-gray-400 mt-6 sm:mt-8 font-light">No commitment required <span className="hidden sm:inline">•</span><span className="sm:hidden"><br /></span> Results in 15 minutes</p>
           </div>
         </div>

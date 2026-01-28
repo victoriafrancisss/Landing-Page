@@ -90,29 +90,32 @@ export function SavingsCalculator() {
       </div>
 
       {/* Result Display */}
-      <div className="bg-gradient-to-r from-red-900/40 to-orange-900/40 border-2 border-red-500/60 rounded-xl p-6 md:p-8 mb-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex-1">
-            <p className="text-gray-300 text-sm md:text-base mb-2 uppercase tracking-wider">
+      <div className="bg-gradient-to-r from-red-900/40 to-orange-900/40 border-2 border-red-500/60 rounded-xl p-4 sm:p-6 md:p-8 mb-6" style={{ overflow: 'visible' }}>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
+          <div className="flex-1 w-full min-w-0">
+            <p className="text-gray-300 text-xs sm:text-sm md:text-base mb-2 uppercase tracking-wider break-words" style={{ wordBreak: 'break-word', whiteSpace: 'normal' }}>
               Potential Annual Recovery
             </p>
-            <p className="text-4xl md:text-5xl font-bold text-red-300">
+            <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-300 whitespace-nowrap">
               {formattedWaste}
             </p>
-            <p className="text-gray-400 text-sm mt-2">
+            <p className="text-gray-400 text-xs sm:text-sm mt-2 break-words">
               Based on {weeklyHoursNum || 0} hours/week × 52 weeks × ${hourlyRateNum || 0}/hour
             </p>
           </div>
           
-          <a
-            href="https://calendly.com/victoriafranciss/automation-discovery-call"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg shadow-red-500/30 hover:shadow-xl hover:shadow-red-500/40 transform hover:scale-105 whitespace-nowrap"
-          >
-            <Calendar className="w-5 h-5" />
-            Book My Free Audit
-          </a>
+          <div className="w-full md:w-auto flex justify-center md:justify-end px-2 sm:px-0">
+            <a
+              href="https://calendly.com/victoriafranciss/automation-discovery-call"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-semibold text-sm sm:text-base rounded-lg transition-all duration-300 shadow-lg shadow-red-500/30 hover:shadow-xl hover:shadow-red-500/40 transform hover:scale-105 whitespace-nowrap"
+              style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}
+            >
+              <Calendar className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+              <span style={{ whiteSpace: 'nowrap' }}>Book My Free Audit</span>
+            </a>
+          </div>
         </div>
       </div>
 
