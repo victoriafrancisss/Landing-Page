@@ -87,7 +87,7 @@ export default function Home() {
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6 leading-tight">
                 Watch how we fix the $15,600 leak in 60 seconds.
               </h3>
-              <div className="relative aspect-video w-full max-w-2xl mx-auto rounded-xl overflow-hidden border border-cyan-500/20 shadow-xl bg-gray-900/50">
+              <div className="relative aspect-video w-full max-w-[370px] mx-auto rounded-xl overflow-hidden border border-cyan-500/20 shadow-xl bg-gray-900/50">
                 {YOUTUBE_VIDEO_ID ? (
                   <iframe
                     className="absolute inset-0 w-full h-full"
