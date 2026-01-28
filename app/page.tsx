@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <main className="min-h-screen relative" style={{ contain: 'layout style paint', willChange: 'auto' }}>
       <PremiumBackground />
-      {/* Limited February Offer Banner */}
+      {/* Beta Launch Banner - Updated */}
       <div className="relative z-50 bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 text-white py-3 px-6 text-center font-semibold text-sm md:text-base shadow-lg">
         <div className="container mx-auto max-w-6xl flex items-center justify-center gap-2">
           <Sparkles className="w-4 h-4 animate-pulse" />
