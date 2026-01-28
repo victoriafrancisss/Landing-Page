@@ -49,7 +49,7 @@ export default function Home() {
             <FadeInOnScroll delay={100}>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-extrabold text-white leading-[1.1] tracking-tight mb-4 sm:mb-5 md:mb-6" style={{ fontSize: 'clamp(2.5rem, 8vw, 9rem)' }}>
                 <span className="block">We recover 500+ hours of manual labor waste</span>
-                <span className="block">for small-to-mid sized businesses and solopreneurs.</span>
+                <span className="block">for small-to-mid sized businesses and <span className="whitespace-nowrap">solopreneurs</span>.</span>
               </h1>
             </FadeInOnScroll>
             <FadeInOnScroll delay={200}>
@@ -536,8 +536,8 @@ export default function Home() {
       </section>
 
       {/* Offerings Section */}
-      <section className="px-6 py-24 bg-gradient-to-b from-transparent via-blue-900/10 to-transparent">
-        <div className="container mx-auto max-w-6xl">
+      <section className="px-6 py-24 bg-gradient-to-b from-transparent via-blue-900/10 to-transparent overflow-visible">
+        <div className="container mx-auto max-w-6xl overflow-visible">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight">
               Choose Your <span className="text-blue-400">Automation Path</span>
@@ -545,7 +545,7 @@ export default function Home() {
             <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 font-medium max-w-3xl mx-auto">Solutions tailored to your needs</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 overflow-visible">
             {/* Quick Win */}
             <FadeInOnScroll delay={0}>
               <div className="glass-effect-premium border border-gray-700/50 rounded-xl p-8 hover:border-blue-500/60 transition-all duration-300 interactive-card group">
@@ -558,15 +558,15 @@ export default function Home() {
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300">Eliminate one critical workflow bottleneck</span>
+                    <span className="text-gray-300 break-words min-w-0">Eliminate one critical workflow bottleneck</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300">Production-ready Python automation</span>
+                    <span className="text-gray-300 break-words min-w-0">Production-ready Python automation</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300">Complete technical documentation</span>
+                    <span className="text-gray-300 break-words min-w-0">Complete technical documentation</span>
                   </li>
                 </ul>
                 <a
@@ -582,9 +582,9 @@ export default function Home() {
 
             {/* Workflow Architect */}
             <FadeInOnScroll delay={100}>
-              <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 backdrop-blur-sm border-2 border-blue-500/50 rounded-xl p-8 hover:border-blue-400 transition-all duration-300 transform hover:scale-105 relative interactive-card">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold px-4 py-1 rounded-full">
+              <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 backdrop-blur-sm border-2 border-blue-500/50 rounded-xl p-8 pt-12 hover:border-blue-400 transition-all duration-300 transform hover:scale-105 relative interactive-card overflow-visible">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20 whitespace-nowrap">
+                <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs sm:text-sm font-bold px-4 sm:px-5 py-1.5 rounded-full shadow-lg">
                   MOST POPULAR
                 </span>
               </div>
@@ -597,19 +597,19 @@ export default function Home() {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-300">Multi-workflow automation</span>
+                  <span className="text-gray-300 break-words">Multi-workflow automation</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-300">Custom Python architecture</span>
+                  <span className="text-gray-300 break-words">Custom Python architecture</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-300">Comprehensive documentation</span>
+                  <span className="text-gray-300 break-words min-w-0">Comprehensive documentation</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-300">30-day support</span>
+                  <span className="text-gray-300 break-words min-w-0">30-day support</span>
                 </li>
               </ul>
               
@@ -622,15 +622,15 @@ export default function Home() {
                 <ul className="space-y-2.5">
                   <li className="flex items-start gap-2.5">
                     <Video className="w-5 h-5 text-yellow-300 mt-0.5 flex-shrink-0" />
-                    <span className="text-base text-white font-medium">Custom Video Onboarding</span>
+                    <span className="text-base text-white font-medium break-words min-w-0">Custom Video Onboarding</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <FileText className="w-5 h-5 text-yellow-300 mt-0.5 flex-shrink-0" />
-                    <span className="text-base text-white font-medium">Team SOP Documentation</span>
+                    <span className="text-base text-white font-medium break-words min-w-0">Team SOP Documentation</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <Clock className="w-5 h-5 text-yellow-300 mt-0.5 flex-shrink-0" />
-                    <span className="text-base text-white font-medium">Extended 30-Day Support</span>
+                    <span className="text-base text-white font-medium break-words min-w-0">Extended 30-Day Support</span>
                   </li>
                 </ul>
               </div>
@@ -658,15 +658,15 @@ export default function Home() {
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300">Continuously maximize automation ROI</span>
+                    <span className="text-gray-300 break-words min-w-0">Continuously maximize automation ROI</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300">Eliminate bottlenecks as they emerge</span>
+                    <span className="text-gray-300 break-words min-w-0">Eliminate bottlenecks as they emerge</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300">Monthly profitability optimization</span>
+                    <span className="text-gray-300 break-words min-w-0">Monthly profitability optimization</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
@@ -757,9 +757,9 @@ export default function Home() {
               href="https://calendly.com/victoriafranciss/automation-discovery-call"
               target="_blank"
               rel="noopener noreferrer"
-              className="premium-button inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold text-base rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-xl shadow-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/70 relative z-10 tracking-tight"
+              className="premium-button inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold text-base rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-xl shadow-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/70 relative z-10 tracking-tight whitespace-nowrap"
             >
-              <span className="relative z-10">Schedule Free Consultation</span>
+              <span className="relative z-10 whitespace-nowrap">Schedule Free Consultation</span>
               <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
             </a>
             <p className="text-sm text-gray-400 mt-8 font-light">No commitment required • Results in 15 minutes</p>

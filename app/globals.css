@@ -105,6 +105,12 @@ p, h1, h2, h3, h4, h5, h6, span, a, li, td, th, div {
   white-space: normal;
 }
 
+/* Ensure package cards and buttons don't cut off text */
+.grid > div,
+.interactive-card {
+  overflow: visible !important;
+}
+
 /* Force larger mobile font sizes - override Tailwind defaults */
 @media (max-width: 640px) {
   /* Hero headline - much larger on mobile */
