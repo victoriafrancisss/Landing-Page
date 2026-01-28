@@ -79,9 +79,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Video Section - ecomflow-style: contained, generous whitespace, rounded, shadow */}
+      {/* Video Section - focused feature card: compact, centered, premium asset */}
       <section className="px-6 sm:px-8 md:px-12 lg:px-16 py-10 sm:py-12 md:py-16 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
-        <div className="w-full max-w-3xl mx-auto">
+        <div className="w-full max-w-2xl mx-auto">
           <FadeInOnScroll>
             <div className="text-center space-y-3 sm:space-y-4">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6 leading-tight">
