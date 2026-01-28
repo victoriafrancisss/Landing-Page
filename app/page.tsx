@@ -30,42 +30,43 @@ import { PremiumBackground } from './components/PremiumBackground';
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative" style={{ contain: 'layout style paint', willChange: 'auto' }}>
+    <main className="min-h-screen relative overflow-x-hidden w-full max-w-full">
       <PremiumBackground />
       {/* Beta Launch Banner - Updated */}
-      <div className="relative z-50 bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 text-white py-3 px-6 text-center font-semibold text-sm md:text-base shadow-lg">
-        <div className="container mx-auto max-w-6xl flex items-center justify-center gap-2">
-          <Sparkles className="w-4 h-4 animate-pulse" />
-          <span>Beta Launch: Only 2 spots remaining for a full Workflow Audit</span>
-          <Sparkles className="w-4 h-4 animate-pulse" />
+      <div className="sticky top-0 z-50 bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 text-white py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 md:px-6 text-center font-semibold text-[10px] sm:text-xs md:text-sm lg:text-base shadow-lg">
+        <div className="w-full max-w-6xl mx-auto flex items-center justify-center gap-1.5 sm:gap-2 flex-wrap px-2">
+          <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 animate-pulse flex-shrink-0" />
+          <span className="break-words leading-tight overflow-wrap-anywhere text-center">Beta Launch: Only 2 spots remaining for a full Workflow Audit</span>
+          <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 animate-pulse flex-shrink-0" />
         </div>
       </div>
       {/* Hero Section */}
-      <section className="relative overflow-hidden px-6 py-20 md:py-32">
+      <section className="relative px-2 sm:px-3 md:px-4 lg:px-6 py-12 sm:py-14 md:py-16 lg:py-20 xl:py-32 pt-20 sm:pt-24 md:pt-16 lg:pt-20 xl:pt-32" style={{ width: '100%', maxWidth: '100vw', overflowX: 'hidden' }}>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center space-y-6">
+        <div className="w-full max-w-6xl mx-auto relative z-10 px-2 sm:px-4" style={{ width: '100%', maxWidth: '100%' }}>
+          <div className="text-center space-y-3 sm:space-y-4 md:space-y-6">
             <FadeInOnScroll delay={100}>
-              <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6">
-                We recover 500+ hours of manual labor waste for small-to-mid sized businesses and solopreneurs.
+              <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-7xl font-bold text-white leading-[1.3] sm:leading-[1.25] md:leading-[1.2] lg:leading-[1.15] tracking-tight mb-3 sm:mb-4 md:mb-6 break-words overflow-wrap-anywhere hyphens-auto max-w-full">
+                <span className="block">We recover 500+ hours of manual labor waste</span>
+                <span className="block">for small-to-mid sized businesses and solopreneurs.</span>
               </h1>
             </FadeInOnScroll>
             <FadeInOnScroll delay={200}>
-              <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed font-light">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed font-light break-words overflow-wrap-anywhere">
                 Turning 12-hour manual nightmares into 15-minute Python runs.
               </p>
             </FadeInOnScroll>
             <FadeInOnScroll delay={300}>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+              <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 md:gap-4 justify-center items-center pt-4 sm:pt-6 md:pt-8">
                 <a
                   href="https://calendly.com/victoriafranciss/automation-discovery-call"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="premium-button px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg shadow-blue-500/50 hover:shadow-xl hover:shadow-blue-500/70 flex items-center gap-2 group transform hover:scale-105 active:scale-95 relative z-10"
+                  className="premium-button px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold text-xs sm:text-sm md:text-base rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg shadow-blue-500/50 hover:shadow-xl hover:shadow-blue-500/70 flex items-center gap-1.5 sm:gap-2 group transform hover:scale-105 active:scale-95 relative z-10 w-full sm:w-auto max-w-xs sm:max-w-none"
                 >
-                  Get My Free Audit
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <span className="whitespace-nowrap">Get My Free Audit</span>
+                  <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
                 </a>
               </div>
             </FadeInOnScroll>
@@ -108,37 +109,37 @@ export default function Home() {
       </section>
 
       {/* Meet Victoria, Your Architect Section */}
-      <section className="px-6 py-24 bg-gradient-to-b from-transparent via-gray-900/20 to-transparent">
-        <div className="container mx-auto max-w-6xl">
-          <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-10 md:p-14 overflow-hidden">
-            <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <section className="px-3 sm:px-4 md:px-6 py-20 sm:py-24 pb-32 md:pb-24 bg-gradient-to-b from-transparent via-gray-900/20 to-transparent" style={{ width: '100%', maxWidth: '100vw', overflowX: 'hidden' }}>
+        <div className="w-full max-w-6xl mx-auto px-2 sm:px-4" style={{ width: '100%', maxWidth: '100%' }}>
+          <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-3 sm:p-4 md:p-6 lg:p-10 xl:p-14 overflow-hidden w-full" style={{ width: '100%', maxWidth: '100%' }}>
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10 items-center w-full" style={{ width: '100%', maxWidth: '100%' }}>
               {/* Headshot */}
-              <div className="flex flex-col items-center md:items-start">
-                <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border border-blue-500/30 shadow-xl shadow-blue-500/10">
+              <div className="flex flex-col items-center md:items-start w-full" style={{ minWidth: 0, maxWidth: '100%' }}>
+                <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-2xl overflow-hidden border border-blue-500/30 shadow-xl shadow-blue-500/10" style={{ maxWidth: '100%' }}>
                   <img
                     src="/victoria-headshot.jpg"
                     alt="Victoria Francis - AI Automation Specialist"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="mt-5 text-center md:text-left text-sm text-gray-400 font-medium tracking-tight">
+                <p className="mt-3 sm:mt-4 md:mt-5 text-center md:text-left text-[10px] sm:text-xs md:text-sm text-gray-400 font-medium tracking-tight px-1" style={{ wordBreak: 'break-word', overflowWrap: 'anywhere', width: '100%', maxWidth: '100%' }}>
                   Victoria Francis | Lead Automation Architect
                 </p>
               </div>
 
               {/* Bio Content */}
-              <div className="space-y-6">
-                <div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">
+              <div className="space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6 w-full" style={{ minWidth: 0, maxWidth: '100%' }}>
+                <div className="w-full">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-3 tracking-tight" style={{ wordBreak: 'break-word', overflowWrap: 'anywhere', width: '100%', maxWidth: '100%' }}>
                     Meet Victoria, Your <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">Architect</span>
                   </h2>
-                  <div className="w-16 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+                  <div className="w-10 sm:w-12 md:w-16 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
                 </div>
-                <div className="space-y-5 text-gray-300 leading-relaxed">
-                  <p className="text-lg md:text-xl font-light">
+                <div className="space-y-3 sm:space-y-4 md:space-y-5 text-gray-300 leading-relaxed w-full" style={{ wordBreak: 'break-word', overflowWrap: 'anywhere', width: '100%', maxWidth: '100%' }}>
+                  <p className="text-xs sm:text-sm md:text-base lg:text-lg font-light" style={{ wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', width: '100%' }}>
                     I don't just run the agency; I write the code. I started BoldScale because I saw brilliant finance teams burning out on Excel work that a script could do in minutes.
                   </p>
-                  <p className="text-base md:text-lg font-light">
+                  <p className="text-xs sm:text-sm md:text-base lg:text-lg font-light" style={{ wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', width: '100%' }}>
                     When you work with BoldScale Solutions, your project gets <span className="text-cyan-400 font-semibold">100% of our focus</span>—no middleman, just results.
                   </p>
                 </div>
@@ -149,52 +150,52 @@ export default function Home() {
       </section>
 
       {/* The 3-Step Recovery Plan Section */}
-      <section className="px-6 py-24 bg-gradient-to-b from-transparent via-blue-900/10 to-transparent">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-              The <span className="text-cyan-400">3-Step Recovery Plan</span>
+      <section className="px-3 sm:px-4 md:px-6 py-20 sm:py-24 bg-gradient-to-b from-transparent via-blue-900/10 to-transparent w-full overflow-x-hidden">
+        <div className="w-full max-w-6xl mx-auto px-2 sm:px-4">
+          <div className="text-center mb-12 sm:mb-16 w-full">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 tracking-tight break-words overflow-wrap-anywhere w-full px-1">
+              The <span className="text-cyan-400 break-words">3-Step Recovery Plan</span>
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 w-full">
             <FadeInOnScroll delay={0}>
-              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-8 text-center interactive-card hover:border-cyan-500/60 group">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-2 border-cyan-500/40 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <span className="text-3xl font-bold text-cyan-400">1</span>
+              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-5 sm:p-6 md:p-8 text-center interactive-card hover:border-cyan-500/60 group w-full min-w-0">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-4 sm:mb-5 md:mb-6 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-2 border-cyan-500/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <span className="text-2xl sm:text-3xl font-bold text-cyan-400">1</span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-200 transition-colors">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3 sm:mb-4 group-hover:text-cyan-200 transition-colors break-words overflow-wrap-anywhere">
                   We identify your manual leaks.
                 </h3>
-                <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                <p className="text-sm sm:text-base text-gray-400 group-hover:text-gray-300 transition-colors break-words overflow-wrap-anywhere">
                   We audit your workflows to find where time and money are being wasted on manual processes.
                 </p>
               </div>
             </FadeInOnScroll>
 
             <FadeInOnScroll delay={100}>
-              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-8 text-center interactive-card hover:border-cyan-500/60 group">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-2 border-cyan-500/40 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <span className="text-3xl font-bold text-cyan-400">2</span>
+              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-5 sm:p-6 md:p-8 text-center interactive-card hover:border-cyan-500/60 group w-full min-w-0">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-4 sm:mb-5 md:mb-6 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-2 border-cyan-500/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <span className="text-2xl sm:text-3xl font-bold text-cyan-400">2</span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-200 transition-colors">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3 sm:mb-4 group-hover:text-cyan-200 transition-colors break-words overflow-wrap-anywhere">
                   I build your custom Python pipeline.
                 </h3>
-                <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                <p className="text-sm sm:text-base text-gray-400 group-hover:text-gray-300 transition-colors break-words overflow-wrap-anywhere">
                   I create production-ready automation that eliminates your manual bottlenecks.
                 </p>
               </div>
             </FadeInOnScroll>
 
             <FadeInOnScroll delay={200}>
-              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-8 text-center interactive-card hover:border-cyan-500/60 group">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-2 border-cyan-500/40 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <span className="text-3xl font-bold text-cyan-400">3</span>
+              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-5 sm:p-6 md:p-8 text-center interactive-card hover:border-cyan-500/60 group w-full min-w-0">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-4 sm:mb-5 md:mb-6 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-2 border-cyan-500/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <span className="text-2xl sm:text-3xl font-bold text-cyan-400">3</span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-200 transition-colors">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3 sm:mb-4 group-hover:text-cyan-200 transition-colors break-words overflow-wrap-anywhere">
                   We recover 70% of your work week.
                 </h3>
-                <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                <p className="text-sm sm:text-base text-gray-400 group-hover:text-gray-300 transition-colors break-words overflow-wrap-anywhere">
                   Your team gets back hundreds of hours per year to focus on high-value work.
                 </p>
               </div>
@@ -332,7 +333,7 @@ export default function Home() {
       </section>
 
       {/* Proof of Work Section */}
-      <section className="px-6 py-20 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
+      <section className="px-6 py-20 pb-32 md:pb-20 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -344,7 +345,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             {/* Case Study Card - Left Side */}
             <FadeInOnScroll delay={0}>
-              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-8 md:p-10 interactive-card hover:border-cyan-500/60 group">
+              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8 lg:p-10 interactive-card hover:border-cyan-500/60 group pb-8 md:pb-10">
                 <div className="flex items-center gap-3 mb-6">
                   <Code className="w-8 h-8 text-cyan-400" />
                   <h3 className="text-2xl font-bold text-white">Case Study</h3>
@@ -359,59 +360,59 @@ export default function Home() {
                 </p>
 
                 {/* Transformation Highlight */}
-                <div className="mb-6 p-5 rounded-lg bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border-2 border-cyan-500/50">
-                  <div className="flex items-center justify-between flex-wrap gap-4">
-                    <div className="text-center flex-1 min-w-[120px]">
+                <div className="mb-6 p-4 md:p-5 rounded-lg bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border-2 border-cyan-500/50">
+                  <div className="flex items-center justify-between flex-wrap gap-3 md:gap-4">
+                    <div className="text-center flex-1 min-w-[100px] md:min-w-[120px]">
                       <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Before</p>
-                      <p className="text-2xl font-bold text-red-400">12 Hours</p>
-                      <p className="text-xs text-gray-500 mt-1">Manual + VBA</p>
+                      <p className="text-xl md:text-2xl font-bold text-red-400 break-words">12 Hours</p>
+                      <p className="text-xs text-gray-500 mt-1 break-words">Manual + VBA</p>
                     </div>
-                    <ArrowRight className="w-6 h-6 text-cyan-400 flex-shrink-0" />
-                    <div className="text-center flex-1 min-w-[120px]">
+                    <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-cyan-400 flex-shrink-0 mx-2" />
+                    <div className="text-center flex-1 min-w-[100px] md:min-w-[120px]">
                       <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">After</p>
-                      <p className="text-2xl font-bold text-green-400">15 Minutes</p>
-                      <p className="text-xs text-gray-500 mt-1">Fully Automated</p>
+                      <p className="text-xl md:text-2xl font-bold text-green-400 break-words">15 Minutes</p>
+                      <p className="text-xs text-gray-500 mt-1 break-words">Fully Automated</p>
                     </div>
-                    <div className="w-full text-center mt-2 pt-3 border-t border-cyan-500/30">
-                      <p className="text-sm text-cyan-300 font-semibold">48x Overall Speed Improvement</p>
+                    <div className="w-full text-center mt-3 md:mt-2 pt-3 border-t border-cyan-500/30">
+                      <p className="text-xs md:text-sm text-cyan-300 font-semibold break-words">48x Overall Speed Improvement</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-4 mb-6 md:mb-4">
                   {/* Metric 1 - Speed */}
-                  <div className="relative p-5 rounded-lg bg-gradient-to-r from-cyan-900/30 to-blue-900/30 border-2 border-cyan-500/40 group-hover:border-cyan-500/60 transition-all duration-300 shadow-lg shadow-cyan-500/20">
-                    <div className="flex items-center justify-between">
-                      <div className="flex-1">
+                  <div className="relative p-4 md:p-5 rounded-lg bg-gradient-to-r from-cyan-900/30 to-blue-900/30 border-2 border-cyan-500/40 group-hover:border-cyan-500/60 transition-all duration-300 shadow-lg shadow-cyan-500/20">
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="flex-1 min-w-0">
                         <p className="text-xs text-cyan-300 uppercase tracking-wider mb-1">Speed Improvement</p>
-                        <p className="text-3xl font-bold text-white mb-1">48x</p>
-                        <p className="text-xs text-gray-400">Reduced 12 hours of manual "data wrestling" to a 15-minute automated run</p>
+                        <p className="text-2xl md:text-3xl font-bold text-white mb-1">48x</p>
+                        <p className="text-xs text-gray-400 break-words">Reduced 12 hours of manual "data wrestling" to a 15-minute automated run</p>
                       </div>
-                      <Zap className="w-10 h-10 text-cyan-400 opacity-60 flex-shrink-0" />
+                      <Zap className="w-8 h-8 md:w-10 md:h-10 text-cyan-400 opacity-60 flex-shrink-0" />
                     </div>
                   </div>
 
                   {/* Metric 2 - Errors Eliminated */}
-                  <div className="relative p-5 rounded-lg bg-gradient-to-r from-green-900/30 to-emerald-900/30 border-2 border-green-500/40 group-hover:border-green-500/60 transition-all duration-300 shadow-lg shadow-green-500/20">
-                    <div className="flex items-center justify-between">
-                      <div className="flex-1">
+                  <div className="relative p-4 md:p-5 rounded-lg bg-gradient-to-r from-green-900/30 to-emerald-900/30 border-2 border-green-500/40 group-hover:border-green-500/60 transition-all duration-300 shadow-lg shadow-green-500/20">
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="flex-1 min-w-0">
                         <p className="text-xs text-green-300 uppercase tracking-wider mb-1">Manual Errors</p>
-                        <p className="text-3xl font-bold text-white mb-1">Zero</p>
-                        <p className="text-xs text-gray-400">Eliminated 5% human error rate & 90% spreadsheet error potential</p>
+                        <p className="text-2xl md:text-3xl font-bold text-white mb-1">Zero</p>
+                        <p className="text-xs text-gray-400 break-words">Eliminated 5% human error rate & 90% spreadsheet error potential</p>
                       </div>
-                      <Shield className="w-10 h-10 text-green-400 opacity-60 flex-shrink-0" />
+                      <Shield className="w-8 h-8 md:w-10 md:h-10 text-green-400 opacity-60 flex-shrink-0" />
                     </div>
                   </div>
 
                   {/* Metric 3 - Financial Recovery */}
-                  <div className="relative p-5 rounded-lg bg-gradient-to-r from-yellow-900/30 to-amber-900/30 border-2 border-yellow-500/40 group-hover:border-yellow-500/60 transition-all duration-300 shadow-lg shadow-yellow-500/20">
-                    <div className="flex items-center justify-between">
-                      <div className="flex-1">
+                  <div className="relative p-4 md:p-5 rounded-lg bg-gradient-to-r from-yellow-900/30 to-amber-900/30 border-2 border-yellow-500/40 group-hover:border-yellow-500/60 transition-all duration-300 shadow-lg shadow-yellow-500/20 pb-6 md:pb-5">
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="flex-1 min-w-0">
                         <p className="text-xs text-yellow-300 uppercase tracking-wider mb-1">Annual Labor Recovery</p>
-                        <p className="text-3xl font-bold text-white mb-1">$15,600</p>
-                        <p className="text-xs text-gray-400">Total annual savings from eliminating manual reconciliation</p>
+                        <p className="text-2xl md:text-3xl font-bold text-white mb-1">$15,600</p>
+                        <p className="text-xs text-gray-400 break-words">Total annual savings from eliminating manual reconciliation</p>
                       </div>
-                      <DollarSign className="w-10 h-10 text-yellow-400 opacity-60 flex-shrink-0" />
+                      <DollarSign className="w-8 h-8 md:w-10 md:h-10 text-yellow-400 opacity-60 flex-shrink-0" />
                     </div>
                   </div>
                 </div>
@@ -420,7 +421,7 @@ export default function Home() {
 
             {/* Performance Optimizations - Right Side */}
             <FadeInOnScroll delay={100}>
-              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-8 md:p-10 interactive-card hover:border-cyan-500/60 group">
+              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8 lg:p-10 interactive-card hover:border-cyan-500/60 group pb-8 md:pb-10">
                 <div className="flex items-center gap-3 mb-6">
                   <Zap className="w-8 h-8 text-cyan-400" />
                   <h3 className="text-2xl font-bold text-white">Performance Optimizations</h3>
@@ -433,54 +434,54 @@ export default function Home() {
                 {/* Performance Metrics */}
                 <div className="space-y-4 mb-6">
                   {/* Data Loading */}
-                  <div className="p-5 rounded-lg bg-gradient-to-r from-gray-800/50 to-gray-700/50 border border-cyan-500/20 group-hover:border-cyan-500/40 transition-all duration-300">
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="text-lg font-bold text-white">Data Loading</h4>
-                      <span className="text-2xl font-bold text-cyan-400">1,800x</span>
+                  <div className="p-4 md:p-5 rounded-lg bg-gradient-to-r from-gray-800/50 to-gray-700/50 border border-cyan-500/20 group-hover:border-cyan-500/40 transition-all duration-300 mb-4 md:mb-4">
+                    <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
+                      <h4 className="text-base md:text-lg font-bold text-white">Data Loading</h4>
+                      <span className="text-xl md:text-2xl font-bold text-cyan-400">1,800x</span>
                     </div>
-                    <div className="flex items-center justify-between text-xs text-gray-400">
-                      <span>VBA: Row-by-row cell access</span>
-                      <ArrowRight className="w-4 h-4" />
-                      <span>Python: Single read_excel() call</span>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs text-gray-400">
+                      <span className="break-words">VBA: Row-by-row cell access</span>
+                      <ArrowRight className="w-4 h-4 hidden sm:block flex-shrink-0" />
+                      <span className="break-words">Python: Single read_excel() call</span>
                     </div>
                   </div>
 
                   {/* Matching */}
-                  <div className="p-5 rounded-lg bg-gradient-to-r from-gray-800/50 to-gray-700/50 border border-cyan-500/20 group-hover:border-cyan-500/40 transition-all duration-300">
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="text-lg font-bold text-white">Matching</h4>
-                      <span className="text-2xl font-bold text-cyan-400">300x</span>
+                  <div className="p-4 md:p-5 rounded-lg bg-gradient-to-r from-gray-800/50 to-gray-700/50 border border-cyan-500/20 group-hover:border-cyan-500/40 transition-all duration-300 mb-4 md:mb-4">
+                    <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
+                      <h4 className="text-base md:text-lg font-bold text-white">Matching</h4>
+                      <span className="text-xl md:text-2xl font-bold text-cyan-400">300x</span>
                     </div>
-                    <div className="flex items-center justify-between text-xs text-gray-400">
-                      <span>VBA: O(n) Find() per row</span>
-                      <ArrowRight className="w-4 h-4" />
-                      <span>Python: O(1) dictionary lookup</span>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs text-gray-400">
+                      <span className="break-words">VBA: O(n) Find() per row</span>
+                      <ArrowRight className="w-4 h-4 hidden sm:block flex-shrink-0" />
+                      <span className="break-words">Python: O(1) dictionary lookup</span>
                     </div>
                   </div>
 
                   {/* Transformations */}
-                  <div className="p-5 rounded-lg bg-gradient-to-r from-gray-800/50 to-gray-700/50 border border-cyan-500/20 group-hover:border-cyan-500/40 transition-all duration-300">
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="text-lg font-bold text-white">Transformations</h4>
-                      <span className="text-2xl font-bold text-cyan-400">100x</span>
+                  <div className="p-4 md:p-5 rounded-lg bg-gradient-to-r from-gray-800/50 to-gray-700/50 border border-cyan-500/20 group-hover:border-cyan-500/40 transition-all duration-300 mb-4 md:mb-4">
+                    <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
+                      <h4 className="text-base md:text-lg font-bold text-white">Transformations</h4>
+                      <span className="text-xl md:text-2xl font-bold text-cyan-400">100x</span>
                     </div>
-                    <div className="flex items-center justify-between text-xs text-gray-400">
-                      <span>VBA: Loop with cell writes</span>
-                      <ArrowRight className="w-4 h-4" />
-                      <span>Python: Vectorized pandas ops</span>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs text-gray-400">
+                      <span className="break-words">VBA: Loop with cell writes</span>
+                      <ArrowRight className="w-4 h-4 hidden sm:block flex-shrink-0" />
+                      <span className="break-words">Python: Vectorized pandas ops</span>
                     </div>
                   </div>
 
                   {/* Excel Writing */}
-                  <div className="p-5 rounded-lg bg-gradient-to-r from-gray-800/50 to-gray-700/50 border border-cyan-500/20 group-hover:border-cyan-500/40 transition-all duration-300">
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="text-lg font-bold text-white">Excel Writing</h4>
-                      <span className="text-2xl font-bold text-cyan-400">540x</span>
+                  <div className="p-4 md:p-5 rounded-lg bg-gradient-to-r from-gray-800/50 to-gray-700/50 border border-cyan-500/20 group-hover:border-cyan-500/40 transition-all duration-300 mb-4 md:mb-4 pb-6 md:pb-5">
+                    <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
+                      <h4 className="text-base md:text-lg font-bold text-white">Excel Writing</h4>
+                      <span className="text-xl md:text-2xl font-bold text-cyan-400">540x</span>
                     </div>
-                    <div className="flex items-center justify-between text-xs text-gray-400">
-                      <span>VBA: Cell-by-cell writes</span>
-                      <ArrowRight className="w-4 h-4" />
-                      <span>Python: Bulk to_excel()</span>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs text-gray-400">
+                      <span className="break-words">VBA: Cell-by-cell writes</span>
+                      <ArrowRight className="w-4 h-4 hidden sm:block flex-shrink-0" />
+                      <span className="break-words">Python: Bulk to_excel()</span>
                     </div>
                   </div>
                 </div>

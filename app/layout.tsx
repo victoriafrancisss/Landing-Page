@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -11,6 +11,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "BoldScale Solutions - Recover Your Team's First 500 Hours",
   description: "Reduce manual reconciliation time by 70% using AI-native Python pipelines",
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 const GA_MEASUREMENT_ID = "G-LMKSM39YCJ";
