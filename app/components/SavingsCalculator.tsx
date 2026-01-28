@@ -104,15 +104,15 @@ export function SavingsCalculator() {
             </p>
           </div>
           
-          <div className="w-full md:w-auto flex justify-center md:justify-end px-2 sm:px-0">
+          <div className="w-full md:w-auto flex justify-center md:justify-end px-2 sm:px-4">
             <a
               href="https://calendly.com/victoriafranciss/automation-discovery-call"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-semibold text-sm sm:text-base rounded-lg transition-all duration-300 shadow-lg shadow-red-500/30 hover:shadow-xl hover:shadow-red-500/40 transform hover:scale-105 whitespace-nowrap"
+              className="premium-button inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-semibold text-xs sm:text-sm md:text-base rounded-lg transition-all duration-300 shadow-xl shadow-red-500/50 hover:shadow-2xl hover:shadow-red-500/70 relative z-10 tracking-tight"
               style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}
             >
-              <Calendar className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+              <Calendar className="w-4 h-4 flex-shrink-0" />
               <span style={{ whiteSpace: 'nowrap' }}>Book My Free Audit</span>
             </a>
           </div>
