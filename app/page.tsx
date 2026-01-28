@@ -80,14 +80,14 @@ export default function Home() {
       </section>
 
       {/* Video Section */}
-      <section className="px-6 py-16 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
+      <section className="px-6 py-12 md:py-16 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
         <div className="container mx-auto max-w-4xl">
           <FadeInOnScroll>
-            <div className="text-center space-y-4">
-              <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-8 leading-tight">
+            <div className="text-center space-y-3 md:space-y-4">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6 leading-tight">
                 Watch how we fix the $15,600 leak in 60 seconds.
               </h3>
-              <div className="relative aspect-video w-full max-w-md mx-auto rounded-xl overflow-hidden border-2 border-cyan-500/30 shadow-2xl shadow-cyan-500/20 bg-gray-900/50">
+              <div className="relative aspect-video w-full max-w-[360px] mx-auto rounded-lg overflow-hidden border border-cyan-500/20 shadow-xl bg-gray-900/50">
                 {YOUTUBE_VIDEO_ID ? (
                   <iframe
                     className="absolute inset-0 w-full h-full"
@@ -105,7 +105,7 @@ export default function Home() {
                   </div>
                 )}
               </div>
-              <p className="text-gray-400 text-sm font-light italic">
+              <p className="text-gray-400 text-xs md:text-sm font-light">
                 Meet Victoria Francis, Founder & Lead Architect
               </p>
             </div>
