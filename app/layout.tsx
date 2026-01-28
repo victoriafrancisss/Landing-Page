@@ -11,6 +11,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "BoldScale Solutions - Recover Your Team's First 500 Hours",
   description: "Reduce manual reconciliation time by 70% using AI-native Python pipelines",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export const viewport: Viewport = {

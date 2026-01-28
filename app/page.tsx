@@ -36,6 +36,14 @@ export default function Home() {
   return (
     <main className="min-h-screen relative w-full max-w-full" style={{ overflowX: 'hidden' }}>
       <PremiumBackground />
+      {/* Navbar: logo links to home */}
+      <nav className="flex items-center justify-center sm:justify-start px-4 sm:px-6 py-3 bg-gray-900/80 backdrop-blur-sm border-b border-gray-800/50">
+        <div className="w-full max-w-6xl mx-auto flex items-center justify-center sm:justify-start">
+          <a href="/" className="inline-flex items-center" aria-label="BoldScale Solutions – Home">
+            <img src="/logo-white.png" alt="BoldScale Solutions" className="h-8" />
+          </a>
+        </div>
+      </nav>
       {/* Beta Launch Banner - Updated */}
       <div className="sticky top-0 z-50 bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 text-white py-3 sm:py-3.5 md:py-4 px-4 sm:px-5 md:px-6 text-center font-bold text-sm sm:text-base md:text-lg lg:text-xl shadow-lg">
         <div className="w-full max-w-6xl mx-auto flex items-center justify-center gap-1.5 sm:gap-2 flex-wrap px-2">
