@@ -79,15 +79,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="px-6 py-12 md:py-16 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
-        <div className="container mx-auto max-w-4xl">
+      {/* Video Section - contained like ecomflow: ~70% width, generous whitespace */}
+      <section className="px-8 sm:px-12 md:px-16 lg:px-24 py-12 md:py-16 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
+        <div className="container mx-auto max-w-5xl">
           <FadeInOnScroll>
             <div className="text-center space-y-3 md:space-y-4">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6 leading-tight">
                 Watch how we fix the $15,600 leak in 60 seconds.
               </h3>
-              <div className="relative aspect-video w-full max-w-[280px] sm:max-w-[320px] mx-auto rounded-lg overflow-hidden border border-cyan-500/20 shadow-xl bg-gray-900/50">
+              <div className="relative aspect-video w-full max-w-2xl mx-auto rounded-xl overflow-hidden border border-cyan-500/20 shadow-xl bg-gray-900/50">
                 {YOUTUBE_VIDEO_ID ? (
                   <iframe
                     className="absolute inset-0 w-full h-full"
