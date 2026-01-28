@@ -79,15 +79,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Video Section - responsive YouTube embed: below headline, above 3-Step Plan */}
-      <section className="px-4 sm:px-6 md:px-8 py-10 sm:py-12 md:py-16 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
-        <div className="w-full max-w-4xl mx-auto">
+      {/* Video Section - ecomflow-style: contained, generous whitespace, rounded, shadow */}
+      <section className="px-6 sm:px-8 md:px-12 lg:px-16 py-10 sm:py-12 md:py-16 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
+        <div className="w-full max-w-3xl mx-auto">
           <FadeInOnScroll>
             <div className="text-center space-y-3 sm:space-y-4">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6 leading-tight">
                 Watch how we fix the $15,600 leak in 60 seconds.
               </h3>
-              <div className="relative aspect-video w-full max-w-full rounded-2xl overflow-hidden border border-gray-600/40 shadow-2xl bg-gray-900/50">
+              <div className="relative aspect-video w-full max-w-full rounded-2xl overflow-hidden border border-gray-500/30 shadow-2xl bg-gray-900/50">
                 {YOUTUBE_VIDEO_ID ? (
                   <iframe
                     className="absolute inset-0 w-full h-full"
