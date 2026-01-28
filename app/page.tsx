@@ -79,22 +79,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Video Section - contained like ecomflow: ~70% width, generous whitespace */}
-      <section className="px-8 sm:px-12 md:px-16 lg:px-24 py-12 md:py-16 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
-        <div className="container mx-auto max-w-5xl">
+      {/* Video Section - responsive YouTube embed: below headline, above 3-Step Plan */}
+      <section className="px-4 sm:px-6 md:px-8 py-10 sm:py-12 md:py-16 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
+        <div className="w-full max-w-4xl mx-auto">
           <FadeInOnScroll>
-            <div className="text-center space-y-3 md:space-y-4">
+            <div className="text-center space-y-3 sm:space-y-4">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6 leading-tight">
                 Watch how we fix the $15,600 leak in 60 seconds.
               </h3>
-              <div className="relative aspect-video w-full max-w-[50px] mx-auto rounded-xl overflow-hidden border border-cyan-500/20 shadow-xl bg-gray-900/50">
+              <div className="relative aspect-video w-full max-w-full rounded-2xl overflow-hidden border border-gray-600/40 shadow-2xl bg-gray-900/50">
                 {YOUTUBE_VIDEO_ID ? (
                   <iframe
                     className="absolute inset-0 w-full h-full"
-                    src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}`}
-                    title="How we fix the $15,600 leak"
+                    src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?rel=0`}
+                    title="How we automate the $15,600 manual leak"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
+                    loading="lazy"
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -105,8 +106,8 @@ export default function Home() {
                   </div>
                 )}
               </div>
-              <p className="text-gray-400 text-xs md:text-sm font-light">
-                Meet Victoria Francis, Founder & Lead Architect
+              <p className="text-gray-500 text-xs sm:text-sm font-light mt-2">
+                Watch: How we automate the $15,600 manual leak in 47 seconds.
               </p>
             </div>
           </FadeInOnScroll>
