@@ -28,6 +28,10 @@ import { ConvertKitForm } from './components/ConvertKitForm';
 import { SavingsCalculator } from './components/SavingsCalculator';
 import { PremiumBackground } from './components/PremiumBackground';
 
+// YouTube VSL: swap in your video ID once uploaded (from youtube.com/watch?v=VIDEO_ID)
+// Set via env: NEXT_PUBLIC_YOUTUBE_VIDEO_ID, or replace the string below.
+const YOUTUBE_VIDEO_ID = process.env.NEXT_PUBLIC_YOUTUBE_VIDEO_ID || 'lyn6o4UZrvA';
+
 export default function Home() {
   return (
     <main className="min-h-screen relative w-full max-w-full" style={{ overflowX: 'hidden' }}>
@@ -83,23 +87,23 @@ export default function Home() {
               <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-8 leading-tight">
                 Watch how we fix the $15,600 leak in 60 seconds.
               </h3>
-              <div className="relative aspect-video rounded-xl overflow-hidden border-2 border-cyan-500/30 shadow-2xl shadow-cyan-500/20 bg-gray-900/50">
-                {/* Video placeholder - replace with actual video embed */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-4">
-                    <Video className="w-16 h-16 text-cyan-400 mx-auto opacity-50" />
-                    <p className="text-gray-400 text-sm">Video coming soon</p>
+              <div className="relative aspect-video w-full rounded-xl overflow-hidden border-2 border-cyan-500/30 shadow-2xl shadow-cyan-500/20 bg-gray-900/50">
+                {YOUTUBE_VIDEO_ID ? (
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}`}
+                    title="How we fix the $15,600 leak"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center space-y-4">
+                      <Video className="w-16 h-16 text-cyan-400 mx-auto opacity-50" />
+                      <p className="text-gray-400 text-sm">Add your YouTube Video ID to show your VSL</p>
+                    </div>
                   </div>
-                </div>
-                {/* Uncomment and add your video embed when ready:
-                <iframe
-                  className="w-full h-full"
-                  src="YOUR_VIDEO_EMBED_URL"
-                  title="How we fix the $15,600 leak"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-                */}
+                )}
               </div>
               <p className="text-gray-400 text-sm font-light italic">
                 Meet Victoria Francis, Founder & Lead Architect
