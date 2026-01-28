@@ -79,15 +79,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Video Section - focused feature card: compact, centered, premium asset */}
-      <section className="px-6 sm:px-8 md:px-12 lg:px-16 py-10 sm:py-12 md:py-16 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
-        <div className="w-full max-w-2xl mx-auto">
+      {/* Video Section - Ecomflow-style feature card: 600px max, centered */}
+      <section className="flex flex-col items-center justify-center px-6 sm:px-8 md:px-12 lg:px-16 py-10 sm:py-12 md:py-16 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
+        <div className="w-full max-w-2xl mx-auto flex flex-col items-center">
           <FadeInOnScroll>
-            <div className="text-center space-y-3 sm:space-y-4">
+            <div className="text-center space-y-3 sm:space-y-4 flex flex-col items-center">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6 leading-tight">
                 Watch how we fix the $15,600 leak in 60 seconds.
               </h3>
-              <div className="relative aspect-video w-full max-w-xl mx-auto rounded-2xl shadow-2xl overflow-hidden">
+              <div className="w-full max-w-[600px] mx-auto aspect-video rounded-2xl shadow-2xl border border-gray-700 overflow-hidden relative z-10">
                 {YOUTUBE_VIDEO_ID ? (
                   <iframe
                     className="absolute inset-0 w-full h-full"
@@ -106,7 +106,7 @@ export default function Home() {
                   </div>
                 )}
               </div>
-              <p className="text-gray-500 text-xs sm:text-sm font-light mt-2">
+              <p className="text-sm text-gray-400 mt-2">
                 Watch: How we automate the $15,600 manual leak in 47 seconds.
               </p>
             </div>
