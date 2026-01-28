@@ -216,7 +216,9 @@ a.premium-button {
     font-size: 2rem !important;
   }
 }
-  
+
+/* Mobile-specific font sizes */
+@media (max-width: 640px) {
   /* All section headings */
   section h2 {
     font-size: 2rem !important;
