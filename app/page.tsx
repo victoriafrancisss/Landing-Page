@@ -48,7 +48,7 @@ export default function Home() {
           <div className="text-center space-y-6">
             <FadeInOnScroll delay={100}>
               <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6">
-                I recover 500+ hours of manual labor waste for small-to-mid sized businesses and solopreneurs.
+                We recover 500+ hours of manual labor waste for small-to-mid sized businesses and solopreneurs.
               </h1>
             </FadeInOnScroll>
             <FadeInOnScroll delay={200}>
@@ -70,6 +70,40 @@ export default function Home() {
               </div>
             </FadeInOnScroll>
           </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="px-6 py-16 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
+        <div className="container mx-auto max-w-4xl">
+          <FadeInOnScroll>
+            <div className="text-center space-y-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                Watch how we fix the $15,600 leak in 60 seconds.
+              </h3>
+              <div className="relative aspect-video rounded-xl overflow-hidden border-2 border-cyan-500/30 shadow-2xl shadow-cyan-500/20 bg-gray-900/50">
+                {/* Video placeholder - replace with actual video embed */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center space-y-4">
+                    <Video className="w-16 h-16 text-cyan-400 mx-auto opacity-50" />
+                    <p className="text-gray-400 text-sm">Video coming soon</p>
+                  </div>
+                </div>
+                {/* Uncomment and add your video embed when ready:
+                <iframe
+                  className="w-full h-full"
+                  src="YOUR_VIDEO_EMBED_URL"
+                  title="How we fix the $15,600 leak"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+                */}
+              </div>
+              <p className="text-gray-400 text-sm font-light italic">
+                Meet Victoria Francis, Founder & Lead Architect
+              </p>
+            </div>
+          </FadeInOnScroll>
         </div>
       </section>
 
@@ -102,10 +136,7 @@ export default function Home() {
                 </div>
                 <div className="space-y-5 text-gray-300 leading-relaxed">
                   <p className="text-lg md:text-xl font-light">
-                    I'm <span className="text-white font-semibold">Victoria Francis</span>, an AI-native automation specialist.
-                  </p>
-                  <p className="text-base md:text-lg font-light">
-                    I help business owners reclaim their time and sanity by replacing manual data entry with self-healing Python pipelines.
+                    I don't just run the agency; I write the code. I started BoldScale because I saw brilliant finance teams burning out on Excel work that a script could do in minutes.
                   </p>
                   <p className="text-base md:text-lg font-light">
                     When you work with BoldScale Solutions, your project gets <span className="text-cyan-400 font-semibold">100% of our focus</span>—no middleman, just results.
@@ -161,7 +192,7 @@ export default function Home() {
                   <span className="text-3xl font-bold text-cyan-400">3</span>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-200 transition-colors">
-                  You recover 70% of your work week.
+                  We recover 70% of your work week.
                 </h3>
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
                   Your team gets back hundreds of hours per year to focus on high-value work.
@@ -244,7 +275,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Transform Your <span className="text-cyan-400">Performance</span>
             </h2>
-            <p className="text-xl text-gray-400">Python automation that eliminates bottlenecks and maximizes efficiency</p>
+            <p className="text-xl text-gray-400">We replace fragile VBA macros with robust Python pipelines</p>
           </div>
           
           {/* Bold 1,800x Callout */}
@@ -320,7 +351,7 @@ export default function Home() {
                 </div>
                 
                 <h4 className="text-xl md:text-2xl font-bold text-white mb-5 leading-snug tracking-tight group-hover:text-cyan-200 transition-colors">
-                  How I Reduced Manual Financial Reconciliation Time by <span className="text-cyan-400">70%</span> for a Fintech Startup
+                  How We Reduced Manual Financial Reconciliation Time by <span className="text-cyan-400">70%</span> for a Fintech Startup
                 </h4>
 
                 <p className="text-gray-400 mb-7 text-sm leading-relaxed font-light">
@@ -669,8 +700,8 @@ export default function Home() {
               <div className="glass-effect-premium border border-blue-500/30 rounded-xl p-8 text-center interactive-card hover:border-blue-500/60 group cursor-pointer">
                 <Target className="w-12 h-12 text-blue-400 mx-auto mb-4 group-hover:scale-110 group-hover:text-blue-300 transition-all duration-300" />
                 <h3 className="text-lg font-bold text-white mb-3 group-hover:text-blue-200 transition-colors tracking-tight">Maximize Profitability</h3>
-                <p className="text-gray-400 group-hover:text-gray-300 transition-colors text-sm font-light leading-relaxed">
-                  Every automation is engineered to deliver measurable ROI. We don't just automate—we transform your bottom line.
+                  <p className="text-gray-400 group-hover:text-gray-300 transition-colors text-sm font-light leading-relaxed">
+                  We engineer every automation to deliver measurable ROI. We don't just automate—we transform your bottom line.
                 </p>
               </div>
             </FadeInOnScroll>
@@ -680,7 +711,7 @@ export default function Home() {
                 <Shield className="w-12 h-12 text-blue-400 mx-auto mb-4 group-hover:scale-110 group-hover:text-blue-300 transition-all duration-300" />
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-200 transition-colors">Eliminate Technical Debt</h3>
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
-                  Production-grade code that scales. Zero shortcuts. Zero legacy baggage. Just results that compound.
+                  I write production-grade code that scales. Zero shortcuts. Zero legacy baggage. Just results that compound.
                 </p>
               </div>
             </FadeInOnScroll>
@@ -690,7 +721,7 @@ export default function Home() {
                 <BarChart3 className="w-12 h-12 text-blue-400 mx-auto mb-4 group-hover:scale-110 group-hover:text-blue-300 transition-all duration-300" />
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-200 transition-colors">Transform Workflows</h3>
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
-                  Industry-agnostic automation that eliminates waste and maximizes efficiency. Built to scale with your growth.
+                  We deliver industry-agnostic automation that eliminates waste and maximizes efficiency. I build it to scale with your growth.
                 </p>
               </div>
             </FadeInOnScroll>
@@ -702,7 +733,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-white">The 5-Hour Recovery Guarantee</h3>
             </div>
             <p className="text-gray-300 text-lg">
-              If we don't recover at least 5 hours of your team's week in the first 14 days, I work for free until we do.
+              If we don't recover at least 5 hours of your team's week in the first 14 days, we work for free until we do.
             </p>
           </div>
         </div>
@@ -751,7 +782,7 @@ export default function Home() {
                   Stop the <span className="text-red-400">$15,600</span> Leak
                 </h2>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  Get the <span className="text-cyan-400 font-medium">10-Point Automation Audit</span> I use to recover 12+ hours a week for finance teams.
+                  Get the <span className="text-cyan-400 font-medium">10-Point Automation Audit</span> I use to identify where finance teams lose 12+ hours a week.
                 </p>
               </div>
             </div>
