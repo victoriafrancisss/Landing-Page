@@ -48,7 +48,7 @@ export default function Home() {
           <div className="text-center space-y-6">
             <FadeInOnScroll delay={100}>
               <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6">
-                I recover 500+ hours of manual labor waste for Fintech teams.
+                I recover 500+ hours of manual labor waste for small-to-mid sized businesses and solopreneurs.
               </h1>
             </FadeInOnScroll>
             <FadeInOnScroll delay={200}>
