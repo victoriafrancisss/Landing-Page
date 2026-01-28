@@ -77,16 +77,13 @@ html {
   box-sizing: border-box;
 }
 
-/* CRITICAL: Force word breaking on ALL text to prevent horizontal overflow */
+/* Prevent horizontal overflow while allowing natural word wrapping */
 * {
-  word-wrap: break-word !important;
-  overflow-wrap: break-word !important;
-  word-break: break-word !important;
   max-width: 100% !important;
 }
 
 /* Ensure all containers respect viewport width */
-html, body, main, section, article, header, footer, div {
+html, body, main, section, article, header, footer {
   max-width: 100vw !important;
   overflow-x: hidden !important;
   width: 100% !important;
@@ -98,13 +95,73 @@ html, body, main, section, article, header, footer, div {
   max-width: 100% !important;
 }
 
-/* Force text elements to wrap */
-p, h1, h2, h3, h4, h5, h6, span, a, li, td, th {
-  word-wrap: break-word !important;
-  overflow-wrap: break-word !important;
-  word-break: break-word !important;
-  hyphens: auto;
-  white-space: normal !important;
+/* Natural word wrapping - only break when absolutely necessary */
+p, h1, h2, h3, h4, h5, h6, span, a, li, td, th, div {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  /* Only break words if they're too long - don't break normal words */
+  word-break: normal;
+  hyphens: manual;
+  white-space: normal;
+}
+
+/* Force larger mobile font sizes - override Tailwind defaults */
+@media (max-width: 640px) {
+  /* Hero headline - much larger on mobile */
+  main > section:first-of-type h1,
+  main section.relative:first-of-type h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.1 !important;
+    font-weight: 800 !important;
+  }
+  
+  /* Hero subheadline */
+  main > section:first-of-type p,
+  main section.relative:first-of-type p {
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+  }
+  
+  /* All section headings */
+  section h2 {
+    font-size: 2rem !important;
+    font-weight: 800 !important;
+  }
+  
+  /* All h3 headings */
+  section h3 {
+    font-size: 1.75rem !important;
+    font-weight: 700 !important;
+  }
+  
+  /* Banner text */
+  .sticky.top-0 span,
+  div.sticky.top-0 span {
+    font-size: 0.875rem !important;
+    font-weight: 700 !important;
+  }
+  
+  /* Buttons */
+  .premium-button,
+  a.premium-button {
+    font-size: 1rem !important;
+    padding: 1rem 2rem !important;
+    font-weight: 700 !important;
+  }
+  
+  /* Meet Victoria section text */
+  section p.text-base {
+    font-size: 1rem !important;
+  }
+  
+  /* Step cards */
+  .glass-effect-premium h3 {
+    font-size: 1.5rem !important;
+  }
+  
+  .glass-effect-premium p {
+    font-size: 1rem !important;
+  }
 }
 
 @layer utilities {
