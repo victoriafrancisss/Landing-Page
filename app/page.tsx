@@ -40,7 +40,7 @@ export default function Home() {
       <div className="sticky top-0 z-50 bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 text-white py-3 sm:py-3.5 md:py-4 px-4 sm:px-5 md:px-6 text-center font-bold text-sm sm:text-base md:text-lg lg:text-xl shadow-lg">
         <div className="w-full max-w-6xl mx-auto flex items-center justify-center gap-1.5 sm:gap-2 flex-wrap px-2">
           <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 animate-pulse flex-shrink-0" />
-          <span className="text-center">Beta Launch: Only 2 spots remaining for a full Workflow Audit</span>
+          <span className="text-center">Beta Launch: Limited spots this quarter for a full Workflow Audit</span>
           <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 animate-pulse flex-shrink-0" />
         </div>
       </div>
@@ -52,13 +52,18 @@ export default function Home() {
           <div className="text-center space-y-6 sm:space-y-8 md:space-y-10">
             <FadeInOnScroll delay={100}>
               <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold text-white leading-[1.1] tracking-tight mb-4 sm:mb-5 md:mb-6" style={{ fontSize: 'clamp(2.5rem, 8vw, 4.5rem)' }}>
-                <span className="block">We recover 500+ hours of manual labor waste</span>
+                <span className="block">We recover 500+ hours of manual labor waste </span>
                 <span className="block">for small-to-mid sized businesses and <span className="whitespace-nowrap">solopreneurs.</span></span>
               </h1>
             </FadeInOnScroll>
             <FadeInOnScroll delay={200}>
               <p className="text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium" style={{ fontSize: 'clamp(1.25rem, 4vw, 1.75rem)' }}>
                 Turning 12-hour manual nightmares into 15-minute Python runs.
+              </p>
+            </FadeInOnScroll>
+            <FadeInOnScroll delay={250}>
+              <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto">
+                Built for finance teams, ops managers, and founders who run their own books.
               </p>
             </FadeInOnScroll>
             <FadeInOnScroll delay={300}>
@@ -239,6 +244,7 @@ export default function Home() {
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6 leading-tight">
                 Watch how we fix the $15,600 leak in 60 seconds.
               </h3>
+              <p className="text-sm text-gray-400 mb-2">Watch the demo below.</p>
               <div className="w-full max-w-[600px] mx-auto aspect-video rounded-2xl shadow-2xl border border-gray-700 overflow-hidden relative z-10">
                 {YOUTUBE_VIDEO_ID ? (
                   <iframe
@@ -259,7 +265,7 @@ export default function Home() {
                 )}
               </div>
               <p className="text-sm text-gray-400 mt-2">
-                Watch: How we automate the $15,600 manual leak in 47 seconds.
+                Watch: How we automate the $15,600 manual leak in 60 seconds.
               </p>
             </div>
           </FadeInOnScroll>
@@ -270,6 +276,7 @@ export default function Home() {
       <section className="px-6 py-20 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
         <div className="container mx-auto max-w-4xl">
           <FadeInOnScroll>
+            <p className="text-center text-gray-400 text-sm md:text-base mb-6">See your number — adjust the inputs below.</p>
             <SavingsCalculator />
           </FadeInOnScroll>
         </div>
@@ -523,6 +530,44 @@ export default function Home() {
             </FadeInOnScroll>
           </div>
 
+          {/* Second row: 2 more case studies (placeholder — replace with real stories when available) */}
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <FadeInOnScroll delay={150}>
+              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8 lg:p-10 interactive-card hover:border-cyan-500/60 group pb-8 md:pb-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <Code className="w-8 h-8 text-cyan-400" />
+                  <h3 className="text-2xl font-bold text-white">Case Study</h3>
+                </div>
+                <h4 className="text-xl md:text-2xl font-bold text-white mb-5 leading-snug tracking-tight group-hover:text-cyan-200 transition-colors">
+                  How We Cut <span className="text-cyan-400">Reporting Time by 80%</span> for an Ops Team
+                </h4>
+                <p className="text-gray-400 mb-6 text-sm leading-relaxed font-light">
+                  Weekly reporting used to take 8+ hours of manual data pulls and Excel assembly. We built a Python pipeline that runs on a schedule and delivers the same report in under an hour.
+                </p>
+                <div className="p-4 rounded-lg bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border-2 border-cyan-500/50">
+                  <p className="text-sm text-cyan-300 font-semibold">80% time saved · 10+ hours recovered per week</p>
+                </div>
+              </div>
+            </FadeInOnScroll>
+            <FadeInOnScroll delay={200}>
+              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8 lg:p-10 interactive-card hover:border-cyan-500/60 group pb-8 md:pb-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <Code className="w-8 h-8 text-cyan-400" />
+                  <h3 className="text-2xl font-bold text-white">Case Study</h3>
+                </div>
+                <h4 className="text-xl md:text-2xl font-bold text-white mb-5 leading-snug tracking-tight group-hover:text-cyan-200 transition-colors">
+                  How We Automated <span className="text-cyan-400">Books & Reconciliation</span> for a Founder
+                </h4>
+                <p className="text-gray-400 mb-6 text-sm leading-relaxed font-light">
+                  A solopreneur was spending 6+ hours a week on bookkeeping and bank reconciliation. We built a custom automation that syncs, matches, and reports—freeing those hours for client work.
+                </p>
+                <div className="p-4 rounded-lg bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border-2 border-cyan-500/50">
+                  <p className="text-sm text-cyan-300 font-semibold">6+ hours/week recovered · Zero manual errors</p>
+                </div>
+              </div>
+            </FadeInOnScroll>
+          </div>
+
           {/* GitHub Button */}
           <FadeInOnScroll delay={200}>
             <div className="text-center">
@@ -700,6 +745,30 @@ export default function Home() {
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight">
               Why <span className="text-blue-400">Trust</span> Our Automation
             </h2>
+          </div>
+
+          {/* What clients say — placeholder quotes (replace with real testimonials when available) */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
+            <FadeInOnScroll delay={0}>
+              <blockquote className="glass-effect-premium border border-blue-500/30 rounded-xl p-6 md:p-8 text-left">
+                <p className="text-lg md:text-xl text-gray-200 italic mb-4 leading-relaxed">
+                  &ldquo;Saved us 10+ hours a week. The automation just runs—we get our report every Monday without touching Excel.&rdquo;
+                </p>
+                <footer className="text-sm text-gray-400">
+                  — Name, Title, Company type
+                </footer>
+              </blockquote>
+            </FadeInOnScroll>
+            <FadeInOnScroll delay={100}>
+              <blockquote className="glass-effect-premium border border-blue-500/30 rounded-xl p-6 md:p-8 text-left">
+                <p className="text-lg md:text-xl text-gray-200 italic mb-4 leading-relaxed">
+                  &ldquo;Accuracy went from 95% to 100%. No more weekend reconciliation—we have peace of mind and our time back.&rdquo;
+                </p>
+                <footer className="text-sm text-gray-400">
+                  — Name, Title, Company type
+                </footer>
+              </blockquote>
+            </FadeInOnScroll>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
