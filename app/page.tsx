@@ -30,7 +30,7 @@ import { PremiumBackground } from './components/PremiumBackground';
 
 // YouTube VSL: swap in your video ID once uploaded (from youtube.com/watch?v=VIDEO_ID)
 // Set via env: NEXT_PUBLIC_YOUTUBE_VIDEO_ID, or replace the string below.
-const YOUTUBE_VIDEO_ID = process.env.NEXT_PUBLIC_YOUTUBE_VIDEO_ID || 'lyn6o4UZrvA';
+const YOUTUBE_VIDEO_ID = process.env.NEXT_PUBLIC_YOUTUBE_VIDEO_ID || 'WpmjuLzuEcA';
 
 export default function Home() {
   return (
