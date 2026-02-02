@@ -264,9 +264,6 @@ export default function Home() {
                   </div>
                 )}
               </div>
-              <p className="text-sm text-gray-400 mt-2">
-                Watch: How we automate the $15,600 manual leak in 60 seconds.
-              </p>
             </div>
           </FadeInOnScroll>
         </div>
@@ -530,44 +527,6 @@ export default function Home() {
             </FadeInOnScroll>
           </div>
 
-          {/* Second row: 2 more case studies (placeholder — replace with real stories when available) */}
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <FadeInOnScroll delay={150}>
-              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8 lg:p-10 interactive-card hover:border-cyan-500/60 group pb-8 md:pb-10">
-                <div className="flex items-center gap-3 mb-6">
-                  <Code className="w-8 h-8 text-cyan-400" />
-                  <h3 className="text-2xl font-bold text-white">Case Study</h3>
-                </div>
-                <h4 className="text-xl md:text-2xl font-bold text-white mb-5 leading-snug tracking-tight group-hover:text-cyan-200 transition-colors">
-                  How We Cut <span className="text-cyan-400">Reporting Time by 80%</span> for an Ops Team
-                </h4>
-                <p className="text-gray-400 mb-6 text-sm leading-relaxed font-light">
-                  Weekly reporting used to take 8+ hours of manual data pulls and Excel assembly. We built a Python pipeline that runs on a schedule and delivers the same report in under an hour.
-                </p>
-                <div className="p-4 rounded-lg bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border-2 border-cyan-500/50">
-                  <p className="text-sm text-cyan-300 font-semibold">80% time saved · 10+ hours recovered per week</p>
-                </div>
-              </div>
-            </FadeInOnScroll>
-            <FadeInOnScroll delay={200}>
-              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8 lg:p-10 interactive-card hover:border-cyan-500/60 group pb-8 md:pb-10">
-                <div className="flex items-center gap-3 mb-6">
-                  <Code className="w-8 h-8 text-cyan-400" />
-                  <h3 className="text-2xl font-bold text-white">Case Study</h3>
-                </div>
-                <h4 className="text-xl md:text-2xl font-bold text-white mb-5 leading-snug tracking-tight group-hover:text-cyan-200 transition-colors">
-                  How We Automated <span className="text-cyan-400">Books & Reconciliation</span> for a Founder
-                </h4>
-                <p className="text-gray-400 mb-6 text-sm leading-relaxed font-light">
-                  A solopreneur was spending 6+ hours a week on bookkeeping and bank reconciliation. We built a custom automation that syncs, matches, and reports—freeing those hours for client work.
-                </p>
-                <div className="p-4 rounded-lg bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border-2 border-cyan-500/50">
-                  <p className="text-sm text-cyan-300 font-semibold">6+ hours/week recovered · Zero manual errors</p>
-                </div>
-              </div>
-            </FadeInOnScroll>
-          </div>
-
           {/* GitHub Button */}
           <FadeInOnScroll delay={200}>
             <div className="text-center">
@@ -745,30 +704,6 @@ export default function Home() {
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight">
               Why <span className="text-blue-400">Trust</span> Our Automation
             </h2>
-          </div>
-
-          {/* What clients say — placeholder quotes (replace with real testimonials when available) */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
-            <FadeInOnScroll delay={0}>
-              <blockquote className="glass-effect-premium border border-blue-500/30 rounded-xl p-6 md:p-8 text-left">
-                <p className="text-lg md:text-xl text-gray-200 italic mb-4 leading-relaxed">
-                  &ldquo;Saved us 10+ hours a week. The automation just runs—we get our report every Monday without touching Excel.&rdquo;
-                </p>
-                <footer className="text-sm text-gray-400">
-                  — Name, Title, Company type
-                </footer>
-              </blockquote>
-            </FadeInOnScroll>
-            <FadeInOnScroll delay={100}>
-              <blockquote className="glass-effect-premium border border-blue-500/30 rounded-xl p-6 md:p-8 text-left">
-                <p className="text-lg md:text-xl text-gray-200 italic mb-4 leading-relaxed">
-                  &ldquo;Accuracy went from 95% to 100%. No more weekend reconciliation—we have peace of mind and our time back.&rdquo;
-                </p>
-                <footer className="text-sm text-gray-400">
-                  — Name, Title, Company type
-                </footer>
-              </blockquote>
-            </FadeInOnScroll>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
