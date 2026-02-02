@@ -79,41 +79,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Video Section - Ecomflow-style feature card: 600px max, centered */}
-      <section className="flex flex-col items-center justify-center px-6 sm:px-8 md:px-12 lg:px-16 py-10 sm:py-12 md:py-16 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
-        <div className="w-full max-w-2xl mx-auto flex flex-col items-center">
-          <FadeInOnScroll>
-            <div className="text-center space-y-3 sm:space-y-4 flex flex-col items-center">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6 leading-tight">
-                Watch how we fix the $15,600 leak in 60 seconds.
-              </h3>
-              <div className="w-full max-w-[600px] mx-auto aspect-video rounded-2xl shadow-2xl border border-gray-700 overflow-hidden relative z-10">
-                {YOUTUBE_VIDEO_ID ? (
-                  <iframe
-                    className="absolute inset-0 w-full h-full"
-                    src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?rel=0`}
-                    title="How we automate the $15,600 manual leak"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center space-y-4">
-                      <Video className="w-16 h-16 text-cyan-400 mx-auto opacity-50" />
-                      <p className="text-gray-400 text-sm">Add your YouTube Video ID to show your VSL</p>
-                    </div>
-                  </div>
-                )}
-              </div>
-              <p className="text-sm text-gray-400 mt-2">
-                Watch: How we automate the $15,600 manual leak in 47 seconds.
-              </p>
-            </div>
-          </FadeInOnScroll>
-        </div>
-      </section>
-
       {/* Meet Victoria, Your Architect Section */}
       <section className="px-3 sm:px-4 md:px-6 py-20 sm:py-24 pb-32 md:pb-24 bg-gradient-to-b from-transparent via-gray-900/20 to-transparent">
         <div className="w-full max-w-6xl mx-auto px-2 sm:px-4">
@@ -263,6 +228,41 @@ export default function Home() {
               624 hours of productivity lost annually
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Video Section - intro / see it in action (placed after Pain so visitors are engaged) */}
+      <section className="flex flex-col items-center justify-center px-6 sm:px-8 md:px-12 lg:px-16 py-10 sm:py-12 md:py-16 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
+        <div className="w-full max-w-2xl mx-auto flex flex-col items-center">
+          <FadeInOnScroll>
+            <div className="text-center space-y-3 sm:space-y-4 flex flex-col items-center">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6 leading-tight">
+                Watch how we fix the $15,600 leak in 60 seconds.
+              </h3>
+              <div className="w-full max-w-[600px] mx-auto aspect-video rounded-2xl shadow-2xl border border-gray-700 overflow-hidden relative z-10">
+                {YOUTUBE_VIDEO_ID ? (
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?rel=0`}
+                    title="How we automate the $15,600 manual leak"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center space-y-4">
+                      <Video className="w-16 h-16 text-cyan-400 mx-auto opacity-50" />
+                      <p className="text-gray-400 text-sm">Add your YouTube Video ID to show your VSL</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <p className="text-sm text-gray-400 mt-2">
+                Watch: How we automate the $15,600 manual leak in 47 seconds.
+              </p>
+            </div>
+          </FadeInOnScroll>
         </div>
       </section>
 
