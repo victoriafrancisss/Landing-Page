@@ -40,33 +40,28 @@ export function FAQAccordion({ items = defaultItems }: { items?: FAQItem[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="space-y-0 rounded-xl border border-cyan-500/30 overflow-hidden bg-gray-900/40">
+    <div className="divide-y divide-gray-700/50">
       {items.map((item, index) => {
         const isOpen = openIndex === index;
         return (
-          <div
-            key={index}
-            className="border-b border-cyan-500/20 last:border-b-0"
-          >
+          <div key={index}>
             <button
               type="button"
               onClick={() => setOpenIndex(isOpen ? null : index)}
-              className="w-full flex items-center justify-between gap-3 py-3 px-4 text-left hover:bg-gray-800/40 transition-colors"
+              className="w-full flex items-center justify-between gap-2 py-2.5 px-0 text-left text-gray-200 hover:text-white transition-colors"
               aria-expanded={isOpen}
             >
-              <span className="text-sm font-semibold text-white pr-2">
+              <span className="text-sm font-medium pr-2">
                 {item.question}
               </span>
               <ChevronDown
-                className={`w-4 h-4 text-cyan-400 flex-shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                className={`w-3.5 h-3.5 text-gray-500 flex-shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`}
               />
             </button>
             {isOpen && (
-              <div className="px-4 pb-3 pt-0">
-                <p className="text-sm text-gray-300 leading-relaxed">
-                  {item.answer}
-                </p>
-              </div>
+              <p className="text-sm text-gray-400 leading-relaxed pb-2.5 pt-0">
+                {item.answer}
+              </p>
             )}
           </div>
         );

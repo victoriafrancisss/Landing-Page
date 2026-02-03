@@ -774,21 +774,21 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8 text-center tracking-tight">
               Is this right for you?
             </h2>
-            <ul className="space-y-4 max-w-2xl mx-auto text-center flex flex-col items-center">
-              <li className="flex items-center justify-center gap-3 text-gray-200">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+            <ul className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-center max-w-4xl mx-auto">
+              <li className="flex items-center gap-2 text-gray-200 whitespace-nowrap">
+                <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <span>You use Excel or Google Sheets daily</span>
               </li>
-              <li className="flex items-center justify-center gap-3 text-gray-200">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+              <li className="flex items-center gap-2 text-gray-200 whitespace-nowrap">
+                <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <span>Someone manually copies data between systems</span>
               </li>
-              <li className="flex items-center justify-center gap-3 text-gray-200">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+              <li className="flex items-center gap-2 text-gray-200 whitespace-nowrap">
+                <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <span>Errors or delays cost you time or money</span>
               </li>
-              <li className="flex items-center justify-center gap-3 text-gray-200">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+              <li className="flex items-center gap-2 text-gray-200 whitespace-nowrap">
+                <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <span>You want to scale without hiring more staff</span>
               </li>
             </ul>
@@ -803,21 +803,21 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8 text-center tracking-tight">
               What we usually find in the audit
             </h2>
-            <ul className="space-y-4 max-w-2xl mx-auto flex flex-col items-center text-center">
-              <li className="flex items-center justify-center gap-3 text-gray-200">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+            <ul className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-center max-w-4xl mx-auto">
+              <li className="flex items-center gap-2 text-gray-200 whitespace-nowrap">
+                <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <span>Duplicate data entry across tools</span>
               </li>
-              <li className="flex items-center justify-center gap-3 text-gray-200">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+              <li className="flex items-center gap-2 text-gray-200 whitespace-nowrap">
+                <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <span>Manual reconciliations that can be automated</span>
               </li>
-              <li className="flex items-center justify-center gap-3 text-gray-200">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+              <li className="flex items-center gap-2 text-gray-200 whitespace-nowrap">
+                <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <span>Reporting delays caused by spreadsheet structure</span>
               </li>
-              <li className="flex items-center justify-center gap-3 text-gray-200">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+              <li className="flex items-center gap-2 text-gray-200 whitespace-nowrap">
+                <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <span>High-risk error points</span>
               </li>
             </ul>
