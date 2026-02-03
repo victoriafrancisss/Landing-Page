@@ -27,6 +27,7 @@ import { FadeInOnScroll, AnimatedCounter } from './components/InteractiveElement
 import { ConvertKitForm } from './components/ConvertKitForm';
 import { SavingsCalculator } from './components/SavingsCalculator';
 import { PremiumBackground } from './components/PremiumBackground';
+import { FAQAccordion } from './components/FAQAccordion';
 
 // YouTube VSL: swap in your video ID once uploaded (from youtube.com/watch?v=VIDEO_ID)
 // Set via env: NEXT_PUBLIC_YOUTUBE_VIDEO_ID, or replace the string below.
@@ -65,7 +66,7 @@ export default function Home() {
               <div className="max-w-2xl mx-auto space-y-4 pt-4 sm:pt-6 md:pt-8">
                 <p className="text-sm sm:text-base text-gray-300">
                   <span className="font-semibold text-gray-200">Example automation:</span>{' '}
-                  Automatically sync Shopify + Amazon sales into a clean Excel report every morning—no manual downloads, no copy-paste, no errors.
+                  <span className="text-gray-400 font-normal">Automatically sync Shopify + Amazon sales into a clean Excel report every morning—no manual downloads, no copy-paste, no errors.</span>
                 </p>
                 <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 md:gap-4 justify-center items-center">
                   <a
@@ -80,16 +81,16 @@ export default function Home() {
                   </a>
                 </div>
                 <p className="text-sm text-gray-400 pt-2">In 15 minutes, you&apos;ll know:</p>
-                <ul className="text-sm text-gray-400 space-y-1 list-none text-center sm:text-left max-w-md mx-auto sm:mx-0">
-                  <li className="flex items-center justify-center sm:justify-start gap-2">
+                <ul className="text-sm text-gray-400 list-none flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-center">
+                  <li className="flex items-center gap-2 whitespace-nowrap">
                     <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                     Which spreadsheet task to automate first
                   </li>
-                  <li className="flex items-center justify-center sm:justify-start gap-2">
+                  <li className="flex items-center gap-2 whitespace-nowrap">
                     <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                     How many hours it saves per month
                   </li>
-                  <li className="flex items-center justify-center sm:justify-start gap-2">
+                  <li className="flex items-center gap-2 whitespace-nowrap">
                     <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                     Whether automation is worth it for you
                   </li>
@@ -770,25 +771,24 @@ export default function Home() {
       <section className="px-6 py-24 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
         <div className="container mx-auto max-w-4xl">
           <FadeInOnScroll>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 text-center tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8 text-center tracking-tight">
               Is this right for you?
             </h2>
-            <p className="text-gray-400 text-center mb-8 text-sm">This helps you self-qualify.</p>
-            <ul className="space-y-4 max-w-2xl mx-auto">
-              <li className="flex items-start gap-3 text-gray-200">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+            <ul className="space-y-4 max-w-2xl mx-auto text-center flex flex-col items-center">
+              <li className="flex items-center justify-center gap-3 text-gray-200">
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                 <span>You use Excel or Google Sheets daily</span>
               </li>
-              <li className="flex items-start gap-3 text-gray-200">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+              <li className="flex items-center justify-center gap-3 text-gray-200">
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                 <span>Someone manually copies data between systems</span>
               </li>
-              <li className="flex items-start gap-3 text-gray-200">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+              <li className="flex items-center justify-center gap-3 text-gray-200">
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                 <span>Errors or delays cost you time or money</span>
               </li>
-              <li className="flex items-start gap-3 text-gray-200">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+              <li className="flex items-center justify-center gap-3 text-gray-200">
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                 <span>You want to scale without hiring more staff</span>
               </li>
             </ul>
@@ -803,21 +803,21 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8 text-center tracking-tight">
               What we usually find in the audit
             </h2>
-            <ul className="space-y-4 max-w-2xl mx-auto">
-              <li className="flex items-start gap-3 text-gray-200">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+            <ul className="space-y-4 max-w-2xl mx-auto flex flex-col items-center text-center">
+              <li className="flex items-center justify-center gap-3 text-gray-200">
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                 <span>Duplicate data entry across tools</span>
               </li>
-              <li className="flex items-start gap-3 text-gray-200">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+              <li className="flex items-center justify-center gap-3 text-gray-200">
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                 <span>Manual reconciliations that can be automated</span>
               </li>
-              <li className="flex items-start gap-3 text-gray-200">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+              <li className="flex items-center justify-center gap-3 text-gray-200">
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                 <span>Reporting delays caused by spreadsheet structure</span>
               </li>
-              <li className="flex items-start gap-3 text-gray-200">
-                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+              <li className="flex items-center justify-center gap-3 text-gray-200">
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                 <span>High-risk error points</span>
               </li>
             </ul>
@@ -828,67 +828,10 @@ export default function Home() {
       {/* FAQs */}
       <section className="px-6 py-24 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-12 text-center tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8 text-center tracking-tight">
             Frequently asked questions
           </h2>
-          <div className="space-y-6">
-            <FadeInOnScroll delay={0}>
-              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8">
-                <h3 className="text-lg font-bold text-white mb-3">Do we need to change our tools or systems?</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  No. We work with the tools you already use—Excel, Google Sheets, Shopify, Amazon, accounting software, etc. The goal is to remove manual work, not force you into new platforms.
-                </p>
-              </div>
-            </FadeInOnScroll>
-            <FadeInOnScroll delay={50}>
-              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8">
-                <h3 className="text-lg font-bold text-white mb-3">Is this overkill for a small team?</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Most of our clients have 5–50 employees. If someone on your team is manually updating spreadsheets every week, automation usually pays for itself very quickly.
-                </p>
-              </div>
-            </FadeInOnScroll>
-            <FadeInOnScroll delay={100}>
-              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8">
-                <h3 className="text-lg font-bold text-white mb-3">How long does it take to see results?</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Simple automations are usually delivered within 5–7 days. You start saving time as soon as the workflow goes live.
-                </p>
-              </div>
-            </FadeInOnScroll>
-            <FadeInOnScroll delay={150}>
-              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8">
-                <h3 className="text-lg font-bold text-white mb-3">What if something breaks or the data changes?</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  We build in error handling and logging so issues are caught early. If a source changes or something fails, you&apos;ll know exactly what happened and why.
-                </p>
-              </div>
-            </FadeInOnScroll>
-            <FadeInOnScroll delay={200}>
-              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8">
-                <h3 className="text-lg font-bold text-white mb-3">Is our data secure?</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Yes. We follow best practices for handling credentials and sensitive data. Access is limited to what&apos;s required, and nothing is shared without your approval.
-                </p>
-              </div>
-            </FadeInOnScroll>
-            <FadeInOnScroll delay={250}>
-              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8">
-                <h3 className="text-lg font-bold text-white mb-3">What does this usually cost?</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Most single-workflow automations range from $500–$1,000, depending on complexity. During the free audit, we&apos;ll tell you exactly what&apos;s worth automating and what isn&apos;t.
-                </p>
-              </div>
-            </FadeInOnScroll>
-            <FadeInOnScroll delay={300}>
-              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8">
-                <h3 className="text-lg font-bold text-white mb-3">What if automation isn&apos;t a good fit for us?</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Then we&apos;ll tell you. The audit is designed to find clear wins—not to force a project that won&apos;t deliver value.
-                </p>
-              </div>
-            </FadeInOnScroll>
-          </div>
+          <FAQAccordion />
         </div>
       </section>
 
