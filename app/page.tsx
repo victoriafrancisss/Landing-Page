@@ -864,20 +864,6 @@ export default function Home() {
               </a>
             </div>
             <p className="text-xs sm:text-sm text-gray-400 mt-6 sm:mt-8 font-light">No commitment required <span className="hidden sm:inline">•</span><span className="sm:hidden"><br /></span> Results in 15 minutes</p>
-            <div className="mt-16 sm:mt-20 pt-12 sm:pt-14 border-t border-gray-700/50">
-              <p className="text-lg font-semibold text-white mb-2">Still have questions?</p>
-              <p className="text-gray-300 text-base mb-6">The free audit is the fastest way to see if automation makes sense for your business.</p>
-              <a
-                href="https://calendly.com/victoriafranciss/automation-discovery-call"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="premium-button inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold text-xs sm:text-sm md:text-base rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-xl shadow-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/70 relative z-10 tracking-tight"
-                style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}
-              >
-                <span className="relative z-10" style={{ whiteSpace: 'nowrap' }}>Get My Free Audit</span>
-                <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform flex-shrink-0" />
-              </a>
-            </div>
           </div>
         </div>
       </section>
