@@ -64,10 +64,6 @@ export default function Home() {
             </FadeInOnScroll>
             <FadeInOnScroll delay={300}>
               <div className="max-w-2xl mx-auto space-y-4 pt-4 sm:pt-6 md:pt-8">
-                <p className="text-sm sm:text-base text-gray-300">
-                  <span className="font-semibold text-gray-200">Example automation:</span>{' '}
-                  <span className="text-gray-400 font-normal">Automatically sync Shopify + Amazon sales into a clean Excel report every morning—no manual downloads, no copy-paste, no errors.</span>
-                </p>
                 <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 md:gap-4 justify-center items-center">
                   <a
                     href="https://calendly.com/victoriafranciss/automation-discovery-call"
@@ -194,6 +190,13 @@ export default function Home() {
               </div>
             </FadeInOnScroll>
           </div>
+
+          <FadeInOnScroll>
+            <p className="text-center max-w-2xl mx-auto mt-12 sm:mt-16 text-sm sm:text-base text-gray-300">
+              <span className="font-semibold text-gray-200">Example automation:</span>{' '}
+              <span className="text-gray-400 font-normal text-xs sm:text-sm">Automatically sync Shopify + Amazon sales into a clean Excel report every morning—no manual downloads, no copy-paste, no errors.</span>
+            </p>
+          </FadeInOnScroll>
         </div>
       </section>
 
@@ -861,7 +864,7 @@ export default function Home() {
               </a>
             </div>
             <p className="text-xs sm:text-sm text-gray-400 mt-6 sm:mt-8 font-light">No commitment required <span className="hidden sm:inline">•</span><span className="sm:hidden"><br /></span> Results in 15 minutes</p>
-            <div className="mt-12 pt-10 border-t border-gray-700/50">
+            <div className="mt-16 sm:mt-20 pt-12 sm:pt-14 border-t border-gray-700/50">
               <p className="text-lg font-semibold text-white mb-2">Still have questions?</p>
               <p className="text-gray-300 text-base mb-6">The free audit is the fastest way to see if automation makes sense for your business.</p>
               <a
