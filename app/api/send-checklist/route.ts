@@ -3,6 +3,19 @@ import { writeFile, readFile, mkdir } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'path';
 
+const EMAIL_MAX_LENGTH = 254;
+const COMPANY_NAME_MAX_LENGTH = 200;
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 // Store emails in a JSON file
 async function saveEmail(email: string, companyName?: string) {
   try {
@@ -121,9 +134,11 @@ async function addToGoogleSheets(email: string, companyName?: string) {
 
 export async function POST(request: NextRequest) {
   try {
-    const { email, companyName } = await request.json();
+    const body = await request.json();
+    const email = typeof body.email === 'string' ? body.email.trim() : '';
+    const companyName = typeof body.companyName === 'string' ? body.companyName.trim().slice(0, COMPANY_NAME_MAX_LENGTH) : undefined;
 
-    if (!email || !email.includes('@')) {
+    if (!email || email.length > EMAIL_MAX_LENGTH || !EMAIL_REGEX.test(email)) {
       return NextResponse.json(
         { error: 'Valid email is required' },
         { status: 400 }
@@ -153,8 +168,8 @@ export async function POST(request: NextRequest) {
           subject: 'New Lead - Automation Landing Page',
           html: `
             <h2>New Lead Submission</h2>
-            <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-            ${companyName ? `<p><strong>Company:</strong> ${companyName}</p>` : ''}
+            <p><strong>Email:</strong> <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></p>
+            ${companyName ? `<p><strong>Company:</strong> ${escapeHtml(companyName)}</p>` : ''}
             <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
             <p><strong>Action:</strong> They requested more information about automation services.</p>
             <hr>

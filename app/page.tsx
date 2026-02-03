@@ -52,32 +52,48 @@ export default function Home() {
           <div className="text-center space-y-6 sm:space-y-8 md:space-y-10">
             <FadeInOnScroll delay={100}>
               <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold text-white leading-[1.1] tracking-tight mb-4 sm:mb-5 md:mb-6" style={{ fontSize: 'clamp(2.5rem, 8vw, 4.5rem)' }}>
-                <span className="block">We recover 500+ hours of manual labor waste </span>
-                <span className="block">for small-to-mid sized businesses and <span className="whitespace-nowrap">solopreneurs.</span></span>
+                <span className="block">We recover 500+ hours of manual spreadsheet work</span>
+                <span className="block">for growing e-commerce and ops teams.</span>
               </h1>
             </FadeInOnScroll>
             <FadeInOnScroll delay={200}>
               <p className="text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium" style={{ fontSize: 'clamp(1.25rem, 4vw, 1.75rem)' }}>
-                Turning 12-hour manual nightmares into 15-minute Python runs.
-              </p>
-            </FadeInOnScroll>
-            <FadeInOnScroll delay={250}>
-              <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto">
-                Built for finance teams, ops managers, and founders who run their own books.
+                Turning 10–12 hour weekly Excel workflows into automated Python systems—without hiring or changing your tools.
               </p>
             </FadeInOnScroll>
             <FadeInOnScroll delay={300}>
-              <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 md:gap-4 justify-center items-center pt-4 sm:pt-6 md:pt-8">
-                <a
-                  href="https://calendly.com/victoriafranciss/automation-discovery-call"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="premium-button px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-sm sm:text-base md:text-lg rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-xl shadow-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/70 flex items-center gap-2 sm:gap-3 group transform hover:scale-105 active:scale-95 relative z-10 w-full sm:w-auto"
-                  style={{ whiteSpace: 'nowrap', minWidth: 'fit-content', maxWidth: '100%' }}
-                >
-                  <span style={{ whiteSpace: 'nowrap' }}>Get My Free Audit</span>
-                  <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
-                </a>
+              <div className="max-w-2xl mx-auto space-y-4 pt-4 sm:pt-6 md:pt-8">
+                <p className="text-sm sm:text-base text-gray-300">
+                  <span className="font-semibold text-gray-200">Example automation:</span>{' '}
+                  Automatically sync Shopify + Amazon sales into a clean Excel report every morning—no manual downloads, no copy-paste, no errors.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 md:gap-4 justify-center items-center">
+                  <a
+                    href="https://calendly.com/victoriafranciss/automation-discovery-call"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="premium-button px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-sm sm:text-base md:text-lg rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-xl shadow-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/70 flex items-center gap-2 sm:gap-3 group transform hover:scale-105 active:scale-95 relative z-10 w-full sm:w-auto"
+                    style={{ whiteSpace: 'nowrap', minWidth: 'fit-content', maxWidth: '100%' }}
+                  >
+                    <span style={{ whiteSpace: 'nowrap' }}>Get My Free Audit</span>
+                    <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                  </a>
+                </div>
+                <p className="text-sm text-gray-400 pt-2">In 15 minutes, you&apos;ll know:</p>
+                <ul className="text-sm text-gray-400 space-y-1 list-none text-center sm:text-left max-w-md mx-auto sm:mx-0">
+                  <li className="flex items-center justify-center sm:justify-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                    Which spreadsheet task to automate first
+                  </li>
+                  <li className="flex items-center justify-center sm:justify-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                    How many hours it saves per month
+                  </li>
+                  <li className="flex items-center justify-center sm:justify-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                    Whether automation is worth it for you
+                  </li>
+                </ul>
               </div>
             </FadeInOnScroll>
           </div>
@@ -113,10 +129,10 @@ export default function Home() {
                 </div>
                 <div className="space-y-4 sm:space-y-5 md:space-y-6 text-gray-200 leading-relaxed">
                   <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-normal">
-                    I don't just run the agency; I write the code. I started BoldScale because I saw brilliant finance teams burning out on Excel work that a script could do in minutes.
+                    I started BoldScale after watching finance and ops teams burn hours every week on Excel work that a script could handle automatically.
                   </p>
                   <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-normal">
-                    When you work with BoldScale Solutions, your project gets <span className="text-cyan-400 font-bold">100% of our focus</span>—no middleman, just results.
+                    When you work with me, you&apos;re not managing a junior analyst or a generic agency—you&apos;re working directly with the person building the automation.
                   </p>
                 </div>
               </div>
@@ -750,6 +766,132 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Is this right for you? */}
+      <section className="px-6 py-24 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
+        <div className="container mx-auto max-w-4xl">
+          <FadeInOnScroll>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 text-center tracking-tight">
+              Is this right for you?
+            </h2>
+            <p className="text-gray-400 text-center mb-8 text-sm">This helps you self-qualify.</p>
+            <ul className="space-y-4 max-w-2xl mx-auto">
+              <li className="flex items-start gap-3 text-gray-200">
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                <span>You use Excel or Google Sheets daily</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-200">
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                <span>Someone manually copies data between systems</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-200">
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                <span>Errors or delays cost you time or money</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-200">
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                <span>You want to scale without hiring more staff</span>
+              </li>
+            </ul>
+          </FadeInOnScroll>
+        </div>
+      </section>
+
+      {/* Audit Preview: What we usually find */}
+      <section className="px-6 py-24 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
+        <div className="container mx-auto max-w-4xl">
+          <FadeInOnScroll>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8 text-center tracking-tight">
+              What we usually find in the audit
+            </h2>
+            <ul className="space-y-4 max-w-2xl mx-auto">
+              <li className="flex items-start gap-3 text-gray-200">
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                <span>Duplicate data entry across tools</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-200">
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                <span>Manual reconciliations that can be automated</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-200">
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                <span>Reporting delays caused by spreadsheet structure</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-200">
+                <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                <span>High-risk error points</span>
+              </li>
+            </ul>
+          </FadeInOnScroll>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="px-6 py-24 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-12 text-center tracking-tight">
+            Frequently asked questions
+          </h2>
+          <div className="space-y-6">
+            <FadeInOnScroll delay={0}>
+              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8">
+                <h3 className="text-lg font-bold text-white mb-3">Do we need to change our tools or systems?</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  No. We work with the tools you already use—Excel, Google Sheets, Shopify, Amazon, accounting software, etc. The goal is to remove manual work, not force you into new platforms.
+                </p>
+              </div>
+            </FadeInOnScroll>
+            <FadeInOnScroll delay={50}>
+              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8">
+                <h3 className="text-lg font-bold text-white mb-3">Is this overkill for a small team?</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Most of our clients have 5–50 employees. If someone on your team is manually updating spreadsheets every week, automation usually pays for itself very quickly.
+                </p>
+              </div>
+            </FadeInOnScroll>
+            <FadeInOnScroll delay={100}>
+              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8">
+                <h3 className="text-lg font-bold text-white mb-3">How long does it take to see results?</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Simple automations are usually delivered within 5–7 days. You start saving time as soon as the workflow goes live.
+                </p>
+              </div>
+            </FadeInOnScroll>
+            <FadeInOnScroll delay={150}>
+              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8">
+                <h3 className="text-lg font-bold text-white mb-3">What if something breaks or the data changes?</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  We build in error handling and logging so issues are caught early. If a source changes or something fails, you&apos;ll know exactly what happened and why.
+                </p>
+              </div>
+            </FadeInOnScroll>
+            <FadeInOnScroll delay={200}>
+              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8">
+                <h3 className="text-lg font-bold text-white mb-3">Is our data secure?</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Yes. We follow best practices for handling credentials and sensitive data. Access is limited to what&apos;s required, and nothing is shared without your approval.
+                </p>
+              </div>
+            </FadeInOnScroll>
+            <FadeInOnScroll delay={250}>
+              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8">
+                <h3 className="text-lg font-bold text-white mb-3">What does this usually cost?</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Most single-workflow automations range from $500–$1,000, depending on complexity. During the free audit, we&apos;ll tell you exactly what&apos;s worth automating and what isn&apos;t.
+                </p>
+              </div>
+            </FadeInOnScroll>
+            <FadeInOnScroll delay={300}>
+              <div className="glass-effect-premium border border-cyan-500/30 rounded-xl p-6 md:p-8">
+                <h3 className="text-lg font-bold text-white mb-3">What if automation isn&apos;t a good fit for us?</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Then we&apos;ll tell you. The audit is designed to find clear wins—not to force a project that won&apos;t deliver value.
+                </p>
+              </div>
+            </FadeInOnScroll>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section id="audit" className="px-6 py-24 bg-gradient-to-br from-blue-900/30 via-cyan-900/30 to-purple-900/30">
         <div className="container mx-auto max-w-4xl">
@@ -776,6 +918,20 @@ export default function Home() {
               </a>
             </div>
             <p className="text-xs sm:text-sm text-gray-400 mt-6 sm:mt-8 font-light">No commitment required <span className="hidden sm:inline">•</span><span className="sm:hidden"><br /></span> Results in 15 minutes</p>
+            <div className="mt-12 pt-10 border-t border-gray-700/50">
+              <p className="text-lg font-semibold text-white mb-2">Still have questions?</p>
+              <p className="text-gray-300 text-base mb-6">The free audit is the fastest way to see if automation makes sense for your business.</p>
+              <a
+                href="https://calendly.com/victoriafranciss/automation-discovery-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="premium-button inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold text-xs sm:text-sm md:text-base rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-xl shadow-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/70 relative z-10 tracking-tight"
+                style={{ whiteSpace: 'nowrap', minWidth: 'fit-content' }}
+              >
+                <span className="relative z-10" style={{ whiteSpace: 'nowrap' }}>Get My Free Audit</span>
+                <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -797,6 +953,9 @@ export default function Home() {
                 </h2>
                 <p className="text-gray-300 text-lg leading-relaxed">
                   Get the <span className="text-cyan-400 font-medium">10-Point Automation Audit</span> I use to identify where finance teams lose 12+ hours a week.
+                </p>
+                <p className="text-gray-400 text-base leading-relaxed mt-2">
+                  See the full list of manual Excel tasks we can automate for you—from bank feed integration to one-click reporting.
                 </p>
               </div>
             </div>

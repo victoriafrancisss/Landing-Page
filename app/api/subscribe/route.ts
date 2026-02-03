@@ -1,10 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+const EMAIL_MAX_LENGTH = 254;
+const COMPANY_NAME_MAX_LENGTH = 200;
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export async function POST(request: NextRequest) {
   try {
-    const { email, companyName } = await request.json();
+    const body = await request.json();
+    const email = typeof body.email === 'string' ? body.email.trim() : '';
+    const companyName = typeof body.companyName === 'string' ? body.companyName.trim().slice(0, COMPANY_NAME_MAX_LENGTH) : undefined;
 
-    if (!email || !email.includes('@')) {
+    if (!email || email.length > EMAIL_MAX_LENGTH || !EMAIL_REGEX.test(email)) {
       return NextResponse.json(
         { error: 'Valid email is required' },
         { status: 400 }
