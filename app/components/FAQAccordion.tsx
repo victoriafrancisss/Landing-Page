@@ -27,10 +27,6 @@ const defaultItems: FAQItem[] = [
     answer: "Yes. We follow best practices for handling credentials and sensitive data. Access is limited to what's required, and nothing is shared without your approval.",
   },
   {
-    question: 'What does this usually cost?',
-    answer: "Most single-workflow automations range from $500–$1,000, depending on complexity. During the free audit, we'll tell you exactly what's worth automating and what isn't.",
-  },
-  {
     question: "What if automation isn't a good fit for us?",
     answer: "Then we'll tell you. The audit is designed to find clear wins—not to force a project that won't deliver value.",
   },
