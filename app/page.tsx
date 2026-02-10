@@ -164,7 +164,13 @@ export default function Home() {
         <div
           className="absolute inset-0 pointer-events-none z-0"
           style={{
-            background: 'radial-gradient(circle at center, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0) 70%)',
+            background: 'radial-gradient(circle at center, rgba(100, 100, 255, 0.08) 0%, transparent 60%)',
+          }}
+        />
+        <div
+          className="absolute inset-0 pointer-events-none z-0"
+          style={{
+            background: 'radial-gradient(circle at center, rgba(255,255,255,0.12) 0%, rgba(0,0,0,0) 70%)',
           }}
         />
         <div className="w-full max-w-4xl mx-auto relative z-10 px-2 sm:px-4">
@@ -225,20 +231,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Outcome blocks — 3-column Bento */}
+      {/* Outcome blocks — Diagnose Risk (glass effect) */}
       <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20">
         <div className="w-full max-w-5xl mx-auto">
           <div className="grid sm:grid-cols-3 gap-4 sm:gap-6">
             {outcomeBlocks.map((block, i) => (
               <FadeInOnScroll key={i} delay={i * 80}>
-                <div className="bento-card p-6 text-center">
-                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[#0F0F0F] border border-[#262626] flex items-center justify-center">
+                <div
+                  className="p-6 text-center rounded-xl transition-all duration-300 hover:-translate-y-0.5"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.03)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}
+                >
+                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
                     <block.icon className="w-6 h-6 text-white/90" />
                   </div>
                   <h3 className="text-base font-semibold text-white mb-2 tracking-tight">
                     {block.title}
                   </h3>
-                  <p className="text-sm text-[#A1A1AA] leading-relaxed">
+                  <p className="text-sm text-gray-400 leading-relaxed">
                     {block.body}
                   </p>
                 </div>
@@ -253,10 +273,10 @@ export default function Home() {
         <div className="w-full max-w-3xl mx-auto">
           <FadeInOnScroll>
             <div className="bento-card p-8 sm:p-10">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-8 leading-tight tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 sm:mb-8 leading-tight" style={{ letterSpacing: '-0.02em' }}>
                 The Problem: Inaccurate Numbers That Look Right Until They Don’t
               </h2>
-              <div className="space-y-4 text-[#A1A1AA] leading-relaxed">
+              <div className="space-y-4 text-gray-400 leading-relaxed">
                 <p>
                   When numbers are manually reconciled across spreadsheets and
                   systems, errors hide in plain sight. A wrong link, a missed
