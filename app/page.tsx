@@ -18,6 +18,7 @@ import {
 import { FadeInOnScroll } from "./components/InteractiveElements";
 import { PremiumBackground } from "./components/PremiumBackground";
 import { FAQAccordion } from "./components/FAQAccordion";
+import { InfiniteMarquee } from "./components/InfiniteMarquee";
 
 const CTA_URL = "https://calendly.com/victoriafranciss/automation-discovery-call";
 const CTA_LABEL = "Book a Free Financial Accuracy Snapshot™";
@@ -195,6 +196,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <InfiniteMarquee />
 
       {/* Credibility strip - Bento */}
       <section className="relative px-4 sm:px-6 md:px-8 py-8 sm:py-10">
