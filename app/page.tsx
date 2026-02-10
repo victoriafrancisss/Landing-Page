@@ -7,6 +7,13 @@ import {
   MapPin,
   Linkedin,
   Mail,
+  Search,
+  Wrench,
+  Map,
+  RefreshCw,
+  BarChart3,
+  ShieldCheck,
+  Activity,
 } from "lucide-react";
 import { FadeInOnScroll } from "./components/InteractiveElements";
 import { PremiumBackground } from "./components/PremiumBackground";
@@ -19,6 +26,37 @@ const credibilityStrip = [
   "Your real setup, reviewed live—custom, not templated",
   "At least one real fix done with you in the session—practical operator experience",
   "Your tools, your data. No prep, no new software, personally delivered",
+];
+
+const outcomeBlocks = [
+  {
+    icon: Search,
+    title: "Diagnose Risk",
+    body: "We reveal where your financial accuracy is jeopardized before it costs you.",
+  },
+  {
+    icon: Wrench,
+    title: "Immediate Fix",
+    body: "We fix one real issue live during the session.",
+  },
+  {
+    icon: Map,
+    title: "Roadmap Next Steps",
+    body: "We outline what to automate next.",
+  },
+];
+
+const whatYouGetBullets = [
+  "Hands-on review of your actual setup",
+  "One live fix you can apply immediately",
+  "A written automation priority roadmap after the call",
+];
+
+const trustStripItems = [
+  { icon: RefreshCw, label: "Automated Reconciliation" },
+  { icon: BarChart3, label: "KPI Dashboards & Reporting" },
+  { icon: ShieldCheck, label: "Internal Controls & Checks" },
+  { icon: Activity, label: "Anomaly Detection" },
 ];
 
 const leadMagnetBullets = [
@@ -160,6 +198,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Outcome blocks — 3-column benefits */}
+      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20">
+        <div className="w-full max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8">
+            {outcomeBlocks.map((block, i) => (
+              <FadeInOnScroll key={i} delay={i * 80}>
+                <div className="text-center">
+                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center">
+                    <block.icon className="w-6 h-6 text-cyan-400/90" />
+                  </div>
+                  <h3 className="text-base font-semibold text-white mb-2">
+                    {block.title}
+                  </h3>
+                  <p className="text-sm text-gray-400 leading-relaxed">
+                    {block.body}
+                  </p>
+                </div>
+              </FadeInOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Problem */}
       <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24">
         <div className="w-full max-w-3xl mx-auto">
@@ -236,6 +297,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Contextual CTA Banner 1 */}
+      <section className="relative px-4 sm:px-6 md:px-8 py-12 sm:py-16 bg-gray-900/50 border-y border-gray-800/60">
+        <div className="w-full max-w-2xl mx-auto text-center">
+          <FadeInOnScroll>
+            <p className="text-lg sm:text-xl font-semibold text-white mb-6">
+              Ready to see what’s really breaking your numbers?
+            </p>
+            <a
+              href={CTA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="premium-button inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg shadow-blue-500/30"
+            >
+              {CTA_LABEL}
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <p className="text-sm text-gray-400 mt-4">
+              No prep. No sales pitch. No obligation. A few sessions per week
+              only.
+            </p>
+          </FadeInOnScroll>
+        </div>
+      </section>
+
       {/* Services — what we do */}
       <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24">
         <div className="w-full max-w-4xl mx-auto">
@@ -283,9 +368,25 @@ export default function Home() {
               You leave with at least one concrete improvement to your numbers.
               If we don’t deliver that, the session doesn’t count.
             </p>
-            <p className="text-xs text-gray-500 text-center mb-8 max-w-lg mx-auto">
+            <p className="text-xs text-gray-500 text-center mb-6 max-w-lg mx-auto">
               Offered free while building a small number of case studies.
             </p>
+            <div className="mb-8">
+              <p className="text-sm font-semibold text-gray-200 mb-3 text-center">
+                What you get
+              </p>
+              <ul className="space-y-2">
+                {whatYouGetBullets.map((bullet, i) => (
+                  <li
+                    key={i}
+                    className="flex items-center gap-2 text-gray-300 text-sm"
+                  >
+                    <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <ul className="space-y-3 mb-8">
               {leadMagnetBullets.map((bullet, i) => (
                 <li
@@ -313,6 +414,24 @@ export default function Home() {
               </p>
             </div>
           </FadeInOnScroll>
+        </div>
+      </section>
+
+      {/* Mini credibility / trust strip — service icons */}
+      <section className="relative px-4 sm:px-6 md:px-8 py-8 sm:py-10 border-y border-gray-800/50 bg-gray-900/20">
+        <div className="w-full max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+            {trustStripItems.map((item, i) => (
+              <FadeInOnScroll key={i} delay={i * 60}>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-gray-400">
+                  <item.icon className="w-5 h-5 flex-shrink-0 text-gray-500" />
+                  <span className="text-xs sm:text-sm font-medium text-center sm:text-left">
+                    {item.label}
+                  </span>
+                </div>
+              </FadeInOnScroll>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -352,6 +471,29 @@ export default function Home() {
               </FadeInOnScroll>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Contextual CTA Banner 2 */}
+      <section className="relative px-4 sm:px-6 md:px-8 py-12 sm:py-16 bg-gray-900/50 border-y border-gray-800/60">
+        <div className="w-full max-w-2xl mx-auto text-center">
+          <FadeInOnScroll>
+            <p className="text-lg sm:text-xl font-semibold text-white mb-6">
+              Get clarity today — see what’s hiding in your numbers.
+            </p>
+            <a
+              href={CTA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="premium-button inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg shadow-blue-500/30"
+            >
+              {CTA_LABEL}
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <p className="text-sm text-gray-400 mt-4">
+              Limited weekly availability.
+            </p>
+          </FadeInOnScroll>
         </div>
       </section>
 
@@ -440,6 +582,24 @@ export default function Home() {
               only.
             </p>
           </FadeInOnScroll>
+        </div>
+      </section>
+
+      {/* Footer CTA reminder */}
+      <section className="relative px-4 sm:px-6 py-8 border-t border-gray-800/50 bg-gray-900/30">
+        <div className="w-full max-w-2xl mx-auto text-center">
+          <p className="text-gray-400 text-sm">
+            Still unsure?{" "}
+            <a
+              href={CTA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors underline underline-offset-2"
+            >
+              Book a Free Financial Accuracy Snapshot™
+            </a>{" "}
+            — no prep, no sales, just clarity.
+          </p>
         </div>
       </section>
 
