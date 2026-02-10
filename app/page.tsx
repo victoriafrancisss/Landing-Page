@@ -16,9 +16,9 @@ const CTA_URL = "https://calendly.com/victoriafranciss/automation-discovery-call
 const CTA_LABEL = "Book a Free Financial Accuracy Snapshot™";
 
 const credibilityStrip = [
-  "Live review of your actual setup—no templates, no generic advice",
-  "At least one real fix or automation done with you during the session",
-  "Your tools, your data. No prep and no new software required",
+  "Your real setup, reviewed live—custom, not templated",
+  "At least one real fix done with you in the session—practical operator experience",
+  "Your tools, your data. No prep, no new software, personally delivered",
 ];
 
 const leadMagnetBullets = [
@@ -114,9 +114,9 @@ export default function Home() {
             </FadeInOnScroll>
             <FadeInOnScroll delay={200}>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                We help founders and small finance teams find where their numbers
-                break, fix one issue live in a free session, and outline what to
-                automate next. No hype. No new tools. No rebuilds.
+                A free, hands-on session—personally delivered, not templated—where
+                we find where your numbers break, fix one issue live with you, and
+                outline what to automate next. No hype. No new tools. No rebuilds.
               </p>
             </FadeInOnScroll>
             <FadeInOnScroll delay={300}>
@@ -172,8 +172,8 @@ export default function Home() {
                 When numbers are manually reconciled across spreadsheets and
                 systems, errors hide in plain sight. A wrong link, a missed
                 reclass, or a formula that didn’t copy right can throw off your
-                P&L, cash forecast, or board deck—and you often don’t find out
-                until it’s expensive.
+                P&L, cash forecast, or board deck. The risk is silent until it
+                compounds—and you often don’t find out until it’s expensive.
               </p>
               <p>
                 We help you see where your numbers are at risk and fix those
@@ -241,11 +241,12 @@ export default function Home() {
         <div className="w-full max-w-4xl mx-auto">
           <FadeInOnScroll>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight text-center">
-              What We Actually Do
+              What We Can Do After the Snapshot
             </h2>
             <p className="text-gray-400 text-center mb-10 max-w-xl mx-auto text-sm">
-              After the Snapshot, we help you improve accuracy and automate the
-              right things—in plain language.
+              If you choose to go further, we help improve accuracy and
+              automate the right things—in plain language. No packages, no
+              tiers.
             </p>
           </FadeInOnScroll>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -273,14 +274,17 @@ export default function Home() {
               The Financial Accuracy Snapshot™ — Free, Hands-On, No Pitch
             </h2>
             <p className="text-lg text-gray-300 text-center mb-6 leading-relaxed">
-              A free session where we review your financial setup, fix one real
+              A free first step: we review your real financial setup, fix one
               issue live with you, and outline what to automate next. Think of
-              it as a gift: you get clarity and one concrete fix, not a sales
+              it as a gift—you get clarity and one concrete fix, not a sales
               call.
             </p>
-            <p className="text-sm text-gray-400 text-center mb-8 leading-relaxed max-w-lg mx-auto">
-              You leave with at least one real improvement to your numbers. If
-              we don’t deliver that, the session doesn’t count.
+            <p className="text-sm text-gray-400 text-center mb-6 leading-relaxed max-w-lg mx-auto">
+              You leave with at least one concrete improvement to your numbers.
+              If we don’t deliver that, the session doesn’t count.
+            </p>
+            <p className="text-xs text-gray-500 text-center mb-8 max-w-lg mx-auto">
+              Offered free while building a small number of case studies.
             </p>
             <ul className="space-y-3 mb-8">
               {leadMagnetBullets.map((bullet, i) => (
@@ -304,7 +308,8 @@ export default function Home() {
                 <ArrowRight className="w-4 h-4" />
               </a>
               <p className="text-sm text-gray-400">
-                No prep. No obligation. Only a few sessions opened each week.
+                No prep. No sales pitch. No obligation. Only a few sessions
+                opened each week.
               </p>
             </div>
           </FadeInOnScroll>
@@ -417,8 +422,9 @@ export default function Home() {
               See What’s Breaking Your Numbers
             </h2>
             <p className="text-gray-300 mb-6 max-w-lg mx-auto">
-              Book a free Financial Accuracy Snapshot™. We review your setup,
-              fix one issue live, and give you a roadmap—no prep, no pitch.
+              One action: book a free Financial Accuracy Snapshot™. We review
+              your setup, fix one issue live, and give you a roadmap. Low effort.
+              Low risk.
             </p>
             <a
               href={CTA_URL}
@@ -430,7 +436,8 @@ export default function Home() {
               <ArrowRight className="w-4 h-4" />
             </a>
             <p className="text-sm text-gray-400 mt-4">
-              No prep. No obligation. A few sessions per week only.
+              No prep. No obligation. No sales pitch. A few sessions per week
+              only.
             </p>
           </FadeInOnScroll>
         </div>
