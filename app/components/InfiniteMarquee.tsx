@@ -10,7 +10,14 @@ const LOGOS = [
 
 export function InfiniteMarquee() {
   return (
-    <section className="relative w-full overflow-hidden border-y border-[#262626] py-6 bg-[#050505]" aria-label="Finance stack we work with">
+    <section
+      className="relative w-full overflow-hidden border-y border-[#262626] py-6 bg-[#050505]"
+      aria-label="Finance stack we work with"
+      style={{
+        maskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)',
+        WebkitMaskImage: 'linear-gradient(to right, transparent, black 20%, black 80%, transparent)',
+      }}
+    >
       <div className="flex w-max animate-marquee items-center gap-0 shrink-0 px-4">
         {[1, 2].map((set) => (
           <div key={set} className="flex items-center gap-0 shrink-0">

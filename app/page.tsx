@@ -141,9 +141,9 @@ export default function Home() {
     >
       <PremiumBackground />
 
-      {/* Floating Navbar - Glassmorphism */}
-      <nav className="fixed top-0 left-0 right-0 z-50 navbar-glass">
-        <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      {/* Floating Navbar — Dumo-style glass pill */}
+      <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl rounded-full backdrop-blur-xl bg-[#050505]/70 border border-[#262626] shadow-xl">
+        <div className="w-full mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
           <span className="text-white font-bold tracking-tight text-lg">
             BOLDSCALE
           </span>
@@ -159,17 +159,24 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero */}
+      {/* Hero — Dumo-style spotlight */}
       <section className="relative flex min-h-[85vh] flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-28 md:py-32 lg:py-40 pt-32 sm:pt-36">
+        <div
+          className="absolute inset-0 pointer-events-none z-0"
+          style={{
+            background: 'radial-gradient(circle at center, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0) 70%)',
+          }}
+        />
         <div className="w-full max-w-4xl mx-auto relative z-10 px-2 sm:px-4">
           <div className="text-center space-y-6 sm:space-y-8">
             <FadeInOnScroll delay={100}>
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white leading-[1.05] tracking-tight">
-                Accurate Financial Numbers — Before They Become a Costly Problem
+              <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-9xl font-bold text-white leading-[1.05] tracking-tight">
+                <span className="block">Accurate Financial Numbers —</span>
+                <span className="block">Before They Become a Costly Problem</span>
               </h1>
             </FadeInOnScroll>
             <FadeInOnScroll delay={200}>
-              <p className="text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed text-[#A1A1AA]">
+              <p className="text-xl sm:text-2xl max-w-2xl mx-auto leading-relaxed text-slate-400">
                 A free, hands-on session—personally delivered, not templated—where
                 we find where your numbers break, fix one issue live with you, and
                 outline what to automate next. No hype. No new tools. No rebuilds.
@@ -268,7 +275,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How it works — 3-step Bento */}
+      {/* How it works — 3-step Dumo-style gradient cards */}
       <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24">
         <div className="w-full max-w-4xl mx-auto">
           <FadeInOnScroll>
@@ -279,32 +286,36 @@ export default function Home() {
           <div className="grid sm:grid-cols-3 gap-4 sm:gap-6 mb-10">
             {[
               {
-                step: 1,
+                step: "01",
                 title: "Review your financial setup",
                 body: "We look at where your numbers come from and where accuracy is most at risk.",
+                gradient: "from-emerald-950/90 via-emerald-900/80 to-teal-950/90",
+                border: "border-emerald-500/30",
               },
               {
-                step: 2,
+                step: "02",
                 title: "Fix one issue live",
                 body: "We fix one real problem with you during the session—so you leave with a concrete improvement, not just a report.",
+                gradient: "from-violet-950/90 via-purple-900/80 to-fuchsia-950/90",
+                border: "border-violet-500/30",
               },
               {
-                step: 3,
+                step: "03",
                 title: "Outline what to automate next",
                 body: "You get a clear roadmap so your numbers stay reliable as you scale.",
+                gradient: "from-blue-950/90 via-indigo-900/80 to-cyan-950/90",
+                border: "border-blue-500/30",
               },
             ].map((item, i) => (
               <FadeInOnScroll key={item.step} delay={i * 100}>
-                <div className="bento-card p-6 text-center">
-                  <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-[#0F0F0F] border border-[#262626] flex items-center justify-center">
-                    <span className="text-lg font-bold text-white">
-                      {item.step}
-                    </span>
-                  </div>
+                <div className={`relative overflow-hidden rounded-2xl border p-6 text-center bg-gradient-to-br ${item.gradient} ${item.border}`}>
+                  <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white/90 bg-white/10 mb-4">
+                    Step {item.step}
+                  </span>
                   <h3 className="text-lg font-semibold text-white mb-2 tracking-tight">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-[#A1A1AA] leading-relaxed">
+                  <p className="text-sm text-white/80 leading-relaxed">
                     {item.body}
                   </p>
                 </div>
