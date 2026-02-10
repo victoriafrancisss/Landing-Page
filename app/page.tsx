@@ -168,7 +168,7 @@ export default function Home() {
         <div
           className="absolute inset-0 pointer-events-none z-0"
           style={{
-            background: 'radial-gradient(circle at center, rgba(255,255,255,0.12) 0%, rgba(0,0,0,0) 70%)',
+            background: 'radial-gradient(circle at center, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0) 70%)',
           }}
         />
         <div className="w-full max-w-4xl mx-auto relative z-10 px-2 sm:px-4">
@@ -272,14 +272,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Outcome blocks — Diagnose Risk, Fix Live, Roadmap (grayscale icons) */}
+      {/* Outcome blocks — Diagnose Risk, Fix Live, Roadmap (glassmorphism) */}
       <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20">
         <div className="w-full max-w-5xl mx-auto">
           <div className="grid sm:grid-cols-3 gap-4 sm:gap-6">
             {outcomeBlocks.map((block, i) => (
               <FadeInOnScroll key={i} delay={i * 80}>
                 <div
-                  className="p-6 text-center rounded-xl transition-all duration-300 bg-white/[0.03] border border-white/10 hover:border-white/30 hover:-translate-y-0.5"
+                  className="p-6 text-center rounded-xl transition-all duration-300 bg-[rgba(255,255,255,0.03)] border border-white/10 hover:border-white/20 hover:-translate-y-0.5"
                 >
                   <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
                     <block.icon className="w-6 h-6 text-white/80" aria-hidden />
@@ -418,60 +418,59 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Lead magnet — Financial Accuracy Snapshot™ — Bento */}
+      {/* Lead magnet — Financial Accuracy Snapshot™ — 2-column split */}
       <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24">
-        <div className="w-full max-w-2xl mx-auto">
+        <div className="w-full max-w-5xl mx-auto">
           <FadeInOnScroll>
-            <div className="bento-card p-8 sm:p-10">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight text-center tracking-tight">
-                The Financial Accuracy Snapshot™ — Free, Hands-On, No Pitch
-              </h2>
-              <p className="text-lg text-[#A1A1AA] text-center mb-6 leading-relaxed">
-                A free first step: we review your real financial setup, fix one
-                issue live with you, and outline what to automate next. Think of
-                it as a gift—you get clarity and one concrete fix, not a sales
-                call.
-              </p>
-              <p className="text-sm text-[#A1A1AA] text-center mb-6 leading-relaxed max-w-lg mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center tracking-tight">
+              Financial Accuracy Snapshot™
+            </h2>
+          </FadeInOnScroll>
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-start">
+            {/* Left: Action Card */}
+            <FadeInOnScroll delay={0}>
+              <div
+                className="bento-card p-8 sm:p-10 flex flex-col h-full transition-all duration-300 hover:shadow-[0_0_32px_rgba(255,255,255,0.06)]"
+                style={{ boxShadow: "0 0 32px rgba(255,255,255,0.06)" }}
+              >
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight tracking-tight">
+                  Start Your Accuracy Journey
+                </h3>
+                <p className="text-[#A1A1AA] leading-relaxed mb-4 flex-1">
+                  A free first step: we review your real financial setup, fix one issue live with you, and outline what to automate next. You get clarity and one concrete fix, not a sales call.
+                </p>
+              <p className="text-sm text-[#A1A1AA] leading-relaxed mb-6">
                 You leave with at least one concrete improvement to your numbers.
                 If we don’t deliver that, the session doesn’t count.
               </p>
-              <p className="text-xs text-[#71717A] text-center mb-6 max-w-lg mx-auto">
-                Offered free while building a small number of case studies.
-              </p>
-              <div className="mb-8">
-                <p className="text-sm font-semibold text-white mb-3 text-center">
-                  What you get
+                <p className="text-xs text-[#71717A] mb-6">
+                  Offered free while building a small number of case studies.
                 </p>
-                <ul className="space-y-2">
-                  {whatYouGetBullets.map((bullet, i) => (
-                    <li
-                      key={i}
-                      className="flex items-center gap-2 text-[#A1A1AA] text-sm"
-                    >
-                      <CheckCircle2 className="w-4 h-4 text-white/80 flex-shrink-0" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="text-center space-y-3">
                 <a
                   href={CTA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="premium-button btn-agency inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 bg-white text-black font-semibold rounded-full hover:shadow-[0_0_24px_rgba(255,255,255,0.25)]"
+                  className="premium-button btn-agency inline-flex items-center justify-center gap-2 w-full px-6 sm:px-8 py-3.5 bg-white text-black font-semibold rounded-full hover:shadow-[0_0_24px_rgba(255,255,255,0.25)]"
                 >
-                  {CTA_LABEL}
+                  {NAVBAR_CTA_LABEL}
                   <ArrowRight className="w-4 h-4" />
                 </a>
-                <p className="text-sm text-[#A1A1AA]">
-                  No prep. No sales pitch. No obligation. Only a few sessions
-                  opened each week.
-                </p>
               </div>
+            </FadeInOnScroll>
+            {/* Right: Feature Cards (first 3 bullets) */}
+            <div className="flex flex-col gap-4 sm:gap-5">
+              {whatYouGetBullets.slice(0, 3).map((bullet, i) => (
+                <FadeInOnScroll key={i} delay={(i + 1) * 60}>
+                  <div className="rounded-xl p-5 bg-[#0F0F0F] border border-[#262626] flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-white/80 flex-shrink-0 mt-0.5" />
+                    <span className="text-[#A1A1AA] text-sm sm:text-base leading-relaxed">
+                      {bullet}
+                    </span>
+                  </div>
+                </FadeInOnScroll>
+              ))}
             </div>
-          </FadeInOnScroll>
+          </div>
         </div>
       </section>
 
