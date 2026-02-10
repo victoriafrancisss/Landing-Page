@@ -22,6 +22,7 @@ import { InfiniteMarquee } from "./components/InfiniteMarquee";
 
 const CTA_URL = "https://calendly.com/victoriafranciss/automation-discovery-call";
 const CTA_LABEL = "Book a Free Financial Accuracy Snapshot™";
+const NAVBAR_CTA_LABEL = "Book Audit";
 
 const credibilityStrip = [
   "Your real setup, reviewed live—custom, not templated",
@@ -150,20 +151,20 @@ export default function Home() {
             href={CTA_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="premium-button btn-agency inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full bg-white text-black hover:shadow-[0_0_24px_rgba(255,255,255,0.25)]"
+            className="premium-button btn-agency inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full bg-white text-black hover:shadow-[0_0_28px_rgba(255,255,255,0.4)]"
           >
-            {CTA_LABEL}
+            {NAVBAR_CTA_LABEL}
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </nav>
 
       {/* Hero */}
-      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-28 md:py-32 lg:py-40 pt-32 sm:pt-36">
+      <section className="relative flex min-h-[85vh] flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-28 md:py-32 lg:py-40 pt-32 sm:pt-36">
         <div className="w-full max-w-4xl mx-auto relative z-10 px-2 sm:px-4">
           <div className="text-center space-y-6 sm:space-y-8">
             <FadeInOnScroll delay={100}>
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] tracking-tight">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white leading-[1.05] tracking-tight">
                 Accurate Financial Numbers — Before They Become a Costly Problem
               </h1>
             </FadeInOnScroll>
