@@ -1,12 +1,12 @@
 'use client';
 
 const LOGOS = [
-  { name: 'Excel', src: 'https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg' },
-  { name: 'Python', src: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg' },
-  { name: 'Google Sheets', src: 'https://upload.wikimedia.org/wikipedia/commons/3/30/Google_Sheets_2020_Logo.svg' },
-  { name: 'QuickBooks', src: 'https://upload.wikimedia.org/wikipedia/commons/9/96/QuickBooks_logo.svg' },
-  { name: 'Xero', src: 'https://upload.wikimedia.org/wikipedia/commons/a/a2/Xero_software_logo.svg' },
-  { name: 'SQL', src: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png' },
+  { name: 'Excel', src: 'https://www.vectorlogo.zone/logos/microsoft_excel/microsoft_excel-icon.svg' },
+  { name: 'Python', src: 'https://www.vectorlogo.zone/logos/python/python-icon.svg' },
+  { name: 'Google Sheets', src: 'https://www.vectorlogo.zone/logos/google_sheets/google_sheets-icon.svg' },
+  { name: 'QuickBooks', src: 'https://www.vectorlogo.zone/logos/intuit_quickbooks/intuit_quickbooks-icon.svg' },
+  { name: 'Xero', src: 'https://www.vectorlogo.zone/logos/xero/xero-icon.svg' },
+  { name: 'PostgreSQL', src: 'https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg' },
 ] as const;
 
 export function InfiniteMarquee() {
@@ -18,16 +18,20 @@ export function InfiniteMarquee() {
             {LOGOS.map((logo) => (
               <div
                 key={`${set}-${logo.name}`}
-                className="group flex h-12 shrink-0 items-center justify-center transition-all duration-300"
+                className="group flex h-[50px] shrink-0 items-center justify-center transition-all duration-300"
                 role="img"
                 aria-label={logo.name}
               >
                 <img
                   src={logo.src}
                   alt=""
-                  className="h-12 w-auto max-w-[120px] object-contain object-center grayscale opacity-50 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
+                  className="h-[50px] w-auto max-w-[120px] object-contain object-center grayscale opacity-50 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
+                  style={{ height: '50px', width: 'auto', objectFit: 'contain' }}
                   width={120}
-                  height={48}
+                  height={50}
+                  onError={(e) => {
+                    e.currentTarget.style.visibility = 'hidden';
+                  }}
                 />
               </div>
             ))}
