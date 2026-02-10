@@ -9,7 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-space-grotesk)', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        'agency-card': '#0F0F0F',
+        'agency-border': '#262626',
+        'agency-muted': '#A1A1AA',
       },
       letterSpacing: {
         tighter: '-0.02em',

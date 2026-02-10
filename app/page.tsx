@@ -134,24 +134,40 @@ const faqItems = [
 export default function Home() {
   return (
     <main
-      className="min-h-screen relative w-full max-w-full"
+      className="min-h-screen relative w-full max-w-full bg-[#050505]"
       style={{ overflowX: "hidden" }}
     >
       <PremiumBackground />
 
+      {/* Floating Navbar - Glassmorphism */}
+      <nav className="fixed top-0 left-0 right-0 z-50 navbar-glass">
+        <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+          <span className="text-white font-bold tracking-tight text-lg">
+            BOLDSCALE
+          </span>
+          <a
+            href={CTA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="premium-button btn-agency inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full bg-white text-black hover:shadow-[0_0_24px_rgba(255,255,255,0.25)]"
+          >
+            {CTA_LABEL}
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
+      </nav>
+
       {/* Hero */}
-      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24 lg:py-28 pt-20 sm:pt-24 md:pt-28 lg:pt-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-slate-900/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.08),transparent_50%)]" />
+      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-28 md:py-32 lg:py-40 pt-32 sm:pt-36">
         <div className="w-full max-w-4xl mx-auto relative z-10 px-2 sm:px-4">
           <div className="text-center space-y-6 sm:space-y-8">
             <FadeInOnScroll delay={100}>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] tracking-tight">
                 Accurate Financial Numbers — Before They Become a Costly Problem
               </h1>
             </FadeInOnScroll>
             <FadeInOnScroll delay={200}>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed text-[#A1A1AA]">
                 A free, hands-on session—personally delivered, not templated—where
                 we find where your numbers break, fix one issue live with you, and
                 outline what to automate next. No hype. No new tools. No rebuilds.
@@ -163,15 +179,15 @@ export default function Home() {
                   href={CTA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="premium-button inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold text-base rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40"
+                  className="premium-button btn-agency inline-flex items-center gap-2 px-8 sm:px-10 py-4 sm:py-4 bg-white text-black font-semibold text-base rounded-full hover:shadow-[0_0_32px_rgba(255,255,255,0.25)]"
                 >
                   {CTA_LABEL}
                   <ArrowRight className="w-4 h-4" />
                 </a>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-[#A1A1AA]">
                   No prep. No sales pitch. No obligation.
                 </p>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-[#71717A]">
                   A few sessions per week so each one gets hands-on attention.
                 </p>
               </div>
@@ -180,15 +196,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Credibility strip */}
-      <section className="relative px-4 sm:px-6 md:px-8 py-8 sm:py-10 border-y border-gray-800/60 bg-gray-900/30">
+      {/* Credibility strip - Bento */}
+      <section className="relative px-4 sm:px-6 md:px-8 py-8 sm:py-10">
         <div className="w-full max-w-5xl mx-auto">
-          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8 text-center">
+          <div className="grid sm:grid-cols-3 gap-4">
             {credibilityStrip.map((line, i) => (
               <FadeInOnScroll key={i} delay={i * 80}>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-gray-200">
-                  <CheckCircle2 className="w-5 h-5 text-cyan-400/90 flex-shrink-0" />
-                  <span className="text-sm sm:text-base font-medium">
+                <div className="bento-card flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 p-5 text-center sm:text-left">
+                  <CheckCircle2 className="w-5 h-5 text-white/80 flex-shrink-0" />
+                  <span className="text-sm sm:text-base font-medium text-[#A1A1AA]">
                     {line}
                   </span>
                 </div>
@@ -198,20 +214,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Outcome blocks — 3-column benefits */}
+      {/* Outcome blocks — 3-column Bento */}
       <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20">
         <div className="w-full max-w-5xl mx-auto">
-          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid sm:grid-cols-3 gap-4 sm:gap-6">
             {outcomeBlocks.map((block, i) => (
               <FadeInOnScroll key={i} delay={i * 80}>
-                <div className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center">
-                    <block.icon className="w-6 h-6 text-cyan-400/90" />
+                <div className="bento-card p-6 text-center">
+                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[#0F0F0F] border border-[#262626] flex items-center justify-center">
+                    <block.icon className="w-6 h-6 text-white/90" />
                   </div>
-                  <h3 className="text-base font-semibold text-white mb-2">
+                  <h3 className="text-base font-semibold text-white mb-2 tracking-tight">
                     {block.title}
                   </h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">
+                  <p className="text-sm text-[#A1A1AA] leading-relaxed">
                     {block.body}
                   </p>
                 </div>
@@ -221,40 +237,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Problem */}
+      {/* Problem - Bento card */}
       <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24">
         <div className="w-full max-w-3xl mx-auto">
           <FadeInOnScroll>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-8 leading-tight">
-              The Problem: Inaccurate Numbers That Look Right Until They Don’t
-            </h2>
-            <div className="space-y-4 text-gray-300 leading-relaxed">
-              <p>
-                When numbers are manually reconciled across spreadsheets and
-                systems, errors hide in plain sight. A wrong link, a missed
-                reclass, or a formula that didn’t copy right can throw off your
-                P&L, cash forecast, or board deck. The risk is silent until it
-                compounds—and you often don’t find out until it’s expensive.
-              </p>
-              <p>
-                We help you see where your numbers are at risk and fix those
-                spots before they become a costly problem. No revolution. Just
-                clarity and control.
-              </p>
+            <div className="bento-card p-8 sm:p-10">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-8 leading-tight tracking-tight">
+                The Problem: Inaccurate Numbers That Look Right Until They Don’t
+              </h2>
+              <div className="space-y-4 text-[#A1A1AA] leading-relaxed">
+                <p>
+                  When numbers are manually reconciled across spreadsheets and
+                  systems, errors hide in plain sight. A wrong link, a missed
+                  reclass, or a formula that didn’t copy right can throw off your
+                  P&L, cash forecast, or board deck. The risk is silent until it
+                  compounds—and you often don’t find out until it’s expensive.
+                </p>
+                <p>
+                  We help you see where your numbers are at risk and fix those
+                  spots before they become a costly problem. No revolution. Just
+                  clarity and control.
+                </p>
+              </div>
             </div>
           </FadeInOnScroll>
         </div>
       </section>
 
-      {/* How it works — 3-step */}
-      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24 bg-gradient-to-b from-transparent via-gray-900/20 to-transparent">
+      {/* How it works — 3-step Bento */}
+      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24">
         <div className="w-full max-w-4xl mx-auto">
           <FadeInOnScroll>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 sm:mb-10 leading-tight text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 sm:mb-10 leading-tight text-center tracking-tight">
               How It Works: Fix Real Issues First, Then Automate
             </h2>
           </FadeInOnScroll>
-          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8 mb-10">
+          <div className="grid sm:grid-cols-3 gap-4 sm:gap-6 mb-10">
             {[
               {
                 step: 1,
@@ -273,16 +291,16 @@ export default function Home() {
               },
             ].map((item, i) => (
               <FadeInOnScroll key={item.step} delay={i * 100}>
-                <div className="glass-effect-premium border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-500/40 transition-colors">
-                  <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center">
-                    <span className="text-lg font-bold text-cyan-400">
+                <div className="bento-card p-6 text-center">
+                  <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-[#0F0F0F] border border-[#262626] flex items-center justify-center">
+                    <span className="text-lg font-bold text-white">
                       {item.step}
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">
+                  <h3 className="text-lg font-semibold text-white mb-2 tracking-tight">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">
+                  <p className="text-sm text-[#A1A1AA] leading-relaxed">
                     {item.body}
                   </p>
                 </div>
@@ -290,7 +308,7 @@ export default function Home() {
             ))}
           </div>
           <FadeInOnScroll>
-            <p className="text-center text-gray-300 font-medium">
+            <p className="text-center text-[#A1A1AA] font-medium">
               No system rebuilds. No new tools. No extra hires.
             </p>
           </FadeInOnScroll>
@@ -298,133 +316,147 @@ export default function Home() {
       </section>
 
       {/* Contextual CTA Banner 1 */}
-      <section className="relative px-4 sm:px-6 md:px-8 py-12 sm:py-16 bg-gray-900/50 border-y border-gray-800/60">
+      <section className="relative px-4 sm:px-6 md:px-8 py-12 sm:py-16">
         <div className="w-full max-w-2xl mx-auto text-center">
           <FadeInOnScroll>
-            <p className="text-lg sm:text-xl font-semibold text-white mb-6">
-              Ready to see what’s really breaking your numbers?
-            </p>
-            <a
-              href={CTA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="premium-button inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg shadow-blue-500/30"
-            >
-              {CTA_LABEL}
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <p className="text-sm text-gray-400 mt-4">
-              No prep. No sales pitch. No obligation. A few sessions per week
-              only.
-            </p>
+            <div className="bento-card p-8 sm:p-10">
+              <p className="text-lg sm:text-xl font-semibold text-white mb-6 tracking-tight">
+                Ready to see what’s really breaking your numbers?
+              </p>
+              <a
+                href={CTA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="premium-button btn-agency inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 bg-white text-black font-semibold rounded-full hover:shadow-[0_0_24px_rgba(255,255,255,0.25)]"
+              >
+                {CTA_LABEL}
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <p className="text-sm text-[#A1A1AA] mt-4">
+                No prep. No sales pitch. No obligation. A few sessions per week
+                only.
+              </p>
+            </div>
           </FadeInOnScroll>
         </div>
       </section>
 
-      {/* Services — what we do */}
+      {/* Services — 3-column Bento grid */}
       <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24">
-        <div className="w-full max-w-4xl mx-auto">
+        <div className="w-full max-w-5xl mx-auto">
           <FadeInOnScroll>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight text-center tracking-tight">
               What We Can Do After the Snapshot
             </h2>
-            <p className="text-gray-400 text-center mb-10 max-w-xl mx-auto text-sm">
+            <p className="text-[#A1A1AA] text-center mb-10 max-w-xl mx-auto text-sm">
               If you choose to go further, we help improve accuracy and
               automate the right things—in plain language. No packages, no
               tiers.
             </p>
           </FadeInOnScroll>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {servicesList.map((s, i) => (
+          <div className="grid sm:grid-cols-3 gap-4 sm:gap-6">
+            {servicesList.slice(0, 3).map((s, i) => (
               <FadeInOnScroll key={i} delay={i * 80}>
-                <div className="border border-gray-700/50 rounded-xl p-5 bg-gray-900/30 hover:border-cyan-500/30 transition-colors">
-                  <h3 className="text-base font-semibold text-white mb-2">
+                <div className="bento-card p-6">
+                  <h3 className="text-base font-semibold text-white mb-2 tracking-tight">
                     {s.title}
                   </h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">
+                  <p className="text-sm text-[#A1A1AA] leading-relaxed">
                     {s.body}
                   </p>
                 </div>
               </FadeInOnScroll>
             ))}
+            <FadeInOnScroll delay={240}>
+              <div className="bento-card p-6 sm:col-span-3">
+                <h3 className="text-base font-semibold text-white mb-2 tracking-tight">
+                  {servicesList[3].title}
+                </h3>
+                <p className="text-sm text-[#A1A1AA] leading-relaxed">
+                  {servicesList[3].body}
+                </p>
+              </div>
+            </FadeInOnScroll>
           </div>
         </div>
       </section>
 
-      {/* Lead magnet — Financial Accuracy Snapshot™ */}
+      {/* Lead magnet — Financial Accuracy Snapshot™ — Bento */}
       <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24">
         <div className="w-full max-w-2xl mx-auto">
           <FadeInOnScroll>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight text-center">
-              The Financial Accuracy Snapshot™ — Free, Hands-On, No Pitch
-            </h2>
-            <p className="text-lg text-gray-300 text-center mb-6 leading-relaxed">
-              A free first step: we review your real financial setup, fix one
-              issue live with you, and outline what to automate next. Think of
-              it as a gift—you get clarity and one concrete fix, not a sales
-              call.
-            </p>
-            <p className="text-sm text-gray-400 text-center mb-6 leading-relaxed max-w-lg mx-auto">
-              You leave with at least one concrete improvement to your numbers.
-              If we don’t deliver that, the session doesn’t count.
-            </p>
-            <p className="text-xs text-gray-500 text-center mb-6 max-w-lg mx-auto">
-              Offered free while building a small number of case studies.
-            </p>
-            <div className="mb-8">
-              <p className="text-sm font-semibold text-gray-200 mb-3 text-center">
-                What you get
+            <div className="bento-card p-8 sm:p-10">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight text-center tracking-tight">
+                The Financial Accuracy Snapshot™ — Free, Hands-On, No Pitch
+              </h2>
+              <p className="text-lg text-[#A1A1AA] text-center mb-6 leading-relaxed">
+                A free first step: we review your real financial setup, fix one
+                issue live with you, and outline what to automate next. Think of
+                it as a gift—you get clarity and one concrete fix, not a sales
+                call.
               </p>
-              <ul className="space-y-2">
-                {whatYouGetBullets.map((bullet, i) => (
+              <p className="text-sm text-[#A1A1AA] text-center mb-6 leading-relaxed max-w-lg mx-auto">
+                You leave with at least one concrete improvement to your numbers.
+                If we don’t deliver that, the session doesn’t count.
+              </p>
+              <p className="text-xs text-[#71717A] text-center mb-6 max-w-lg mx-auto">
+                Offered free while building a small number of case studies.
+              </p>
+              <div className="mb-8">
+                <p className="text-sm font-semibold text-white mb-3 text-center">
+                  What you get
+                </p>
+                <ul className="space-y-2">
+                  {whatYouGetBullets.map((bullet, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-2 text-[#A1A1AA] text-sm"
+                    >
+                      <CheckCircle2 className="w-4 h-4 text-white/80 flex-shrink-0" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <ul className="space-y-3 mb-8">
+                {leadMagnetBullets.map((bullet, i) => (
                   <li
                     key={i}
-                    className="flex items-center gap-2 text-gray-300 text-sm"
+                    className="flex items-start gap-3 text-[#A1A1AA]"
                   >
-                    <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-white/80 flex-shrink-0 mt-0.5" />
                     <span>{bullet}</span>
                   </li>
                 ))}
               </ul>
-            </div>
-            <ul className="space-y-3 mb-8">
-              {leadMagnetBullets.map((bullet, i) => (
-                <li
-                  key={i}
-                  className="flex items-start gap-3 text-gray-200"
+              <div className="text-center space-y-3">
+                <a
+                  href={CTA_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="premium-button btn-agency inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 bg-white text-black font-semibold rounded-full hover:shadow-[0_0_24px_rgba(255,255,255,0.25)]"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
-                  <span>{bullet}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="text-center space-y-3">
-              <a
-                href={CTA_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="premium-button inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg shadow-blue-500/30"
-              >
-                {CTA_LABEL}
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              <p className="text-sm text-gray-400">
-                No prep. No sales pitch. No obligation. Only a few sessions
-                opened each week.
-              </p>
+                  {CTA_LABEL}
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+                <p className="text-sm text-[#A1A1AA]">
+                  No prep. No sales pitch. No obligation. Only a few sessions
+                  opened each week.
+                </p>
+              </div>
             </div>
           </FadeInOnScroll>
         </div>
       </section>
 
-      {/* Mini credibility / trust strip — service icons */}
-      <section className="relative px-4 sm:px-6 md:px-8 py-8 sm:py-10 border-y border-gray-800/50 bg-gray-900/20">
+      {/* Mini credibility / trust strip */}
+      <section className="relative px-4 sm:px-6 md:px-8 py-8 sm:py-10">
         <div className="w-full max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+          <div className="bento-card grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 p-6">
             {trustStripItems.map((item, i) => (
               <FadeInOnScroll key={i} delay={i * 60}>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-gray-400">
-                  <item.icon className="w-5 h-5 flex-shrink-0 text-gray-500" />
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-[#A1A1AA]">
+                  <item.icon className="w-5 h-5 flex-shrink-0 text-[#71717A]" />
                   <span className="text-xs sm:text-sm font-medium text-center sm:text-left">
                     {item.label}
                   </span>
@@ -435,36 +467,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Proof — micro-cases */}
-      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24 bg-gradient-to-b from-transparent via-gray-900/20 to-transparent">
+      {/* Proof — micro-cases Bento */}
+      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24">
         <div className="w-full max-w-4xl mx-auto">
           <FadeInOnScroll>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10 text-center tracking-tight">
               Issue → Fix → Result
             </h2>
           </FadeInOnScroll>
-          <div className="space-y-8">
+          <div className="space-y-6">
             {microCases.map((c, i) => (
               <FadeInOnScroll key={i} delay={i * 80}>
-                <div className="glass-effect-premium border border-gray-700/50 rounded-xl p-6 sm:p-8">
+                <div className="bento-card p-6 sm:p-8">
                   <div className="grid sm:grid-cols-3 gap-4 sm:gap-6 text-sm sm:text-base">
                     <div>
-                      <p className="text-xs font-semibold text-red-400/90 uppercase tracking-wider mb-2">
+                      <p className="text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mb-2">
                         Issue
                       </p>
-                      <p className="text-gray-300 leading-relaxed">{c.issue}</p>
+                      <p className="text-[#A1A1AA] leading-relaxed">{c.issue}</p>
                     </div>
                     <div>
-                      <p className="text-xs font-semibold text-cyan-400/90 uppercase tracking-wider mb-2">
+                      <p className="text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mb-2">
                         Fix
                       </p>
-                      <p className="text-gray-300 leading-relaxed">{c.fix}</p>
+                      <p className="text-[#A1A1AA] leading-relaxed">{c.fix}</p>
                     </div>
                     <div>
-                      <p className="text-xs font-semibold text-green-400/90 uppercase tracking-wider mb-2">
+                      <p className="text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mb-2">
                         Result
                       </p>
-                      <p className="text-gray-300 leading-relaxed">{c.result}</p>
+                      <p className="text-[#A1A1AA] leading-relaxed">{c.result}</p>
                     </div>
                   </div>
                 </div>
@@ -475,51 +507,53 @@ export default function Home() {
       </section>
 
       {/* Contextual CTA Banner 2 */}
-      <section className="relative px-4 sm:px-6 md:px-8 py-12 sm:py-16 bg-gray-900/50 border-y border-gray-800/60">
+      <section className="relative px-4 sm:px-6 md:px-8 py-12 sm:py-16">
         <div className="w-full max-w-2xl mx-auto text-center">
           <FadeInOnScroll>
-            <p className="text-lg sm:text-xl font-semibold text-white mb-6">
-              Get clarity today — see what’s hiding in your numbers.
-            </p>
-            <a
-              href={CTA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="premium-button inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg shadow-blue-500/30"
-            >
-              {CTA_LABEL}
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <p className="text-sm text-gray-400 mt-4">
-              Limited weekly availability.
-            </p>
+            <div className="bento-card p-8 sm:p-10">
+              <p className="text-lg sm:text-xl font-semibold text-white mb-6 tracking-tight">
+                Get clarity today — see what’s hiding in your numbers.
+              </p>
+              <a
+                href={CTA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="premium-button btn-agency inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 bg-white text-black font-semibold rounded-full hover:shadow-[0_0_24px_rgba(255,255,255,0.25)]"
+              >
+                {CTA_LABEL}
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <p className="text-sm text-[#A1A1AA] mt-4">
+                Limited weekly availability.
+              </p>
+            </div>
           </FadeInOnScroll>
         </div>
       </section>
 
-      {/* Who it's for / not for */}
+      {/* Who it's for / not for — Bento */}
       <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24">
         <div className="w-full max-w-4xl mx-auto">
           <FadeInOnScroll>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10 text-center tracking-tight">
               Who This Is For — and Who It’s Not
             </h2>
-            <p className="text-gray-400 text-center mb-8 max-w-xl mx-auto text-sm">
+            <p className="text-[#A1A1AA] text-center mb-8 max-w-xl mx-auto text-sm">
               We’re built for founders, operators, and small finance teams who
               want accurate numbers without the hype.
             </p>
           </FadeInOnScroll>
-          <div className="grid md:grid-cols-2 gap-8 sm:gap-10">
+          <div className="grid md:grid-cols-2 gap-6">
             <FadeInOnScroll delay={0}>
-              <div className="border border-cyan-500/30 rounded-xl p-6 sm:p-8 bg-cyan-500/5">
-                <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                  <Target className="w-5 h-5 text-cyan-400" />
+              <div className="bento-card p-6 sm:p-8">
+                <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2 tracking-tight">
+                  <Target className="w-5 h-5 text-white/80" />
                   For you if
                 </h3>
                 <ul className="space-y-2.5">
                   {forYou.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-gray-200 text-sm sm:text-base">
-                      <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
+                    <li key={i} className="flex items-start gap-2 text-[#A1A1AA] text-sm sm:text-base">
+                      <CheckCircle2 className="w-4 h-4 text-white/80 flex-shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -527,15 +561,15 @@ export default function Home() {
               </div>
             </FadeInOnScroll>
             <FadeInOnScroll delay={100}>
-              <div className="border border-gray-600/50 rounded-xl p-6 sm:p-8 bg-gray-800/30">
-                <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                  <XCircle className="w-5 h-5 text-gray-400" />
+              <div className="bento-card p-6 sm:p-8">
+                <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2 tracking-tight">
+                  <XCircle className="w-5 h-5 text-[#71717A]" />
                   Not a fit if
                 </h3>
                 <ul className="space-y-2.5">
                   {notForYou.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-gray-400 text-sm sm:text-base">
-                      <XCircle className="w-4 h-4 text-gray-500 flex-shrink-0 mt-0.5" />
+                    <li key={i} className="flex items-start gap-2 text-[#A1A1AA] text-sm sm:text-base">
+                      <XCircle className="w-4 h-4 text-[#71717A] flex-shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -546,55 +580,106 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQs */}
-      <section className="relative px-4 sm:px-6 md:px-8 py-16 sm:py-20 bg-gradient-to-b from-transparent via-gray-900/10 to-transparent">
+      {/* Pricing — Premium tier boxes, Recommended with white border */}
+      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24">
+        <div className="w-full max-w-4xl mx-auto">
+          <FadeInOnScroll>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center tracking-tight">
+              How We Work With You
+            </h2>
+            <p className="text-[#A1A1AA] text-center mb-12 max-w-lg mx-auto text-sm">
+              Start with the free Snapshot. From there, we can outline next steps.
+            </p>
+          </FadeInOnScroll>
+          <div className="grid sm:grid-cols-3 gap-4 sm:gap-6">
+            <FadeInOnScroll delay={0}>
+              <div className="bento-card p-6 sm:p-8 flex flex-col">
+                <h3 className="text-lg font-semibold text-white mb-2 tracking-tight">Snapshot Only</h3>
+                <p className="text-sm text-[#A1A1AA] mb-6 flex-1">Free diagnostic and one live fix. No obligation to continue.</p>
+                <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="premium-button btn-agency inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white text-black font-semibold rounded-full text-sm hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                  Book free
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </FadeInOnScroll>
+            <FadeInOnScroll delay={80}>
+              <div className="bento-card p-6 sm:p-8 flex flex-col border-2 border-white relative">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-white text-black text-xs font-semibold">Recommended</span>
+                <h3 className="text-lg font-semibold text-white mb-2 tracking-tight mt-2">Snapshot + Roadmap</h3>
+                <p className="text-sm text-[#A1A1AA] mb-6 flex-1">Everything in Snapshot, plus a written automation priority roadmap after the call.</p>
+                <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="premium-button btn-agency inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white text-black font-semibold rounded-full text-sm hover:shadow-[0_0_24px_rgba(255,255,255,0.3)]">
+                  Book free
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </FadeInOnScroll>
+            <FadeInOnScroll delay={160}>
+              <div className="bento-card p-6 sm:p-8 flex flex-col">
+                <h3 className="text-lg font-semibold text-white mb-2 tracking-tight">Ongoing Engagement</h3>
+                <p className="text-sm text-[#A1A1AA] mb-6 flex-1">After the Snapshot, we can help implement automation and controls. Scope defined together.</p>
+                <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="premium-button btn-agency inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white text-black font-semibold rounded-full text-sm hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                  Book a call
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </FadeInOnScroll>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs — Bento */}
+      <section className="relative px-4 sm:px-6 md:px-8 py-16 sm:py-20">
         <div className="w-full max-w-2xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center tracking-tight">
             Frequently asked questions
           </h2>
-          <FAQAccordion items={faqItems} />
+          <div className="bento-card p-6">
+            <FAQAccordion items={faqItems} />
+          </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="relative px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24 bg-gradient-to-br from-blue-900/20 via-slate-900/30 to-cyan-900/20">
+      <section className="relative px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24">
         <div className="w-full max-w-2xl mx-auto text-center">
           <FadeInOnScroll>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
-              See What’s Breaking Your Numbers
-            </h2>
-            <p className="text-gray-300 mb-6 max-w-lg mx-auto">
-              One action: book a free Financial Accuracy Snapshot™. We review
-              your setup, fix one issue live, and give you a roadmap. Low effort.
-              Low risk.
-            </p>
-            <a
-              href={CTA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="premium-button inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold text-base rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl"
-            >
-              {CTA_LABEL}
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <p className="text-sm text-gray-400 mt-4">
-              No prep. No obligation. No sales pitch. A few sessions per week
-              only.
-            </p>
+            <div className="bento-card p-10 sm:p-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 leading-tight tracking-tight">
+                See What’s Breaking Your Numbers
+              </h2>
+              <p className="text-[#A1A1AA] mb-6 max-w-lg mx-auto">
+                One action: book a free Financial Accuracy Snapshot™. We review
+                your setup, fix one issue live, and give you a roadmap. Low effort.
+                Low risk.
+              </p>
+              <a
+                href={CTA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="premium-button btn-agency inline-flex items-center gap-2 px-8 sm:px-10 py-4 bg-white text-black font-semibold text-base rounded-full hover:shadow-[0_0_32px_rgba(255,255,255,0.25)]"
+              >
+                {CTA_LABEL}
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <p className="text-sm text-[#A1A1AA] mt-4">
+                No prep. No obligation. No sales pitch. A few sessions per week
+                only.
+              </p>
+            </div>
           </FadeInOnScroll>
         </div>
       </section>
 
       {/* Footer CTA reminder */}
-      <section className="relative px-4 sm:px-6 py-8 border-t border-gray-800/50 bg-gray-900/30">
+      <section className="relative px-4 sm:px-6 py-8 border-t border-[#262626]">
         <div className="w-full max-w-2xl mx-auto text-center">
-          <p className="text-gray-400 text-sm">
+          <p className="text-[#A1A1AA] text-sm">
             Still unsure?{" "}
             <a
               href={CTA_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors underline underline-offset-2"
+              className="font-semibold text-white hover:underline underline-offset-2"
             >
               Book a Free Financial Accuracy Snapshot™
             </a>{" "}
@@ -604,14 +689,14 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="px-4 sm:px-6 py-10 border-t border-gray-800/50">
+      <footer className="px-4 sm:px-6 py-10 border-t border-[#262626]">
         <div className="w-full max-w-4xl mx-auto text-center">
-          <p className="text-gray-500 text-sm mb-4">
+          <p className="text-[#71717A] text-sm mb-4">
             &copy; {new Date().getFullYear()} BOLDSCALE Solutions. Financial
             accuracy for founders and small finance teams.
           </p>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-800/50 border border-gray-700/50 text-sm text-gray-400 mb-4">
-            <MapPin className="w-4 h-4 text-blue-400/80" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0F0F0F] border border-[#262626] text-sm text-[#A1A1AA] mb-4">
+            <MapPin className="w-4 h-4 text-[#71717A]" />
             Operating globally
           </div>
           <div className="flex items-center justify-center gap-4">
@@ -619,26 +704,26 @@ export default function Home() {
               href="https://www.linkedin.com/in/victoria-franciss"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800/50 border border-gray-700/50 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all"
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-[#0F0F0F] border border-[#262626] hover:border-white/30 hover:shadow-[0_0_16px_rgba(255,255,255,0.08)] transition-all"
               aria-label="LinkedIn"
             >
-              <Linkedin className="w-5 h-5 text-gray-400 hover:text-blue-400" />
+              <Linkedin className="w-5 h-5 text-[#A1A1AA] hover:text-white" />
             </a>
             <a
               href="mailto:victoriafranciss@hotmail.com"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800/50 border border-gray-700/50 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all"
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-[#0F0F0F] border border-[#262626] hover:border-white/30 hover:shadow-[0_0_16px_rgba(255,255,255,0.08)] transition-all"
               aria-label="Email"
             >
-              <Mail className="w-5 h-5 text-gray-400 hover:text-blue-400" />
+              <Mail className="w-5 h-5 text-[#A1A1AA] hover:text-white" />
             </a>
             <a
               href={CTA_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800/50 border border-gray-700/50 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all"
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-[#0F0F0F] border border-[#262626] hover:border-white/30 hover:shadow-[0_0_16px_rgba(255,255,255,0.08)] transition-all"
               aria-label="Book a call"
             >
-              <Calendar className="w-5 h-5 text-gray-400 hover:text-blue-400" />
+              <Calendar className="w-5 h-5 text-[#A1A1AA] hover:text-white" />
             </a>
           </div>
         </div>
