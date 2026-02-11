@@ -1,12 +1,6 @@
 'use client';
 
-const LOGOS = [
-  { name: 'Excel', src: '/logos/excel.svg' },
-  { name: 'Python', src: '/logos/python.svg' },
-  { name: 'Google Sheets', src: '/logos/google-sheets.svg' },
-  { name: 'Xero', src: '/logos/xero.svg' },
-  { name: 'QuickBooks', src: '/logos/quickbooks.svg' },
-];
+const BRANDS = ['Excel', 'Python', 'Google Sheets', 'Xero', 'QuickBooks'];
 
 export function PoweredByCarousel() {
   return (
@@ -17,21 +11,13 @@ export function PoweredByCarousel() {
       >
         {[1, 2, 3].map((set) => (
           <div key={set} className="flex items-center gap-12 sm:gap-20 shrink-0">
-            {LOGOS.map((logo) => (
-              <div
-                key={`${set}-${logo.name}`}
-                className="flex h-14 w-28 shrink-0 items-center justify-center transition-transform duration-300 hover:scale-110 hover:opacity-100 opacity-85"
-                role="img"
-                aria-label={logo.name}
+            {BRANDS.map((brand) => (
+              <span
+                key={`${set}-${brand}`}
+                className="text-base sm:text-lg font-medium text-[#A1A1AA] whitespace-nowrap transition-colors duration-300 hover:text-white"
               >
-                <img
-                  src={logo.src}
-                  alt=""
-                  className="h-12 w-24 object-contain object-center"
-                  width={96}
-                  height={48}
-                />
-              </div>
+                {brand}
+              </span>
             ))}
           </div>
         ))}

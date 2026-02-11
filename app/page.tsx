@@ -153,22 +153,17 @@ export default function Home() {
         />
         <div className="w-full max-w-5xl mx-auto relative z-10 flex flex-col items-center text-center overflow-visible">
           <FadeInOnScroll delay={80}>
-            <h1 className="hero-headline text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white leading-[1.1] tracking-tight mb-6" style={{ letterSpacing: '-0.03em' }}>
+            <h1 className="hero-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.1] tracking-tight mb-6" style={{ letterSpacing: '-0.03em' }}>
               Not Sure If Your Financial Numbers Are Actually Accurate?
             </h1>
           </FadeInOnScroll>
           <FadeInOnScroll delay={100}>
-            <p className="text-lg sm:text-xl text-gray-400 max-w-[600px] mx-auto mb-6 leading-relaxed">
-              Discover the truth behind your reports before it costs you money, time, or confidence.
-            </p>
-          </FadeInOnScroll>
-          <FadeInOnScroll delay={120}>
             <p className="text-base sm:text-lg text-[#A1A1AA] max-w-[580px] mx-auto mb-10">
               We find where your numbers break, fix one issue immediately, and outline what to automate next — in one session for FREE
             </p>
           </FadeInOnScroll>
-          <FadeInOnScroll delay={150}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <FadeInOnScroll delay={120}>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
               <a
                 href={CTA_URL}
                 target="_blank"
@@ -187,10 +182,6 @@ export default function Home() {
               </a>
             </div>
           </FadeInOnScroll>
-          <FadeInOnScroll delay={180}>
-            <p className="text-sm text-[#71717A] mb-2">No prep. No sales pitch. No obligation.</p>
-            <p className="text-sm text-[#71717A] mb-16">Limited to 3 new sessions per week to ensure hands-on implementation.</p>
-          </FadeInOnScroll>
 
           {/* POWERED BY — horizontal logo carousel in color */}
           <FadeInOnScroll delay={200}>
@@ -202,14 +193,14 @@ export default function Home() {
 
           {/* Metrics row — footer of hero */}
           <FadeInOnScroll delay={220}>
-            <div className="w-full max-w-2xl border-t border-white/10 pt-10 mt-4">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-16">
+            <div className="w-full max-w-2xl border-t border-white/10 pt-10 mt-4 pb-5 overflow-visible">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-16 overflow-visible">
               {heroMetrics.map((m, i) => (
-                <div key={i} className="text-center">
+                <div key={i} className="text-center overflow-visible">
                   <p className={`text-2xl sm:text-3xl font-bold ${i === 1 ? 'text-[#60A5FA]' : 'text-white'}`}>
                     {m.value}
                   </p>
-                  <p className="text-sm text-[#A1A1AA] mt-1">{m.label}</p>
+                  <p className="text-sm text-[#A1A1AA] mt-1 leading-relaxed">{m.label}</p>
                 </div>
               ))}
               </div>

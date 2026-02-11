@@ -40,7 +40,7 @@ export function FadeInOnScroll({ children, delay = 0 }: { children: React.ReactN
   return (
     <div
       ref={ref}
-      className={`transition-opacity duration-500 ease-out ${
+      className={`transition-opacity duration-500 ease-out overflow-visible ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
       style={{
@@ -49,7 +49,7 @@ export function FadeInOnScroll({ children, delay = 0 }: { children: React.ReactN
         willChange: isVisible ? 'auto' : 'transform, opacity',
         backfaceVisibility: 'hidden',
         WebkitBackfaceVisibility: 'hidden',
-        contain: 'layout style paint'
+        contain: 'layout style'
       }}
     >
       {children}
