@@ -64,19 +64,19 @@ const trustStripItems = [
 
 const microCases = [
   {
-    title: "Stop Conflicting Reports in 2 Weeks — Trust Your Numbers Every Time",
+    title: "Reliable Numbers in 2 Weeks — No Conflicting Reports Ever Again",
     issue: "Revenue in the board deck didn’t match the P&L; no one knew which was right.",
     fix: "Traced sources, fixed one broken link in the reporting chain, automated the reconciliation.",
     result: "Board deck and P&L matched to the dollar within two weeks; one reliable number for every board meeting since.",
   },
   {
-    title: "Close in 5 Days — No More Reclasses, No More Guesswork",
+    title: "Close in 5 Days — Fewer Reclasses, More Confidence",
     issue: "Month-end close took 2 weeks and still had 10–12 reclasses every quarter.",
     fix: "Mapped the close process, automated the highest-error step, documented the rest.",
     result: "Close down to 5 business days within 6 weeks; quarterly reclasses fell from 12 to 2.",
   },
   {
-    title: "Forecast Within 3% of Actual — No More Surprise Shortfalls",
+    title: "Forecast Within 3% — No Surprise Shortfalls",
     issue: "Founders couldn’t trust cash forecasts—spreadsheet errors had caused two surprise shortfalls in 6 months.",
     fix: "Reviewed formulas and data feeds, corrected the main driver, added a simple check.",
     result: "Next two cash forecasts were within 3% of actual; no surprise shortfalls in the following 6 months.",
@@ -112,12 +112,12 @@ const faqItems = [
   {
     question: "What happens during the Financial Accuracy Snapshot™?",
     answer:
-      "You'll see improvement during the session. We review where your numbers come from, identify the biggest accuracy risks, and fix one issue live with you on the call. We guarantee at least one concrete improvement, or it doesn't count. You also get a clear roadmap for what to automate next. Low effort: no prep required, no sales pitch.",
+      "You'll see a real improvement during the session — we fix something live with you, not just analyze and send a report. We review where your numbers come from, identify the biggest accuracy risks, and guarantee at least one concrete improvement or it doesn't count. You also get a clear roadmap for what to automate next. No prep required. No sales pitch.",
   },
   {
     question: "How long until we see results?",
     answer:
-      "You'll see improvement during the session—at least one real fix before you leave. No waiting. The roadmap gives you clear next steps you can act on right away. Low effort, quick win.",
+      "You'll see a real improvement during the session — we fix something live with you, not just analyze and send a report. At least one fix before you leave. No waiting. The roadmap gives you clear next steps you can act on right away.",
   },
   {
     question: "Is our data secure?",
@@ -261,9 +261,9 @@ export default function Home() {
                   clarity and control.
                 </p>
                 <p className="pt-4 text-white font-medium">
-                  Think this feels familiar?{" "}
+                  If your numbers ever leave you guessing, that&apos;s a risk — not a stable system.{" "}
                   <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="text-white underline underline-offset-2 hover:no-underline">
-                    Get clarity with a free Financial Accuracy Snapshot™.
+                    See exactly where it breaks with a Free Financial Accuracy Snapshot™.
                   </a>
                 </p>
               </div>
@@ -351,7 +351,7 @@ export default function Home() {
           </FadeInOnScroll>
           <p className="text-center">
             <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="text-white font-medium underline underline-offset-2 hover:no-underline">
-              See how this works for you — book a free Snapshot.
+              If your numbers ever leave you guessing, that&apos;s a risk — not a stable system. See exactly where it breaks with a Free Financial Accuracy Snapshot™.
             </a>
           </p>
         </div>
@@ -505,9 +505,9 @@ export default function Home() {
       <section className="relative px-4 sm:px-6 md:px-8 py-6">
         <div className="w-full max-w-3xl mx-auto text-center">
           <p className="text-[#A1A1AA]">
-            Want these outcomes for your numbers?{" "}
+            If your numbers ever leave you guessing, that&apos;s a risk — not a stable system.{" "}
             <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="text-white font-medium underline underline-offset-2 hover:no-underline">
-              Get started with a free Financial Accuracy Snapshot™.
+              See exactly where it breaks with a Free Financial Accuracy Snapshot™.
             </a>
           </p>
         </div>
@@ -523,35 +523,46 @@ export default function Home() {
           </FadeInOnScroll>
           <div className="space-y-6">
             {microCases.map((c, i) => (
-              <FadeInOnScroll key={i} delay={i * 80}>
-                <div className="bento-card p-6 sm:p-8">
-                  {c.title && (
-                    <h3 className="text-base sm:text-lg font-semibold text-white mb-4 tracking-tight">
-                      {c.title}
-                    </h3>
-                  )}
-                  <div className="grid sm:grid-cols-3 gap-4 sm:gap-6 text-sm sm:text-base">
-                    <div>
-                      <p className="text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mb-2">
-                        Issue
-                      </p>
-                      <p className="text-[#A1A1AA] leading-relaxed">{c.issue}</p>
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mb-2">
-                        Fix
-                      </p>
-                      <p className="text-[#A1A1AA] leading-relaxed">{c.fix}</p>
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mb-2">
-                        Result
-                      </p>
-                      <p className="text-[#A1A1AA] leading-relaxed">{c.result}</p>
+              <div key={i} className="space-y-6">
+                <FadeInOnScroll delay={i * 80}>
+                  <div className="bento-card p-6 sm:p-8">
+                    {c.title && (
+                      <h3 className="text-base sm:text-lg font-semibold text-white mb-4 tracking-tight">
+                        {c.title}
+                      </h3>
+                    )}
+                    <div className="grid sm:grid-cols-3 gap-4 sm:gap-6 text-sm sm:text-base">
+                      <div>
+                        <p className="text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mb-2">
+                          Issue
+                        </p>
+                        <p className="text-[#A1A1AA] leading-relaxed">{c.issue}</p>
+                      </div>
+                      <div>
+                        <p className="text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mb-2">
+                          Fix
+                        </p>
+                        <p className="text-[#A1A1AA] leading-relaxed">{c.fix}</p>
+                      </div>
+                      <div>
+                        <p className="text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mb-2">
+                          Result
+                        </p>
+                        <p className="text-[#A1A1AA] leading-relaxed">{c.result}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </FadeInOnScroll>
+                </FadeInOnScroll>
+                {i === 0 && (
+                  <p className="text-center text-[#A1A1AA]">
+                    Already feeling this pain?{" "}
+                    <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="text-white font-medium underline underline-offset-2 hover:no-underline">
+                      Book a Free Financial Accuracy Snapshot™
+                    </a>
+                    {" "}— uncover the silent risks in your numbers.
+                  </p>
+                )}
+              </div>
             ))}
           </div>
         </div>
@@ -696,7 +707,7 @@ export default function Home() {
           <FadeInOnScroll>
             <div className="bento-card p-10 sm:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 leading-tight tracking-tight">
-                Stop Guessing and Start Knowing — Book a Free Financial Accuracy Snapshot™
+                Turn uncertainty into confidence — Book a Free Financial Accuracy Snapshot™
               </h2>
               <a
                 href={CTA_URL}
