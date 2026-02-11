@@ -21,8 +21,22 @@ import { FAQAccordion } from "./components/FAQAccordion";
 import { StickyCtaBar } from "./components/StickyCtaBar";
 
 const CTA_URL = "https://calendly.com/victoriafranciss/automation-discovery-call";
-const CTA_LABEL = "Book Your Free Financial Accuracy Snapshot™";
-const NAVBAR_CTA_LABEL = "Book Your Free Financial Accuracy Snapshot™";
+const CTA_LABEL = "Book a Free Financial Risk Audit™";
+const NAVBAR_CTA_LABEL = "Book a Free Financial Risk Audit™";
+
+const techStackLogos = [
+  { name: "Excel", src: "https://www.vectorlogo.zone/logos/microsoft_excel/microsoft_excel-icon.svg" },
+  { name: "Python", src: "https://www.vectorlogo.zone/logos/python/python-icon.svg" },
+  { name: "Google Sheets", src: "https://www.vectorlogo.zone/logos/google_sheets/google_sheets-icon.svg" },
+  { name: "Xero", src: "https://www.vectorlogo.zone/logos/xero/xero-icon.svg" },
+  { name: "QuickBooks", src: "https://cdn.worldvectorlogo.com/logos/quickbooks.svg" },
+];
+
+const heroMetrics = [
+  { value: "500+ Hours", label: "Recovered per year" },
+  { value: "100% Accuracy", label: "In Board Reporting" },
+  { value: "2-Week Turnaround", label: "Average Setup" },
+];
 
 const credibilityStrip = [
   "Live diagnosis tailored to your current setup",
@@ -121,35 +135,96 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero — Grouped promise + action, visual anchor */}
-      <section className="relative flex min-h-[80vh] flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-28 sm:py-32 md:py-36 pt-32 sm:pt-36">
-        <div className="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_40%,rgba(96,165,250,0.06),transparent)]" />
-        <div className="w-full max-w-3xl mx-auto relative z-10">
-          <div className="flex flex-col items-center gap-6 sm:gap-8">
-            <FadeInOnScroll delay={80}>
-              <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-2">
-                <BarChart3 className="w-7 h-7 text-white/80" aria-hidden />
-              </div>
-            </FadeInOnScroll>
-            <FadeInOnScroll delay={100}>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-[1.2] tracking-tight text-center">
-                <span className="block">Not Sure Your Numbers Are Accurate?</span>
-                <span className="block text-[#A1A1AA] font-medium text-2xl sm:text-3xl mt-2">We fix that.</span>
-              </h1>
-            </FadeInOnScroll>
-            <FadeInOnScroll delay={150}>
+      {/* Hero — Dumo-inspired: aurora glow, dual buttons, POWERED BY, metrics */}
+      <section className="relative flex min-h-screen flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-32 pt-36 sm:pt-40 bg-[#050505]">
+        {/* Aurora glow — teal/blue radial gradient, low opacity */}
+        <div
+          className="absolute inset-0 pointer-events-none z-0"
+          style={{
+            background: 'radial-gradient(ellipse 100% 80% at 50% 30%, rgba(20, 184, 166, 0.08) 0%, rgba(59, 130, 246, 0.05) 40%, transparent 70%)',
+          }}
+        />
+        <div
+          className="absolute inset-0 pointer-events-none z-0"
+          style={{
+            background: 'radial-gradient(ellipse 120% 100% at 50% 50%, rgba(96, 165, 250, 0.06) 0%, transparent 60%)',
+          }}
+        />
+        <div className="w-full max-w-4xl mx-auto relative z-10 flex flex-col items-center text-center">
+          <FadeInOnScroll delay={80}>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] tracking-tight mb-6">
+              Not Sure If Your Financial Numbers Are Actually Accurate?
+            </h1>
+          </FadeInOnScroll>
+          <FadeInOnScroll delay={100}>
+            <p className="text-lg sm:text-xl text-gray-400 max-w-[600px] mx-auto mb-6 leading-relaxed">
+              Discover the truth behind your reports before it costs you money, time, or confidence.
+            </p>
+          </FadeInOnScroll>
+          <FadeInOnScroll delay={120}>
+            <p className="text-base sm:text-lg text-[#A1A1AA] max-w-[580px] mx-auto mb-10">
+              We find where your numbers break, fix one issue immediately, and outline what to automate next — in one session for FREE
+            </p>
+          </FadeInOnScroll>
+          <FadeInOnScroll delay={150}>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
               <a
                 href={CTA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="premium-button btn-agency inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold text-base rounded-full shadow-[0_0_24px_rgba(255,255,255,0.2)] hover:shadow-[0_0_32px_rgba(255,255,255,0.3)] transition-all duration-300"
+                className="premium-button btn-agency inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full shadow-[0_0_28px_rgba(255,255,255,0.25)] hover:shadow-[0_0_36px_rgba(255,255,255,0.35)] transition-all"
               >
                 {CTA_LABEL}
                 <ArrowRight className="w-4 h-4" />
               </a>
-            </FadeInOnScroll>
-            <p className="text-xs text-[#71717A]">Limited to 3 sessions per week.</p>
-          </div>
+              <a
+                href="#who-are-we"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/60 bg-white/5 backdrop-blur-sm text-white font-semibold hover:bg-white/10 hover:border-white/80 transition-all"
+              >
+                Who Are We
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </FadeInOnScroll>
+          <FadeInOnScroll delay={180}>
+            <p className="text-sm text-[#71717A] mb-2">No prep. No sales pitch. No obligation.</p>
+            <p className="text-sm text-[#71717A] mb-16">Limited to 3 new sessions per week to ensure hands-on implementation.</p>
+          </FadeInOnScroll>
+
+          {/* POWERED BY — tech stack bar */}
+          <FadeInOnScroll delay={200}>
+            <p className="text-xs font-medium text-[#71717A] uppercase tracking-widest mb-6">Powered by</p>
+            <div className="flex flex-wrap items-center justify-center gap-x-10 sm:gap-x-12 gap-y-6 mb-20">
+              {techStackLogos.map((logo, i) => (
+                <span key={logo.name} className="flex items-center">
+                  <img
+                    src={logo.src}
+                    alt={logo.name}
+                    className="h-8 w-auto object-contain opacity-50 grayscale"
+                    width={80}
+                    height={32}
+                  />
+                  {i < techStackLogos.length - 1 && (
+                    <span className="hidden sm:inline w-px h-6 bg-white/20 mx-2" aria-hidden />
+                  )}
+                </span>
+              ))}
+            </div>
+          </FadeInOnScroll>
+
+          {/* Metrics row — footer of hero */}
+          <FadeInOnScroll delay={220}>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-16 w-full max-w-2xl">
+              {heroMetrics.map((m, i) => (
+                <div key={i} className="text-center">
+                  <p className={`text-2xl sm:text-3xl font-bold ${i === 1 ? 'text-[#60A5FA]' : 'text-white'}`}>
+                    {m.value}
+                  </p>
+                  <p className="text-sm text-[#A1A1AA] mt-1">{m.label}</p>
+                </div>
+              ))}
+            </div>
+          </FadeInOnScroll>
         </div>
       </section>
 
@@ -192,7 +267,7 @@ export default function Home() {
             >
               <span className="font-semibold text-white">See where your numbers break</span>
               <span>—</span>
-              <span className="underline underline-offset-4">Book a Free Financial Accuracy Snapshot™</span>
+              <span className="underline underline-offset-4">Book a Free Financial Risk Audit™</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </FadeInOnScroll>
@@ -237,7 +312,7 @@ export default function Home() {
         <div className="w-full max-w-5xl mx-auto">
           <FadeInOnScroll>
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
-              Free Financial Accuracy Snapshot™
+              Free Financial Risk Audit™
             </h2>
             <p className="text-[#A1A1AA] text-center mb-12 max-w-2xl mx-auto">
               A live diagnostic + quick win that shows where your numbers are at risk.
@@ -313,12 +388,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Who it's for / not for */}
-      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-28 sm:py-36 border-t border-white/5">
+      {/* Who Are We */}
+      <section id="who-are-we" className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-28 sm:py-36 border-t border-white/5 scroll-mt-24">
         <div className="w-full max-w-4xl mx-auto">
           <FadeInOnScroll>
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10 text-center tracking-tight">
-              Who This Is For — and Who It's Not
+              Who Are We
             </h2>
             <p className="text-[#A1A1AA] text-center mb-8 max-w-xl mx-auto text-sm">
               We're built for founders, operators, and small finance teams who

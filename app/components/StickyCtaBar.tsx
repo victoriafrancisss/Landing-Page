@@ -3,7 +3,7 @@
 import { ArrowRight } from 'lucide-react';
 
 const CTA_URL = "https://calendly.com/victoriafranciss/automation-discovery-call";
-const CTA_LABEL = "Free Financial Accuracy Snapshot™";
+const CTA_LABEL = "Book a Free Financial Risk Audit™";
 
 export function StickyCtaBar() {
   return (
