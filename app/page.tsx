@@ -64,19 +64,19 @@ const trustStripItems = [
 
 const microCases = [
   {
-    title: "Reliable Numbers in 2 Weeks — No Conflicting Reports Ever Again",
+    title: "Stop Conflicting Reports in 2 Weeks — Trust Your Numbers Every Time",
     issue: "Revenue in the board deck didn’t match the P&L; no one knew which was right.",
     fix: "Traced sources, fixed one broken link in the reporting chain, automated the reconciliation.",
     result: "Board deck and P&L matched to the dollar within two weeks; one reliable number for every board meeting since.",
   },
   {
-    title: "Close in 5 Days — No More Reclasses Every Quarter",
+    title: "Close in 5 Days — No More Reclasses, No More Guesswork",
     issue: "Month-end close took 2 weeks and still had 10–12 reclasses every quarter.",
     fix: "Mapped the close process, automated the highest-error step, documented the rest.",
     result: "Close down to 5 business days within 6 weeks; quarterly reclasses fell from 12 to 2.",
   },
   {
-    title: "Forecast Accuracy Within 3% — No More Surprise Shortfalls",
+    title: "Forecast Within 3% of Actual — No More Surprise Shortfalls",
     issue: "Founders couldn’t trust cash forecasts—spreadsheet errors had caused two surprise shortfalls in 6 months.",
     fix: "Reviewed formulas and data feeds, corrected the main driver, added a simple check.",
     result: "Next two cash forecasts were within 3% of actual; no surprise shortfalls in the following 6 months.",
@@ -97,10 +97,10 @@ const notForYou = [
 ];
 
 const servicesList = [
-  { title: "Automated reconciliation", body: "Reduce manual matching and catch mismatches before they spread." },
-  { title: "Dashboards & reporting", body: "One source of truth so your numbers tell the same story everywhere." },
-  { title: "Controls & checks", body: "Simple safeguards so errors don’t slip through month-end." },
-  { title: "Anomaly detection", body: "Spot unusual numbers early so you can fix them before they become problems." },
+  { title: "Automated reconciliation", body: "Stop error spread before it happens." },
+  { title: "Dashboards & reporting", body: "One source of truth for every report." },
+  { title: "Controls & checks", body: "Prevent common month-end mistakes." },
+  { title: "Anomaly detection", body: "Detect unusual numbers early." },
 ];
 
 const faqItems = [
@@ -112,12 +112,12 @@ const faqItems = [
   {
     question: "What happens during the Financial Accuracy Snapshot™?",
     answer:
-      "We review where your numbers come from, identify the biggest accuracy risks, and fix one issue live with you on the call. You'll see improvement during the session. We guarantee at least one concrete improvement, or it doesn't count. You also get a clear roadmap for what to automate next. No prep required. No sales pitch.",
+      "You'll see improvement during the session. We review where your numbers come from, identify the biggest accuracy risks, and fix one issue live with you on the call. We guarantee at least one concrete improvement, or it doesn't count. You also get a clear roadmap for what to automate next. Low effort: no prep required, no sales pitch.",
   },
   {
     question: "How long until we see results?",
     answer:
-      "You see improvement during the session—at least one live fix before you leave. The roadmap gives you clear next steps you can act on immediately so your numbers stay reliable as you scale.",
+      "You'll see improvement during the session—at least one real fix before you leave. No waiting. The roadmap gives you clear next steps you can act on right away. Low effort, quick win.",
   },
   {
     question: "Is our data secure?",
@@ -181,7 +181,7 @@ export default function Home() {
             </FadeInOnScroll>
             <FadeInOnScroll delay={150}>
               <p className="text-xl sm:text-2xl max-w-2xl mx-auto leading-relaxed text-slate-300 font-medium">
-                Bad decisions hide in numbers you can&apos;t trust. Get trustworthy financial numbers that guide decisions, not confuse them.
+                Every decision you make on wrong numbers carries real risk. Get numbers you can trust — so your choices guide the business, not guesswork.
               </p>
             </FadeInOnScroll>
             <FadeInOnScroll delay={200}>
@@ -345,10 +345,15 @@ export default function Home() {
             ))}
           </div>
           <FadeInOnScroll>
-            <p className="text-center text-[#A1A1AA] font-medium">
+            <p className="text-center text-[#A1A1AA] font-medium mb-8">
               No system rebuilds. No new tools. No extra hires.
             </p>
           </FadeInOnScroll>
+          <p className="text-center">
+            <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="text-white font-medium underline underline-offset-2 hover:no-underline">
+              See how this works for you — book a free Snapshot.
+            </a>
+          </p>
         </div>
       </section>
 
@@ -493,6 +498,18 @@ export default function Home() {
               </FadeInOnScroll>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Micro-CTA after capabilities */}
+      <section className="relative px-4 sm:px-6 md:px-8 py-6">
+        <div className="w-full max-w-3xl mx-auto text-center">
+          <p className="text-[#A1A1AA]">
+            Want these outcomes for your numbers?{" "}
+            <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="text-white font-medium underline underline-offset-2 hover:no-underline">
+              Get started with a free Financial Accuracy Snapshot™.
+            </a>
+          </p>
         </div>
       </section>
 
@@ -679,7 +696,7 @@ export default function Home() {
           <FadeInOnScroll>
             <div className="bento-card p-10 sm:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 leading-tight tracking-tight">
-                Turn guesswork into confidence — Book your Free Financial Accuracy Snapshot™
+                Stop Guessing and Start Knowing — Book a Free Financial Accuracy Snapshot™
               </h2>
               <a
                 href={CTA_URL}
