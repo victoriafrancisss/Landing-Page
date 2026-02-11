@@ -17,20 +17,13 @@ import {
 } from "lucide-react";
 import { FadeInOnScroll } from "./components/InteractiveElements";
 import { PremiumBackground } from "./components/PremiumBackground";
+import { PoweredByCarousel } from "./components/PoweredByCarousel";
 import { FAQAccordion } from "./components/FAQAccordion";
 import { StickyCtaBar } from "./components/StickyCtaBar";
 
 const CTA_URL = "https://calendly.com/victoriafranciss/automation-discovery-call";
 const CTA_LABEL = "Book a Free Financial Risk Audit™";
 const NAVBAR_CTA_LABEL = "Book a Free Financial Risk Audit™";
-
-const techStackLogos = [
-  { name: "Excel", src: "/logos/excel.svg" },
-  { name: "Python", src: "/logos/python.svg" },
-  { name: "Google Sheets", src: "/logos/google-sheets.svg" },
-  { name: "Xero", src: "/logos/xero.svg" },
-  { name: "QuickBooks", src: "/logos/quickbooks.svg" },
-];
 
 const heroMetrics = [
   { value: "500+ Hours", label: "Recovered per year" },
@@ -136,18 +129,19 @@ export default function Home() {
       </nav>
 
       {/* Hero — Dumo-inspired: aurora glow, dual buttons, POWERED BY, metrics */}
-      <section className="relative flex min-h-screen flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-32 pt-36 sm:pt-40 bg-[#050505] overflow-hidden">
-        {/* Aurora glow — stronger teal/blue radial gradients */}
+      <section className="hero-section relative flex min-h-[120vh] flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-28 sm:py-40 pt-40 sm:pt-48 pb-32 sm:pb-40 bg-[#050505] overflow-x-hidden overflow-y-visible">
+        {/* Aurora glow — stronger teal/blue radial gradients, subtle animation */}
         <div
-          className="absolute inset-0 pointer-events-none z-0"
+          className="absolute inset-0 pointer-events-none z-0 animate-aurora-pulse"
           style={{
             background: 'radial-gradient(ellipse 100% 80% at 50% 25%, rgba(20, 184, 166, 0.15) 0%, rgba(59, 130, 246, 0.08) 35%, transparent 65%)',
           }}
         />
         <div
-          className="absolute inset-0 pointer-events-none z-0"
+          className="absolute inset-0 pointer-events-none z-0 animate-aurora-pulse"
           style={{
             background: 'radial-gradient(ellipse 140% 120% at 50% 45%, rgba(96, 165, 250, 0.12) 0%, rgba(99, 102, 241, 0.05) 50%, transparent 70%)',
+            animationDelay: '1s',
           }}
         />
         {/* Subtle noise texture overlay */}
@@ -157,9 +151,9 @@ export default function Home() {
             backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\'/%3E%3C/svg%3E")',
           }}
         />
-        <div className="w-full max-w-4xl mx-auto relative z-10 flex flex-col items-center text-center">
+        <div className="w-full max-w-5xl mx-auto relative z-10 flex flex-col items-center text-center overflow-visible">
           <FadeInOnScroll delay={80}>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] tracking-tight mb-6" style={{ letterSpacing: '-0.03em' }}>
+            <h1 className="hero-headline text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white leading-[1.1] tracking-tight mb-6" style={{ letterSpacing: '-0.03em' }}>
               Not Sure If Your Financial Numbers Are Actually Accurate?
             </h1>
           </FadeInOnScroll>
@@ -198,24 +192,11 @@ export default function Home() {
             <p className="text-sm text-[#71717A] mb-16">Limited to 3 new sessions per week to ensure hands-on implementation.</p>
           </FadeInOnScroll>
 
-          {/* POWERED BY — tech stack bar */}
+          {/* POWERED BY — horizontal logo carousel in color */}
           <FadeInOnScroll delay={200}>
             <p className="text-xs font-medium text-[#71717A] uppercase tracking-widest mb-6">Powered by</p>
-            <div className="flex flex-wrap items-center justify-center gap-x-8 sm:gap-x-10 gap-y-6 mb-16">
-              {techStackLogos.map((logo, i) => (
-                <span key={logo.name} className="flex items-center group">
-                  <img
-                    src={logo.src}
-                    alt={logo.name}
-                    className="h-9 w-auto object-contain opacity-60 grayscale group-hover:opacity-80 transition-opacity duration-300"
-                    width={90}
-                    height={36}
-                  />
-                  {i < techStackLogos.length - 1 && (
-                    <span className="hidden sm:inline w-px h-6 bg-white/25 mx-4" aria-hidden />
-                  )}
-                </span>
-              ))}
+            <div className="w-full max-w-4xl mb-16">
+              <PoweredByCarousel />
             </div>
           </FadeInOnScroll>
 

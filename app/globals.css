@@ -115,6 +115,16 @@ section[class*="py-24"] {
   overflow: visible !important;
 }
 
+/* Hero section - prevent text clipping, allow vertical overflow */
+.hero-section {
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+}
+
+.hero-section .max-w-5xl {
+  overflow: visible !important;
+}
+
 /* Force MOST POPULAR tag to be visible - very specific selectors */
 div[class*="bg-gradient-to-br"][class*="from-blue-900"] > div[class*="absolute"][class*="-top"] {
   overflow: visible !important;
@@ -176,11 +186,11 @@ a.premium-button {
   }
 }
 
-/* Responsive font sizes - larger on mobile, reasonable on desktop */
+/* Responsive font sizes - larger on mobile, bigger on desktop */
 @media (max-width: 640px) {
-  /* Hero headline - larger on mobile */
-  main > section:first-of-type h1,
-  main section.relative:first-of-type h1 {
+  /* Hero headline - larger on mobile (don't override .hero-headline - let Tailwind handle) */
+  main > section:first-of-type h1:not(.hero-headline),
+  main section.relative:first-of-type h1:not(.hero-headline) {
     font-size: 2.5rem !important;
     line-height: 1.1 !important;
     font-weight: 800 !important;
@@ -194,11 +204,11 @@ a.premium-button {
   }
 }
 
-/* Reduce font sizes on larger screens (laptop/desktop) */
+/* Bigger hero headline on desktop - .hero-headline uses Tailwind text-5xl through text-9xl */
 @media (min-width: 1024px) {
-  /* Hero headline - more reasonable on desktop */
-  main > section:first-of-type h1,
-  main section.relative:first-of-type h1 {
+  /* Hero headline - skip override for .hero-headline to allow Tailwind's larger sizes */
+  main > section:first-of-type h1:not(.hero-headline),
+  main section.relative:first-of-type h1:not(.hero-headline) {
     font-size: 3.5rem !important;
     line-height: 1.1 !important;
   }
