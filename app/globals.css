@@ -405,9 +405,9 @@ a.premium-button {
 
 /* Premium Interactive Cards - GPU Accelerated */
 .interactive-card {
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
-              box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-              border-color 0.2s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
   position: relative;
   overflow: hidden;
   will-change: transform;
@@ -449,7 +449,7 @@ a.premium-button {
   background: #0F0F0F;
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 0.75rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .bento-card:hover {
   border-color: rgba(255, 255, 255, 0.12);

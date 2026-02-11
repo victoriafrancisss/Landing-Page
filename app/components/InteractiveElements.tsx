@@ -23,7 +23,7 @@ export function FadeInOnScroll({ children, delay = 0 }: { children: React.ReactN
           setTimeout(() => setIsVisible(true), delay);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.08, rootMargin: '0px 0px -60px 0px' }
     );
 
     if (ref.current) {
@@ -40,12 +40,10 @@ export function FadeInOnScroll({ children, delay = 0 }: { children: React.ReactN
   return (
     <div
       ref={ref}
-      className={`transition-opacity duration-500 ease-out overflow-visible ${
-        isVisible ? 'opacity-100' : 'opacity-0'
-      }`}
+      className={`overflow-visible ${isVisible ? 'opacity-100' : 'opacity-0'}`}
       style={{
-        transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 20px, 0)',
-        transition: 'opacity 0.4s ease-out, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+        transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 24px, 0)',
+        transition: 'opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1)',
         willChange: isVisible ? 'auto' : 'transform, opacity',
         backfaceVisibility: 'hidden',
         WebkitBackfaceVisibility: 'hidden',

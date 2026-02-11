@@ -14,7 +14,7 @@ export function PoweredByCarousel() {
             {BRANDS.map((brand) => (
               <span
                 key={`${set}-${brand}`}
-                className="text-base sm:text-lg font-medium text-[#A1A1AA] whitespace-nowrap transition-colors duration-300 hover:text-white"
+                className="text-base sm:text-lg font-medium text-[#A1A1AA] whitespace-nowrap transition-all duration-300 ease-out hover:text-white hover:scale-105"
               >
                 {brand}
               </span>

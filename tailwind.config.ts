@@ -43,6 +43,10 @@ const config: Config = {
         'powered-by': 'powered-by 40s linear infinite',
         'aurora-pulse': 'aurora-pulse 8s ease-in-out infinite',
       },
+      transitionTimingFunction: {
+        'smooth': 'cubic-bezier(0.16, 1, 0.3, 1)',
+        'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
+      },
     },
   },
   plugins: [],

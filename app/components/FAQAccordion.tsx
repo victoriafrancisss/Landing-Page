@@ -44,21 +44,24 @@ export function FAQAccordion({ items = defaultItems }: { items?: FAQItem[] }) {
             <button
               type="button"
               onClick={() => setOpenIndex(isOpen ? null : index)}
-              className="w-full flex items-center justify-between gap-2 py-2.5 px-0 text-left text-[#A1A1AA] hover:text-white transition-colors"
+              className="w-full flex items-center justify-between gap-2 py-2.5 px-0 text-left text-[#A1A1AA] hover:text-white transition-colors duration-300 ease-out"
               aria-expanded={isOpen}
             >
               <span className="text-sm font-medium pr-2">
                 {item.question}
               </span>
               <ChevronDown
-                className={`w-3.5 h-3.5 text-[#71717A] flex-shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                className={`w-3.5 h-3.5 text-[#71717A] flex-shrink-0 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${isOpen ? 'rotate-180' : ''}`}
               />
             </button>
-            {isOpen && (
+            <div
+              className="overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]"
+              style={{ maxHeight: isOpen ? 400 : 0 }}
+            >
               <p className="text-sm text-[#A1A1AA] leading-relaxed pb-2.5 pt-0">
                 {item.answer}
               </p>
-            )}
+            </div>
           </div>
         );
       })}

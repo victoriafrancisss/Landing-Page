@@ -111,7 +111,7 @@ export default function Home() {
       <StickyCtaBar />
 
       {/* Floating Navbar — Dumo-style glass pill */}
-      <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl rounded-full backdrop-blur-xl bg-[#050505]/70 border border-[#262626] shadow-xl">
+      <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl rounded-full backdrop-blur-xl bg-[#050505]/70 border border-[#262626] shadow-xl transition-all duration-300 ease-smooth">
         <div className="w-full mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
           <span className="text-white font-bold tracking-tight text-lg">
             BOLDSCALE
@@ -120,10 +120,10 @@ export default function Home() {
             href={CTA_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="premium-button btn-agency inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full bg-white text-black hover:shadow-[0_0_28px_rgba(255,255,255,0.4)]"
+            className="premium-button btn-agency group inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full bg-white text-black hover:shadow-[0_0_28px_rgba(255,255,255,0.4)] transition-all duration-300 ease-smooth"
           >
             {NAVBAR_CTA_LABEL}
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 transition-transform duration-300 ease-smooth group-hover:translate-x-0.5" />
           </a>
         </div>
       </nav>
@@ -168,17 +168,17 @@ export default function Home() {
                 href={CTA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="premium-button btn-agency inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full shadow-[0_0_28px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] hover:-translate-y-0.5 transition-all duration-300"
+                className="premium-button btn-agency group inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full shadow-[0_0_28px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] hover:-translate-y-0.5 transition-all duration-300 ease-smooth"
               >
                 {CTA_LABEL}
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 ease-smooth group-hover:translate-x-1" />
               </a>
               <a
                 href="#who-are-we"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/70 bg-white/[0.08] backdrop-blur-xl text-white font-semibold hover:bg-white/[0.15] hover:border-white/90 hover:-translate-y-0.5 transition-all duration-300"
+                className="group inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/70 bg-white/[0.08] backdrop-blur-xl text-white font-semibold hover:bg-white/[0.15] hover:border-white/90 hover:-translate-y-0.5 transition-all duration-300 ease-smooth"
               >
                 Who Are We
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 ease-smooth group-hover:translate-x-1" />
               </a>
             </div>
           </FadeInOnScroll>
@@ -196,7 +196,7 @@ export default function Home() {
             <div className="w-full max-w-2xl border-t border-white/10 pt-10 mt-4 pb-5 overflow-visible">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-16 overflow-visible">
               {heroMetrics.map((m, i) => (
-                <div key={i} className="text-center overflow-visible">
+                <div key={i} className="text-center overflow-visible transition-transform duration-300 ease-smooth hover:scale-[1.02] cursor-default">
                   <p className={`text-2xl sm:text-3xl font-bold ${i === 1 ? 'text-[#60A5FA]' : 'text-white'}`}>
                     {m.value}
                   </p>
@@ -215,7 +215,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             {credibilityStrip.map((statement, i) => (
               <FadeInOnScroll key={i} delay={i * 60}>
-                <div className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.02] px-5 py-4">
+                <div className="interactive-card flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.02] px-5 py-4 hover:border-white/20 transition-all duration-300 ease-smooth">
                   <CheckCircle2 className="w-5 h-5 text-white/80 flex-shrink-0 mt-0.5" />
                   <p className="text-[#A1A1AA] text-sm sm:text-base">{statement}</p>
                 </div>
@@ -244,12 +244,12 @@ export default function Home() {
               href={CTA_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 text-[#A1A1AA] hover:text-white transition-colors"
+              className="group flex items-center justify-center gap-2 text-[#A1A1AA] hover:text-white transition-colors duration-300 ease-smooth"
             >
               <span className="font-semibold text-white">See where your numbers break</span>
               <span>—</span>
               <span className="underline underline-offset-4">Book a Free Financial Risk Audit™</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 ease-smooth group-hover:translate-x-1" />
             </a>
           </FadeInOnScroll>
         </div>
@@ -270,7 +270,7 @@ export default function Home() {
               { icon: Map, title: "Roadmap Next Steps", benefit: "Clear priority list for what to automate." },
             ].map((item, i) => (
               <FadeInOnScroll key={item.title} delay={i * 100}>
-                <div className="interactive-card flex flex-col items-center text-center p-8 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-white/20 transition-all duration-300">
+                <div className="interactive-card flex flex-col items-center text-center p-8 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-white/20 transition-all duration-300 ease-smooth">
                   <div className="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center mb-5">
                     <item.icon className="w-7 h-7 text-white/80" />
                   </div>
@@ -314,10 +314,10 @@ export default function Home() {
                   href={CTA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="premium-button btn-agency inline-flex items-center gap-2 w-full sm:w-auto justify-center px-8 py-4 bg-white text-black font-semibold rounded-full"
+                  className="premium-button btn-agency group inline-flex items-center gap-2 w-full sm:w-auto justify-center px-8 py-4 bg-white text-black font-semibold rounded-full transition-all duration-300 ease-smooth hover:-translate-y-0.5"
                 >
                   {CTA_LABEL}
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 transition-transform duration-300 ease-smooth group-hover:translate-x-1" />
                 </a>
               </div>
             </FadeInOnScroll>
@@ -326,7 +326,7 @@ export default function Home() {
                 <p className="text-sm font-semibold text-white/90 mb-4">What We Can Do After the Snapshot</p>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {capabilityBlocks.map((c, i) => (
-                    <div key={i} className="flex items-center gap-3 p-4 rounded-xl border border-white/10 bg-white/[0.02]">
+                    <div key={i} className="interactive-card flex items-center gap-3 p-4 rounded-xl border border-white/10 bg-white/[0.02] hover:border-white/20 transition-all duration-300 ease-smooth">
                       <c.icon className="w-5 h-5 text-white/70 flex-shrink-0" />
                       <span className="text-sm text-[#A1A1AA]">{c.text}</span>
                     </div>
@@ -359,10 +359,10 @@ export default function Home() {
                 href={CTA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="premium-button btn-agency inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full"
+                className="premium-button btn-agency group inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full transition-all duration-300 ease-smooth hover:-translate-y-0.5"
               >
                 {CTA_LABEL}
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 ease-smooth group-hover:translate-x-1" />
               </a>
             </div>
           </FadeInOnScroll>
@@ -383,7 +383,7 @@ export default function Home() {
           </FadeInOnScroll>
           <div className="grid md:grid-cols-2 gap-6">
             <FadeInOnScroll delay={0}>
-              <div className="bento-card p-8 sm:p-10">
+              <div className="bento-card interactive-card p-8 sm:p-10">
                 <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2 tracking-tight">
                   <Target className="w-5 h-5 text-white/80" />
                   For you if
@@ -399,7 +399,7 @@ export default function Home() {
               </div>
             </FadeInOnScroll>
             <FadeInOnScroll delay={100}>
-              <div className="bento-card p-8 sm:p-10">
+              <div className="bento-card interactive-card p-8 sm:p-10">
                 <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2 tracking-tight">
                   <XCircle className="w-5 h-5 text-[#71717A]" />
                   Not a fit if
@@ -442,10 +442,10 @@ export default function Home() {
                 href={CTA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="premium-button btn-agency inline-flex items-center gap-2 px-8 sm:px-10 py-4 bg-white text-black font-semibold text-base rounded-full hover:shadow-[0_0_32px_rgba(255,255,255,0.25)]"
+                className="premium-button btn-agency group inline-flex items-center gap-2 px-8 sm:px-10 py-4 bg-white text-black font-semibold text-base rounded-full hover:shadow-[0_0_32px_rgba(255,255,255,0.25)] transition-all duration-300 ease-smooth hover:-translate-y-0.5"
               >
                 {CTA_LABEL}
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 ease-smooth group-hover:translate-x-1" />
               </a>
               <p className="text-sm text-[#A1A1AA] mt-4">
                 Only a few sessions are opened each week.
@@ -462,10 +462,10 @@ export default function Home() {
             href={CTA_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="premium-button btn-agency inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full"
+            className="premium-button btn-agency group inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full transition-all duration-300 ease-smooth hover:-translate-y-0.5"
           >
             {CTA_LABEL}
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 transition-transform duration-300 ease-smooth group-hover:translate-x-1" />
           </a>
           <p className="text-[#71717A] text-sm">Weekly availability is limited.</p>
         </div>
@@ -487,14 +487,14 @@ export default function Home() {
               href="https://www.linkedin.com/in/victoria-franciss"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-[#0F0F0F] border border-[#262626] hover:border-white/30 hover:shadow-[0_0_16px_rgba(255,255,255,0.08)] transition-all"
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-[#0F0F0F] border border-[#262626] hover:border-white/30 hover:shadow-[0_0_16px_rgba(255,255,255,0.08)] transition-all duration-300 ease-smooth hover:scale-105"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-5 h-5 text-[#A1A1AA] hover:text-white" />
             </a>
             <a
               href="mailto:victoriafranciss@hotmail.com"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-[#0F0F0F] border border-[#262626] hover:border-white/30 hover:shadow-[0_0_16px_rgba(255,255,255,0.08)] transition-all"
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-[#0F0F0F] border border-[#262626] hover:border-white/30 hover:shadow-[0_0_16px_rgba(255,255,255,0.08)] transition-all duration-300 ease-smooth hover:scale-105"
               aria-label="Email"
             >
               <Mail className="w-5 h-5 text-[#A1A1AA] hover:text-white" />
@@ -503,7 +503,7 @@ export default function Home() {
               href={CTA_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-[#0F0F0F] border border-[#262626] hover:border-white/30 hover:shadow-[0_0_16px_rgba(255,255,255,0.08)] transition-all"
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-[#0F0F0F] border border-[#262626] hover:border-white/30 hover:shadow-[0_0_16px_rgba(255,255,255,0.08)] transition-all duration-300 ease-smooth hover:scale-105"
               aria-label="Book a call"
             >
               <Calendar className="w-5 h-5 text-[#A1A1AA] hover:text-white" />

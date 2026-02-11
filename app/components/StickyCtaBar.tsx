@@ -16,10 +16,10 @@ export function StickyCtaBar() {
         href={CTA_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-white text-black font-semibold text-sm hover:bg-white/95 active:scale-[0.98] transition-transform"
+        className="group flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-white text-black font-semibold text-sm hover:bg-white/95 active:scale-[0.98] transition-all duration-300 ease-out"
       >
         {CTA_LABEL}
-        <ArrowRight className="w-4 h-4" />
+        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
       </a>
     </div>
   );
