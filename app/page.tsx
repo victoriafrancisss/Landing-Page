@@ -21,13 +21,14 @@ import { FAQAccordion } from "./components/FAQAccordion";
 import { InfiniteMarquee } from "./components/InfiniteMarquee";
 
 const CTA_URL = "https://calendly.com/victoriafranciss/automation-discovery-call";
-const CTA_LABEL = "Get My Free Snapshot";
+const CTA_LABEL = "Book Your Free Snapshot";
 const NAVBAR_CTA_LABEL = "Book Audit";
 
-const credibilityStrip = [
-  "We look at your real setup. No templates.",
-  "We fix one real issue with you. Same day.",
-  "You get a clear next step. This week.",
+const benefitsBullets = [
+  "You see where your numbers break.",
+  "We fix one real issue live with you.",
+  "You get a short list of next steps.",
+  "You leave with numbers you can rely on.",
 ];
 
 const outcomeBlocks = [
@@ -43,11 +44,24 @@ const whatYouGetBullets = [
   "You leave sure of your numbers. No more guessing.",
 ];
 
+const whatComesNext = [
+  "One number everywhere. No more mismatches.",
+  "Same numbers in every report.",
+  "Catch errors before they spread.",
+  "Spot problems before they get worse.",
+];
+
 const trustStripItems = [
   { icon: RefreshCw, label: "Numbers that match", outcome: "One number everywhere. No more mismatches." },
   { icon: BarChart3, label: "Reports you can trust", outcome: "Same numbers in every report." },
   { icon: ShieldCheck, label: "Fewer mistakes", outcome: "Catch errors before they spread." },
   { icon: Activity, label: "Spot problems early", outcome: "See when something looks wrong." },
+];
+
+const proofBlocks = [
+  { title: "Board numbers matched in 2 weeks.", line1: "Board report and P&L did not match.", line2: "We fixed it. One number everywhere now." },
+  { title: "Month-end close in 5 days.", line1: "Close used to take 2 weeks.", line2: "We fixed it. Far fewer fixes each quarter." },
+  { title: "Cash forecast within 3%.", line1: "Forecasts were wrong. Two cash shortfalls in 6 months.", line2: "We fixed it. No more surprise shortfalls." },
 ];
 
 const microCases = [
@@ -171,8 +185,8 @@ export default function Home() {
               </h1>
             </FadeInOnScroll>
             <FadeInOnScroll delay={150}>
-              <p className="text-xl sm:text-2xl max-w-2xl mx-auto leading-relaxed text-slate-300 font-medium line-clamp-2">
-                Stop guessing. Start knowing your numbers.
+              <p className="text-xl sm:text-2xl max-w-2xl mx-auto leading-relaxed text-slate-300 font-medium">
+                Stop guessing. Start knowing.
               </p>
             </FadeInOnScroll>
             <FadeInOnScroll delay={200}>
@@ -192,10 +206,7 @@ export default function Home() {
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <p className="text-sm text-[#A1A1AA]">
-                  No prep. No sales pitch. No obligation.
-                </p>
-                <p className="text-xs text-[#71717A]">
-                  Limited spots each week.
+                  No prep. No sales pitch.
                 </p>
               </div>
             </FadeInOnScroll>
@@ -203,36 +214,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mid-hero attention hook */}
-      <section className="relative px-4 sm:px-6 py-16 sm:py-20">
-        <div className="w-full max-w-3xl mx-auto text-center">
-          <p className="text-lg sm:text-xl text-[#A1A1AA] leading-relaxed">
-            Wrong numbers lead to wrong decisions. Often when it is too late.
-          </p>
-        </div>
-      </section>
-
       <InfiniteMarquee />
 
-      {/* Credibility strip - Bento */}
+      {/* 2) Benefits bullets */}
       <section className="relative px-4 sm:px-6 md:px-8 py-24 sm:py-32">
-        <div className="w-full max-w-5xl mx-auto">
-          <div className="grid sm:grid-cols-3 gap-6">
-            {credibilityStrip.map((line, i) => (
-              <FadeInOnScroll key={i} delay={i * 80}>
-                <div className="bento-card flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 p-8 text-center sm:text-left">
-                  <CheckCircle2 className="w-5 h-5 text-white/80 flex-shrink-0" />
-                  <span className="text-sm sm:text-base font-medium text-[#A1A1AA]">
-                    {line}
-                  </span>
-                </div>
+        <div className="w-full max-w-2xl mx-auto">
+          <ul className="space-y-4">
+            {benefitsBullets.map((bullet, i) => (
+              <FadeInOnScroll key={i} delay={i * 60}>
+                <li className="flex items-start gap-3 text-[#A1A1AA] text-lg">
+                  <CheckCircle2 className="w-5 h-5 text-white/80 flex-shrink-0 mt-0.5" />
+                  <span>{bullet}</span>
+                </li>
               </FadeInOnScroll>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
-      {/* Problem — 3 punchy bullets only */}
+      {/* 4) Why it matters */}
       <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-32">
         <div className="w-full max-w-3xl mx-auto">
           <FadeInOnScroll>
@@ -243,12 +243,7 @@ export default function Home() {
               <p className="text-[#A1A1AA] mb-8 max-w-xl">
                 Wrong numbers lead to wrong decisions. They often show up when it is too late.
               </p>
-              <ul className="space-y-4">
-                <li className="text-lg sm:text-xl font-bold text-white tracking-tight">1. Manual entry errors.</li>
-                <li className="text-lg sm:text-xl font-bold text-white tracking-tight">2. Wasted Fridays.</li>
-                <li className="text-lg sm:text-xl font-bold text-white tracking-tight">3. Slow reporting.</li>
-              </ul>
-              <p className="pt-8 text-[#A1A1AA]">
+              <p className="text-[#A1A1AA]">
                 <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="text-white font-medium underline underline-offset-2 hover:no-underline">
                   Get your free snapshot
                 </a>
@@ -315,46 +310,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* VBA vs Python — single focus: the table only */}
+      {/* 6) What comes next */}
       <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-32">
         <div className="w-full max-w-2xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-12 leading-tight text-center tracking-tight">
-            VBA vs Python
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8 leading-tight text-center tracking-tight">
+            What Comes Next
           </h2>
-          <FadeInOnScroll>
-            <div className="overflow-hidden rounded-xl border border-white/10 bg-white/[0.03]">
-              <table className="w-full text-left">
-                <thead>
-                  <tr className="border-b border-white/10">
-                    <th className="p-4 sm:p-5 text-sm font-semibold text-white/90 uppercase tracking-wider"></th>
-                    <th className="p-4 sm:p-5 text-sm font-semibold text-white uppercase tracking-wider">VBA</th>
-                    <th className="p-4 sm:p-5 text-sm font-semibold text-white uppercase tracking-wider">Python</th>
-                  </tr>
-                </thead>
-                <tbody className="text-[#A1A1AA] text-sm sm:text-base">
-                  <tr className="border-b border-white/5">
-                    <td className="p-4 sm:p-5 font-medium text-white/80">Scale</td>
-                    <td className="p-4 sm:p-5">Tied to one file or workbook</td>
-                    <td className="p-4 sm:p-5">Runs across systems & data sources</td>
-                  </tr>
-                  <tr className="border-b border-white/5">
-                    <td className="p-4 sm:p-5 font-medium text-white/80">Maintenance</td>
-                    <td className="p-4 sm:p-5">Hard to debug, easy to break</td>
-                    <td className="p-4 sm:p-5">Readable, testable, version-controlled</td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 sm:p-5 font-medium text-white/80">Reporting</td>
-                    <td className="p-4 sm:p-5">Manual exports, copy-paste</td>
-                    <td className="p-4 sm:p-5">Automated pipelines, one source of truth</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </FadeInOnScroll>
+          <ul className="space-y-3">
+            {whatComesNext.map((item, i) => (
+              <li key={i} className="flex items-start gap-2 text-[#A1A1AA]">
+                <CheckCircle2 className="w-4 h-4 text-white/80 flex-shrink-0 mt-0.5" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
-      {/* Contextual CTA Banner 1 */}
+      {/* CTA */}
       <section className="relative px-4 sm:px-6 md:px-8 py-24 sm:py-32">
         <div className="w-full max-w-2xl mx-auto text-center">
           <FadeInOnScroll>
@@ -379,42 +352,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services — 3-column Bento grid */}
-      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-32">
-        <div className="w-full max-w-5xl mx-auto">
-          <FadeInOnScroll>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 leading-tight text-center tracking-tight">
-              What We Do Next
-            </h2>
-          </FadeInOnScroll>
-          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8 mt-12">
-            {servicesList.slice(0, 3).map((s, i) => (
-              <FadeInOnScroll key={i} delay={i * 80}>
-                <div className="bento-card p-8">
-                  <h3 className="text-base font-semibold text-white mb-2 tracking-tight">
-                    {s.title}
-                  </h3>
-                  <p className="text-sm text-[#A1A1AA] leading-relaxed">
-                    {s.body}
-                  </p>
-                </div>
-              </FadeInOnScroll>
-            ))}
-            <FadeInOnScroll delay={240}>
-              <div className="bento-card p-8 sm:col-span-3">
-                <h3 className="text-base font-semibold text-white mb-2 tracking-tight">
-                  {servicesList[3].title}
-                </h3>
-                <p className="text-sm text-[#A1A1AA] leading-relaxed">
-                  {servicesList[3].body}
-                </p>
-              </div>
-            </FadeInOnScroll>
-          </div>
-        </div>
-      </section>
-
-      {/* Lead magnet — Financial Accuracy Snapshot™ — 2-column split */}
+      {/* 7) Lead magnet / Snapshot — keep for CTA density */}
       <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-32">
         <div className="w-full max-w-5xl mx-auto">
           <FadeInOnScroll>
@@ -468,90 +406,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Capabilities / trust strip — outcome-first */}
-      <section className="relative px-4 sm:px-6 md:px-8 py-24 sm:py-32">
-        <div className="w-full max-w-5xl mx-auto">
-          <div className="bento-card grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 p-8">
-            {trustStripItems.map((item, i) => (
-              <FadeInOnScroll key={i} delay={i * 60}>
-                <div className="flex flex-col sm:flex-row items-start gap-2 text-[#A1A1AA]">
-                  <item.icon className="w-5 h-5 flex-shrink-0 text-[#71717A]" />
-                  <div>
-                    <span className="text-xs sm:text-sm font-semibold text-white block mb-0.5">
-                      {item.label}
-                    </span>
-                    <span className="text-xs sm:text-sm text-[#A1A1AA]">
-                      {item.outcome}
-                    </span>
-                  </div>
-                </div>
-              </FadeInOnScroll>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Micro-CTA after capabilities */}
-      <section className="relative px-4 sm:px-6 md:px-8 py-16 sm:py-20">
-        <div className="w-full max-w-3xl mx-auto text-center">
-          <p className="text-[#A1A1AA]">
-            Wrong numbers are a risk.{" "}
-            <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="text-white font-medium underline underline-offset-2 hover:no-underline">
-              See exactly where it breaks with a Free Financial Accuracy Snapshot™.
-            </a>
-          </p>
-        </div>
-      </section>
-
-      {/* Proof — micro-cases Bento */}
+      {/* Proof */}
       <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-32">
         <div className="w-full max-w-4xl mx-auto">
           <FadeInOnScroll>
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10 text-center tracking-tight">
-              Results
+              Proof
             </h2>
           </FadeInOnScroll>
           <div className="space-y-6">
-            {microCases.map((c, i) => (
-              <div key={i} className="space-y-6">
-                <FadeInOnScroll delay={i * 80}>
-                  <div className="bento-card p-8 sm:p-10">
-                    {c.title && (
-                      <h3 className="text-base sm:text-lg font-semibold text-white mb-4 tracking-tight">
-                        {c.title}
-                      </h3>
-                    )}
-                    <div className="grid sm:grid-cols-3 gap-4 sm:gap-6 text-sm sm:text-base">
-                      <div>
-                        <p className="text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mb-2">
-                          Issue
-                        </p>
-                        <p className="text-[#A1A1AA] leading-relaxed">{c.issue}</p>
-                      </div>
-                      <div>
-                        <p className="text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mb-2">
-                          Fix
-                        </p>
-                        <p className="text-[#A1A1AA] leading-relaxed">{c.fix}</p>
-                      </div>
-                      <div>
-                        <p className="text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mb-2">
-                          Result
-                        </p>
-                        <p className="text-[#A1A1AA] leading-relaxed">{c.result}</p>
-                      </div>
-                    </div>
-                  </div>
-                </FadeInOnScroll>
-                {i === 0 && (
-                  <p className="text-center text-[#A1A1AA]">
-                    Sound familiar?{" "}
-                    <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="text-white font-medium underline underline-offset-2 hover:no-underline">
-                      Get your free snapshot
-                    </a>
-                  </p>
-                )}
-              </div>
+            {proofBlocks.map((block, i) => (
+              <FadeInOnScroll key={i} delay={i * 80}>
+                <div className="bento-card p-6 sm:p-8">
+                  <h3 className="text-base sm:text-lg font-semibold text-white mb-3 tracking-tight">
+                    {block.title}
+                  </h3>
+                  <p className="text-[#A1A1AA] text-sm sm:text-base mb-2">{block.line1}</p>
+                  <p className="text-[#A1A1AA] text-sm sm:text-base">{block.line2}</p>
+                </div>
+              </FadeInOnScroll>
             ))}
           </div>
         </div>
@@ -631,54 +504,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pricing — Premium tier boxes, Recommended with white border */}
-      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-32">
-        <div className="w-full max-w-4xl mx-auto">
-          <FadeInOnScroll>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center tracking-tight">
-              How We Work With You
-            </h2>
-            <p className="text-[#A1A1AA] text-center mb-12 max-w-lg mx-auto text-sm">
-              Start with the free Snapshot. From there, we can outline next steps.
-            </p>
-          </FadeInOnScroll>
-          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8">
-            <FadeInOnScroll delay={0}>
-              <div className="bento-card p-8 flex flex-col">
-                <h3 className="text-lg font-semibold text-white mb-2 tracking-tight">Snapshot Only</h3>
-                <p className="text-sm text-[#A1A1AA] mb-6 flex-1">Free diagnostic and one live fix. No obligation to continue.</p>
-                <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="premium-button btn-agency inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white text-black font-semibold rounded-full text-sm hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-                  Book free
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </a>
-              </div>
-            </FadeInOnScroll>
-            <FadeInOnScroll delay={80}>
-              <div className="bento-card p-8 flex flex-col border border-white/20 relative">
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-white text-black text-xs font-semibold">Recommended</span>
-                <h3 className="text-lg font-semibold text-white mb-2 tracking-tight mt-2">Snapshot + Roadmap</h3>
-                <p className="text-sm text-[#A1A1AA] mb-6 flex-1">Everything in Snapshot, plus a written automation priority roadmap after the call.</p>
-                <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="premium-button btn-agency inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white text-black font-semibold rounded-full text-sm hover:shadow-[0_0_24px_rgba(255,255,255,0.3)]">
-                  Book free
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </a>
-              </div>
-            </FadeInOnScroll>
-            <FadeInOnScroll delay={160}>
-              <div className="bento-card p-8 flex flex-col">
-                <h3 className="text-lg font-semibold text-white mb-2 tracking-tight">Ongoing Engagement</h3>
-                <p className="text-sm text-[#A1A1AA] mb-6 flex-1">After the Snapshot, we can help implement automation and controls. Scope defined together.</p>
-                <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="premium-button btn-agency inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white text-black font-semibold rounded-full text-sm hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-                  Book a call
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </a>
-              </div>
-            </FadeInOnScroll>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQs — Bento */}
+      {/* FAQ */}
       <section className="relative px-4 sm:px-6 md:px-8 py-24 sm:py-32">
         <div className="w-full max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10 text-center tracking-tight">
@@ -696,7 +522,7 @@ export default function Home() {
           <FadeInOnScroll>
             <div className="bento-card p-12 sm:p-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 leading-tight tracking-tight">
-                Get your numbers right. Book your free snapshot.
+                Get your numbers right.
               </h2>
               <a
                 href={CTA_URL}
