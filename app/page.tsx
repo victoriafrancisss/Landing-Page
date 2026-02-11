@@ -25,58 +25,58 @@ const CTA_LABEL = "Book a Free Financial Accuracy Snapshot™";
 const NAVBAR_CTA_LABEL = "Book Audit";
 
 const credibilityStrip = [
-  "We work with your tools and real data — no templates.",
-  "At least one real fix live, with you on the call.",
-  "Clear next steps you can act on immediately.",
+  "Live review of your actual setup — no templates.",
+  "A real fix you can use today.",
+  "A clear plan you can execute this week.",
 ];
 
 const outcomeBlocks = [
   {
     icon: Search,
-    title: "Diagnose Risk",
-    body: "Reveal where your numbers silently break.",
+    title: "Diagnose where your numbers break",
+    body: "Before they cost you.",
   },
   {
     icon: Wrench,
-    title: "Fix One Issue Live",
-    body: "Walk away with a real improvement.",
+    title: "Fix one real issue live",
+    body: "So you walk away with improvement.",
   },
   {
     icon: Map,
-    title: "Roadmap Next Steps",
-    body: "Know exactly what to automate next.",
+    title: "Roadmap what to automate next",
+    body: "So accuracy stays as you scale.",
   },
 ];
 
 const whatYouGetBullets = [
-  "Hands-on review of your actual setup",
+  "Immediate clarity on where your numbers break",
   "One real improvement implemented live",
-  "A written priority roadmap you can use next",
-  "Clear confidence in your numbers",
+  "A written roadmap to sustained accuracy",
+  "Confidence in your numbers, not guesswork",
 ];
 
 const trustStripItems = [
-  { icon: RefreshCw, label: "Automated Reconciliation" },
-  { icon: BarChart3, label: "KPI Dashboards & Reporting" },
-  { icon: ShieldCheck, label: "Internal Controls & Checks" },
-  { icon: Activity, label: "Anomaly Detection" },
+  { icon: RefreshCw, label: "Automated Reconciliation", outcome: "Stop manual mismatches before they spread" },
+  { icon: BarChart3, label: "KPI Dashboards", outcome: "One source of truth for every report" },
+  { icon: ShieldCheck, label: "Internal Controls", outcome: "Reduce errors at month-end" },
+  { icon: Activity, label: "Anomaly Detection", outcome: "Spot unusual numbers early" },
 ];
 
 const microCases = [
   {
-    title: "From Conflicting Numbers to a Single Source of Truth in 2 Weeks",
+    title: "Reliable Numbers in 2 Weeks — No Conflicting Reports Ever Again",
     issue: "Revenue in the board deck didn’t match the P&L; no one knew which was right.",
     fix: "Traced sources, fixed one broken link in the reporting chain, automated the reconciliation.",
     result: "Board deck and P&L matched to the dollar within two weeks; one reliable number for every board meeting since.",
   },
   {
-    title: "Month-End Close Cut to 5 Days — Reclasses from 12 to 2 in 6 Weeks",
+    title: "Close in 5 Days — No More Reclasses Every Quarter",
     issue: "Month-end close took 2 weeks and still had 10–12 reclasses every quarter.",
     fix: "Mapped the close process, automated the highest-error step, documented the rest.",
     result: "Close down to 5 business days within 6 weeks; quarterly reclasses fell from 12 to 2.",
   },
   {
-    title: "Cash Forecasts Within 3% of Actual — No Surprise Shortfalls in 6 Months",
+    title: "Forecast Accuracy Within 3% — No More Surprise Shortfalls",
     issue: "Founders couldn’t trust cash forecasts—spreadsheet errors had caused two surprise shortfalls in 6 months.",
     fix: "Reviewed formulas and data feeds, corrected the main driver, added a simple check.",
     result: "Next two cash forecasts were within 3% of actual; no surprise shortfalls in the following 6 months.",
@@ -107,17 +107,17 @@ const faqItems = [
   {
     question: "Do we need to change our tools or systems?",
     answer:
-      "No. We work with your existing tools and data. The Snapshot is a live, hands-on look at your current setup—no new software, no system rebuilds.",
+      "No. No new tools or systems required. We work with what you already have. The Snapshot is a live look at your current setup—no new software, no system rebuilds.",
   },
   {
     question: "What happens during the Financial Accuracy Snapshot™?",
     answer:
-      "We review where your numbers come from, identify the biggest accuracy risks, and fix one issue live with you on the call. You leave with at least one concrete improvement, or it doesn't count. You also get a clear roadmap for what to automate next. It's a diagnostic and a live fix—not a sales pitch, not a generic template. No prep required. We focus on outcomes and clarity, not tools for their own sake.",
+      "We review where your numbers come from, identify the biggest accuracy risks, and fix one issue live with you on the call. You'll see improvement during the session. We guarantee at least one concrete improvement, or it doesn't count. You also get a clear roadmap for what to automate next. No prep required. No sales pitch.",
   },
   {
     question: "How long until we see results?",
     answer:
-      "You get at least one live fix during the Snapshot—so you see a real improvement before you leave. The roadmap gives you clear next steps you can act on immediately so your numbers stay reliable as you scale.",
+      "You see improvement during the session—at least one live fix before you leave. The roadmap gives you clear next steps you can act on immediately so your numbers stay reliable as you scale.",
   },
   {
     question: "Is our data secure?",
@@ -181,7 +181,7 @@ export default function Home() {
             </FadeInOnScroll>
             <FadeInOnScroll delay={150}>
               <p className="text-xl sm:text-2xl max-w-2xl mx-auto leading-relaxed text-slate-300 font-medium">
-                When your reports don&apos;t reconcile, every decision becomes guesswork.
+                Bad decisions hide in numbers you can&apos;t trust. Get trustworthy financial numbers that guide decisions, not confuse them.
               </p>
             </FadeInOnScroll>
             <FadeInOnScroll delay={200}>
@@ -216,7 +216,7 @@ export default function Home() {
       <section className="relative px-4 sm:px-6 py-6 sm:py-8">
         <div className="w-full max-w-3xl mx-auto text-center">
           <p className="text-lg sm:text-xl text-[#A1A1AA] leading-relaxed">
-            If your numbers <em className="text-white font-medium not-italic">look correct</em> but you can&apos;t explain why — that&apos;s the real problem.
+            If you can&apos;t explain why your numbers don&apos;t match, that&apos;s the real problem.
           </p>
         </div>
       </section>
@@ -261,9 +261,9 @@ export default function Home() {
                   clarity and control.
                 </p>
                 <p className="pt-4 text-white font-medium">
-                  Think hidden errors are slowing your team?{" "}
+                  Think this feels familiar?{" "}
                   <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="text-white underline underline-offset-2 hover:no-underline">
-                    Book your snapshot.
+                    Get clarity with a free Financial Accuracy Snapshot™.
                   </a>
                 </p>
               </div>
@@ -358,7 +358,7 @@ export default function Home() {
           <FadeInOnScroll>
             <div className="bento-card p-8 sm:p-10">
               <p className="text-lg sm:text-xl font-semibold text-white mb-6 tracking-tight">
-                Ready to see what’s really breaking your numbers?
+                Ready to stop guessing and start knowing your numbers?
               </p>
               <a
                 href={CTA_URL}
@@ -370,8 +370,7 @@ export default function Home() {
                 <ArrowRight className="w-4 h-4" />
               </a>
               <p className="text-sm text-[#A1A1AA] mt-4">
-                No prep. No sales pitch. No obligation. A few sessions per week
-                only.
+                No prep. No sales pitch. No obligation.
               </p>
             </div>
           </FadeInOnScroll>
@@ -459,7 +458,7 @@ export default function Home() {
             </FadeInOnScroll>
             {/* Right: Feature Cards (first 3 bullets) */}
             <div className="flex flex-col gap-4 sm:gap-5">
-              {whatYouGetBullets.slice(0, 3).map((bullet, i) => (
+              {whatYouGetBullets.map((bullet, i) => (
                 <FadeInOnScroll key={i} delay={(i + 1) * 60}>
                   <div className="rounded-xl p-5 bg-[#0F0F0F] border border-[#262626] flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-white/80 flex-shrink-0 mt-0.5" />
@@ -474,17 +473,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mini credibility / trust strip */}
+      {/* Capabilities / trust strip — outcome-first */}
       <section className="relative px-4 sm:px-6 md:px-8 py-8 sm:py-10">
-        <div className="w-full max-w-4xl mx-auto">
-          <div className="bento-card grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 p-6">
+        <div className="w-full max-w-5xl mx-auto">
+          <div className="bento-card grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 p-6">
             {trustStripItems.map((item, i) => (
               <FadeInOnScroll key={i} delay={i * 60}>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-[#A1A1AA]">
+                <div className="flex flex-col sm:flex-row items-start gap-2 text-[#A1A1AA]">
                   <item.icon className="w-5 h-5 flex-shrink-0 text-[#71717A]" />
-                  <span className="text-xs sm:text-sm font-medium text-center sm:text-left">
-                    {item.label}
-                  </span>
+                  <div>
+                    <span className="text-xs sm:text-sm font-semibold text-white block mb-0.5">
+                      {item.label}
+                    </span>
+                    <span className="text-xs sm:text-sm text-[#A1A1AA]">
+                      {item.outcome}
+                    </span>
+                  </div>
                 </div>
               </FadeInOnScroll>
             ))}
@@ -536,13 +540,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contextual CTA Banner 2 */}
+      {/* Secondary CTA — after proof */}
       <section className="relative px-4 sm:px-6 md:px-8 py-12 sm:py-16">
         <div className="w-full max-w-2xl mx-auto text-center">
           <FadeInOnScroll>
             <div className="bento-card p-8 sm:p-10">
               <p className="text-lg sm:text-xl font-semibold text-white mb-6 tracking-tight">
-                See exactly where your numbers break — book your snapshot.
+                Ready to stop guessing and start knowing your numbers?
               </p>
               <a
                 href={CTA_URL}
@@ -554,7 +558,7 @@ export default function Home() {
                 <ArrowRight className="w-4 h-4" />
               </a>
               <p className="text-sm text-[#A1A1AA] mt-4">
-                Limited weekly availability.
+                No prep. No sales pitch. No obligation.
               </p>
             </div>
           </FadeInOnScroll>
@@ -675,7 +679,7 @@ export default function Home() {
           <FadeInOnScroll>
             <div className="bento-card p-10 sm:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 leading-tight tracking-tight">
-                Stop guessing — start knowing what your numbers really say.
+                Turn guesswork into confidence — Book your Free Financial Accuracy Snapshot™
               </h2>
               <a
                 href={CTA_URL}
