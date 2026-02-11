@@ -21,65 +21,53 @@ import { FAQAccordion } from "./components/FAQAccordion";
 import { InfiniteMarquee } from "./components/InfiniteMarquee";
 
 const CTA_URL = "https://calendly.com/victoriafranciss/automation-discovery-call";
-const CTA_LABEL = "Book a Free Financial Accuracy Snapshot™";
+const CTA_LABEL = "Get My Free Snapshot";
 const NAVBAR_CTA_LABEL = "Book Audit";
 
 const credibilityStrip = [
-  "Live review of your actual setup — no templates.",
-  "A real fix you can use today.",
-  "A clear plan you can execute this week.",
+  "We look at your real setup. No templates.",
+  "We fix one real issue with you. Same day.",
+  "You get a clear next step. This week.",
 ];
 
 const outcomeBlocks = [
-  {
-    icon: Search,
-    title: "Diagnose where your numbers break",
-    body: "Before they cost you.",
-  },
-  {
-    icon: Wrench,
-    title: "Fix one real issue live",
-    body: "So you walk away with improvement.",
-  },
-  {
-    icon: Map,
-    title: "Roadmap what to automate next",
-    body: "So accuracy stays as you scale.",
-  },
+  { icon: Search, title: "Find", body: "We find where your numbers break." },
+  { icon: Wrench, title: "Fix", body: "We fix one issue live. You leave with a win." },
+  { icon: Map, title: "Plan", body: "You get a simple plan so numbers stay right." },
 ];
 
 const whatYouGetBullets = [
-  "Immediate clarity on where your numbers break",
-  "One real improvement implemented live",
-  "A written roadmap to sustained accuracy",
-  "Confidence in your numbers, not guesswork",
+  "You see exactly where your numbers break.",
+  "We fix one real problem with you in the session.",
+  "You get a short list of what to do next.",
+  "You leave sure of your numbers. No more guessing.",
 ];
 
 const trustStripItems = [
-  { icon: RefreshCw, label: "Automated Reconciliation", outcome: "Stop manual mismatches before they spread" },
-  { icon: BarChart3, label: "KPI Dashboards", outcome: "One source of truth for every report" },
-  { icon: ShieldCheck, label: "Internal Controls", outcome: "Reduce errors at month-end" },
-  { icon: Activity, label: "Anomaly Detection", outcome: "Spot unusual numbers early" },
+  { icon: RefreshCw, label: "Numbers that match", outcome: "One number everywhere. No more mismatches." },
+  { icon: BarChart3, label: "Reports you can trust", outcome: "Same numbers in every report." },
+  { icon: ShieldCheck, label: "Fewer mistakes", outcome: "Catch errors before they spread." },
+  { icon: Activity, label: "Spot problems early", outcome: "See when something looks wrong." },
 ];
 
 const microCases = [
   {
-    title: "Reliable Numbers in 2 Weeks — No Conflicting Reports Ever Again",
+    title: "Board numbers matched in 2 weeks.",
     issue: "Revenue in the board deck didn’t match the P&L; no one knew which was right.",
-    fix: "Traced sources, fixed one broken link in the reporting chain, automated the reconciliation.",
-    result: "Board deck and P&L matched to the dollar within two weeks; one reliable number for every board meeting since.",
+    fix: "We found the broken link and fixed it.",
+    result: "Both matched. One number for every board meeting now.",
   },
   {
-    title: "Close in 5 Days — Fewer Reclasses, More Confidence",
-    issue: "Month-end close took 2 weeks and still had 10–12 reclasses every quarter.",
-    fix: "Mapped the close process, automated the highest-error step, documented the rest.",
-    result: "Close down to 5 business days within 6 weeks; quarterly reclasses fell from 12 to 2.",
+    title: "Month-end close in 5 days.",
+    issue: "Close took 2 weeks. Lots of fixes every quarter.",
+    fix: "We fixed the step that caused most errors.",
+    result: "Close in 5 days. Far fewer fixes each quarter.",
   },
   {
-    title: "Forecast Within 3% — No Surprise Shortfalls",
+    title: "Cash forecast within 3%.",
     issue: "Founders couldn’t trust cash forecasts—spreadsheet errors had caused two surprise shortfalls in 6 months.",
-    fix: "Reviewed formulas and data feeds, corrected the main driver, added a simple check.",
-    result: "Next two cash forecasts were within 3% of actual; no surprise shortfalls in the following 6 months.",
+    fix: "We fixed the main formula and added a check.",
+    result: "Next forecasts were within 3%. No more surprise shortfalls.",
   },
 ];
 
@@ -91,33 +79,30 @@ const forYou = [
 ];
 
 const notForYou = [
-  "Teams that need a full system rebuild or a new ERP",
-  "Companies that already have a dedicated FP&A function and clean, reliable processes",
-  "Anyone who wants a quick fix without addressing root causes",
+  "You need a full system rebuild or new ERP.",
+  "You already have a team and clean processes.",
+  "You want a quick fix with no real change.",
 ];
 
 const servicesList = [
-  { title: "Automated reconciliation", body: "Stop error spread before it happens." },
-  { title: "Dashboards & reporting", body: "One source of truth for every report." },
-  { title: "Controls & checks", body: "Prevent common month-end mistakes." },
-  { title: "Anomaly detection", body: "Detect unusual numbers early." },
+  { title: "Numbers that match", body: "One number everywhere. No more mismatches." },
+  { title: "Reports you can trust", body: "Same numbers in every report." },
+  { title: "Fewer mistakes", body: "Catch errors before they spread." },
+  { title: "Spot problems early", body: "See when something looks wrong." },
 ];
 
 const faqItems = [
   {
-    question: "Do we need to change our tools or systems?",
-    answer:
-      "No. No new tools or systems required. We work with what you already have. The Snapshot is a live look at your current setup—no new software, no system rebuilds.",
+    question: "Do we need new tools or systems?",
+    answer: "No. We use what you already have. No new software. No big changes.",
   },
   {
-    question: "What happens during the Financial Accuracy Snapshot™?",
-    answer:
-      "You'll see a real improvement during the session — we fix something live with you, not just analyze and send a report. We review where your numbers come from, identify the biggest accuracy risks, and guarantee at least one concrete improvement or it doesn't count. You also get a clear roadmap for what to automate next. No prep required. No sales pitch.",
+    question: "What happens in the session?",
+    answer: "We look at your numbers. We fix one real issue with you. You get a short list of next steps. No prep. No sales pitch.",
   },
   {
-    question: "How long until we see results?",
-    answer:
-      "You'll see a real improvement during the session — we fix something live with you, not just analyze and send a report. At least one fix before you leave. No waiting. The roadmap gives you clear next steps you can act on right away.",
+    question: "When do we see results?",
+    answer: "Same day. We fix one thing in the session. You leave with a win and a clear next step.",
   },
   {
     question: "Is our data secure?",
@@ -125,7 +110,7 @@ const faqItems = [
       "Yes. We follow best practices for handling sensitive data. We only access what’s needed for the diagnostic, and nothing is shared without your approval.",
   },
   {
-    question: "What if our issues are too small or too big?",
+    question: "What if we are too small or too big?",
     answer:
       "We’ll tell you. The Snapshot is designed to find real accuracy risks and clear next steps—not to push a project that doesn’t fit. There’s no obligation to continue.",
   },
@@ -181,13 +166,18 @@ export default function Home() {
           <div className="text-center space-y-8 sm:space-y-10">
             <FadeInOnScroll delay={100}>
               <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-9xl font-bold text-white leading-[1.05] tracking-tight">
-                <span className="block">Accurate Financial Numbers —</span>
-                <span className="block">Before They Become a Costly Problem</span>
+                <span className="block">Numbers You Can Trust.</span>
+                <span className="block">Before They Cost You.</span>
               </h1>
             </FadeInOnScroll>
             <FadeInOnScroll delay={150}>
               <p className="text-xl sm:text-2xl max-w-2xl mx-auto leading-relaxed text-slate-300 font-medium line-clamp-2">
-                Wrong numbers = real risk. Get numbers you can trust — so your choices guide the business, not guesswork.
+                Stop guessing. Start knowing your numbers.
+              </p>
+            </FadeInOnScroll>
+            <FadeInOnScroll delay={200}>
+              <p className="text-lg sm:text-xl max-w-xl mx-auto text-[#A1A1AA]">
+                Free session. We find where it breaks and fix one thing with you. You leave with clarity.
               </p>
             </FadeInOnScroll>
             <FadeInOnScroll delay={300}>
@@ -204,6 +194,9 @@ export default function Home() {
                 <p className="text-sm text-[#A1A1AA]">
                   No prep. No sales pitch. No obligation.
                 </p>
+                <p className="text-xs text-[#71717A]">
+                  Limited spots each week.
+                </p>
               </div>
             </FadeInOnScroll>
           </div>
@@ -214,7 +207,7 @@ export default function Home() {
       <section className="relative px-4 sm:px-6 py-16 sm:py-20">
         <div className="w-full max-w-3xl mx-auto text-center">
           <p className="text-lg sm:text-xl text-[#A1A1AA] leading-relaxed">
-            If you can&apos;t explain why your numbers don&apos;t match, that&apos;s the real problem.
+            Wrong numbers lead to wrong decisions. Often when it is too late.
           </p>
         </div>
       </section>
@@ -247,14 +240,17 @@ export default function Home() {
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-10 leading-tight" style={{ letterSpacing: '-0.02em' }}>
                 The Problem: Inaccurate Numbers That Look Right Until They Don’t
               </h2>
-              <ul className="space-y-6">
-                <li className="text-xl sm:text-2xl font-bold text-white tracking-tight">1. Manual entry errors.</li>
-                <li className="text-xl sm:text-2xl font-bold text-white tracking-tight">2. Wasted Fridays.</li>
-                <li className="text-xl sm:text-2xl font-bold text-white tracking-tight">3. Slow reporting.</li>
+              <p className="text-[#A1A1AA] mb-8 max-w-xl">
+                Wrong numbers lead to wrong decisions. They often show up when it is too late.
+              </p>
+              <ul className="space-y-4">
+                <li className="text-lg sm:text-xl font-bold text-white tracking-tight">1. Manual entry errors.</li>
+                <li className="text-lg sm:text-xl font-bold text-white tracking-tight">2. Wasted Fridays.</li>
+                <li className="text-lg sm:text-xl font-bold text-white tracking-tight">3. Slow reporting.</li>
               </ul>
               <p className="pt-8 text-[#A1A1AA]">
                 <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="text-white font-medium underline underline-offset-2 hover:no-underline">
-                  See where it breaks — Free Financial Accuracy Snapshot™
+                  Get your free snapshot
                 </a>
               </p>
             </div>
@@ -297,9 +293,9 @@ export default function Home() {
           </FadeInOnScroll>
           <div className="grid sm:grid-cols-3 gap-6 sm:gap-8">
             {[
-              { step: "01", title: "Review your financial setup", body: "We find where accuracy is most at risk.", gradient: "from-emerald-950/40 via-emerald-900/35 to-teal-950/40" },
-              { step: "02", title: "Fix one issue live", body: "You leave with one concrete improvement.", gradient: "from-violet-950/40 via-purple-900/35 to-fuchsia-950/40" },
-              { step: "03", title: "Outline what to automate next", body: "A clear roadmap so numbers stay reliable.", gradient: "from-blue-950/40 via-indigo-900/35 to-cyan-950/40" },
+              { step: "01", title: "Review", body: "We find where your numbers break.", gradient: "from-emerald-950/40 via-emerald-900/35 to-teal-950/40" },
+              { step: "02", title: "Fix", body: "We fix one issue live. You leave with a win.", gradient: "from-violet-950/40 via-purple-900/35 to-fuchsia-950/40" },
+              { step: "03", title: "Plan", body: "You get a short list so numbers stay right.", gradient: "from-blue-950/40 via-indigo-900/35 to-cyan-950/40" },
             ].map((item, i) => (
               <FadeInOnScroll key={item.step} delay={i * 100}>
                 <div className={`relative overflow-hidden rounded-2xl border border-white/10 p-8 text-center bg-gradient-to-br ${item.gradient}`}>
@@ -364,7 +360,7 @@ export default function Home() {
           <FadeInOnScroll>
             <div className="bento-card p-10 sm:p-12">
               <p className="text-lg sm:text-xl font-semibold text-white mb-6 tracking-tight">
-                Ready to stop guessing and start knowing your numbers?
+                Stop guessing. Start knowing your numbers.
               </p>
               <a
                 href={CTA_URL}
@@ -388,7 +384,7 @@ export default function Home() {
         <div className="w-full max-w-5xl mx-auto">
           <FadeInOnScroll>
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 leading-tight text-center tracking-tight">
-              What We Can Do After the Snapshot
+              What We Do Next
             </h2>
           </FadeInOnScroll>
           <div className="grid sm:grid-cols-3 gap-6 sm:gap-8 mt-12">
@@ -423,7 +419,7 @@ export default function Home() {
         <div className="w-full max-w-5xl mx-auto">
           <FadeInOnScroll>
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center tracking-tight">
-              Financial Accuracy Snapshot™
+              The Free Snapshot
             </h2>
           </FadeInOnScroll>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
@@ -431,17 +427,17 @@ export default function Home() {
             <FadeInOnScroll delay={0}>
               <div className="flex flex-col justify-center text-left">
                 <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight tracking-tight">
-                  Start Your Accuracy Journey
+                  Get clarity in one session.
                 </h3>
                 <p className="text-[#A1A1AA] leading-relaxed mb-4">
-                  A free first step: we review your real financial setup, fix one issue live with you, and outline what to automate next. You get clarity and one concrete fix, not a sales call.
+                  Free session. We look at your numbers and fix one issue with you. You leave with one real win and a short list of next steps.
                 </p>
               <p className="text-sm text-[#A1A1AA] leading-relaxed mb-6">
                 You leave with at least one concrete improvement to your numbers.
                 If we don’t deliver that, the session doesn’t count.
               </p>
                 <p className="text-xs text-[#71717A] mb-6">
-                  Offered free while building a small number of case studies.
+                  Limited free spots each week.
                 </p>
                 <a
                   href={CTA_URL}
@@ -499,7 +495,7 @@ export default function Home() {
       <section className="relative px-4 sm:px-6 md:px-8 py-16 sm:py-20">
         <div className="w-full max-w-3xl mx-auto text-center">
           <p className="text-[#A1A1AA]">
-            If your numbers ever leave you guessing, that&apos;s a risk — not a stable system.{" "}
+            Wrong numbers are a risk.{" "}
             <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="text-white font-medium underline underline-offset-2 hover:no-underline">
               See exactly where it breaks with a Free Financial Accuracy Snapshot™.
             </a>
@@ -512,7 +508,7 @@ export default function Home() {
         <div className="w-full max-w-4xl mx-auto">
           <FadeInOnScroll>
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10 text-center tracking-tight">
-              Issue → Fix → Result
+              Results
             </h2>
           </FadeInOnScroll>
           <div className="space-y-6">
@@ -549,11 +545,10 @@ export default function Home() {
                 </FadeInOnScroll>
                 {i === 0 && (
                   <p className="text-center text-[#A1A1AA]">
-                    Already feeling this pain?{" "}
+                    Sound familiar?{" "}
                     <a href={CTA_URL} target="_blank" rel="noopener noreferrer" className="text-white font-medium underline underline-offset-2 hover:no-underline">
-                      Book a Free Financial Accuracy Snapshot™
+                      Get your free snapshot
                     </a>
-                    {" "}— uncover the silent risks in your numbers.
                   </p>
                 )}
               </div>
@@ -568,7 +563,7 @@ export default function Home() {
           <FadeInOnScroll>
             <div className="bento-card p-10 sm:p-12">
               <p className="text-lg sm:text-xl font-semibold text-white mb-6 tracking-tight">
-                Ready to stop guessing and start knowing your numbers?
+                Stop guessing. Start knowing your numbers.
               </p>
               <a
                 href={CTA_URL}
@@ -701,7 +696,7 @@ export default function Home() {
           <FadeInOnScroll>
             <div className="bento-card p-12 sm:p-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 leading-tight tracking-tight">
-                Turn uncertainty into confidence — Book a Free Financial Accuracy Snapshot™
+                Get your numbers right. Book your free snapshot.
               </h2>
               <a
                 href={CTA_URL}
@@ -713,7 +708,7 @@ export default function Home() {
                 <ArrowRight className="w-4 h-4" />
               </a>
               <p className="text-sm text-[#A1A1AA] mt-4">
-                No prep. No sales. Just clarity.
+                No prep. No sales pitch. Just clarity.
               </p>
             </div>
           </FadeInOnScroll>
@@ -731,9 +726,9 @@ export default function Home() {
               rel="noopener noreferrer"
               className="font-semibold text-white hover:underline underline-offset-2"
             >
-              Book a Free Financial Accuracy Snapshot™
+              Get your free snapshot
             </a>{" "}
-            — no prep, no sales, just clarity.
+            — no prep, no sales pitch, just clarity.
           </p>
         </div>
       </section>
