@@ -7,10 +7,18 @@ import {
   MapPin,
   Linkedin,
   Mail,
+  Search,
+  Wrench,
+  Map,
+  ShieldCheck,
+  BarChart3,
+  AlertTriangle,
+  TrendingUp,
 } from "lucide-react";
 import { FadeInOnScroll } from "./components/InteractiveElements";
 import { PremiumBackground } from "./components/PremiumBackground";
 import { FAQAccordion } from "./components/FAQAccordion";
+import { StickyCtaBar } from "./components/StickyCtaBar";
 
 const CTA_URL = "https://calendly.com/victoriafranciss/automation-discovery-call";
 const CTA_LABEL = "Book Your Free Financial Accuracy Snapshot™";
@@ -28,22 +36,24 @@ const leadMagnetBullets = [
   "Automation priority roadmap",
 ];
 
+const problemBullets = [
+  "Manual processes and spreadsheets hide small errors.",
+  "Rushed month-end close lets mistakes slip through.",
+  "Errors scale with volume — one mismatch becomes many.",
+  "By the time it shows up, decisions are already wrong.",
+];
+
 const proofBlocks = [
-  {
-    issue: "Board report and P&L numbers didn't match; no one knew which was right.",
-    fix: "We found the broken link and fixed it.",
-    result: "Both matched. One number for every board meeting now.",
-  },
-  {
-    issue: "Month-end close took 2 weeks. Lots of fixes every quarter.",
-    fix: "We fixed the step that caused most errors.",
-    result: "Close in 5 days. Far fewer fixes each quarter.",
-  },
-  {
-    issue: "Founders couldn't trust cash forecasts—spreadsheet errors had caused two surprise shortfalls in 6 months.",
-    fix: "We fixed the main formula and added a check.",
-    result: "Next forecasts were within 3%. No more surprise shortfalls.",
-  },
+  { title: "Board numbers matched in 2 weeks.", result: "One number for every board meeting.", icon: BarChart3 },
+  { title: "Month-end close in 5 days.", result: "Far fewer fixes each quarter.", icon: TrendingUp },
+  { title: "Cash forecast within 3%.", result: "No more surprise shortfalls.", icon: ShieldCheck },
+];
+
+const capabilityBlocks = [
+  { icon: ShieldCheck, text: "Stop manual mismatches before they spread." },
+  { icon: BarChart3, text: "One source of truth for every report." },
+  { icon: AlertTriangle, text: "Prevent month-end errors." },
+  { icon: TrendingUp, text: "Spot unusual numbers early." },
 ];
 
 const forYou = [
@@ -87,10 +97,11 @@ const faqItems = [
 export default function Home() {
   return (
     <main
-      className="min-h-screen relative w-full max-w-full bg-[#050505]"
+      className="min-h-screen relative w-full max-w-full bg-[#050505] pb-20 md:pb-0"
       style={{ overflowX: "hidden" }}
     >
       <PremiumBackground />
+      <StickyCtaBar />
 
       {/* Floating Navbar — Dumo-style glass pill */}
       <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl rounded-full backdrop-blur-xl bg-[#050505]/70 border border-[#262626] shadow-xl">
@@ -110,60 +121,40 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero — Above the fold */}
-      <section className="relative flex min-h-[85vh] flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-32 sm:py-36 md:py-40 lg:py-48 pt-36 sm:pt-40">
-        <div
-          className="absolute inset-0 pointer-events-none z-0"
-          style={{
-            background: 'radial-gradient(circle at center, rgba(100, 100, 255, 0.06) 0%, transparent 55%)',
-          }}
-        />
-        <div
-          className="absolute inset-0 pointer-events-none z-0"
-          style={{
-            background: 'radial-gradient(circle at center, rgba(80, 120, 255, 0.03) 0%, transparent 65%)',
-          }}
-        />
-        <div
-          className="absolute inset-0 pointer-events-none z-0"
-          style={{
-            background: 'radial-gradient(circle at center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0) 70%)',
-          }}
-        />
-        <div className="w-full max-w-4xl mx-auto relative z-10 px-2 sm:px-4">
-          <div className="text-center space-y-8 sm:space-y-10">
+      {/* Hero — Grouped promise + action, visual anchor */}
+      <section className="relative flex min-h-[80vh] flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-28 sm:py-32 md:py-36 pt-32 sm:pt-36">
+        <div className="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_40%,rgba(96,165,250,0.06),transparent)]" />
+        <div className="w-full max-w-3xl mx-auto relative z-10">
+          <div className="flex flex-col items-center gap-6 sm:gap-8">
+            <FadeInOnScroll delay={80}>
+              <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-2">
+                <BarChart3 className="w-7 h-7 text-white/80" aria-hidden />
+              </div>
+            </FadeInOnScroll>
             <FadeInOnScroll delay={100}>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.15] tracking-tight">
-                Not Sure If Your Financial Numbers Are Actually Accurate?
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-[1.2] tracking-tight text-center">
+                <span className="block">Not Sure Your Numbers Are Accurate?</span>
+                <span className="block text-[#A1A1AA] font-medium text-2xl sm:text-3xl mt-2">We fix that.</span>
               </h1>
             </FadeInOnScroll>
             <FadeInOnScroll delay={150}>
-              <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed text-slate-300 font-medium">
-                We help growing teams identify hidden accuracy risks, fix one issue immediately, and automate the root cause so your numbers stay reliable as you scale.
-              </p>
+              <a
+                href={CTA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="premium-button btn-agency inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold text-base rounded-full shadow-[0_0_24px_rgba(255,255,255,0.2)] hover:shadow-[0_0_32px_rgba(255,255,255,0.3)] transition-all duration-300"
+              >
+                {CTA_LABEL}
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </FadeInOnScroll>
-            <FadeInOnScroll delay={300}>
-              <div className="pt-4 space-y-5">
-                <a
-                  href={CTA_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="premium-button btn-agency inline-flex items-center gap-2 px-8 sm:px-10 py-4 bg-white text-black font-semibold text-base rounded-full shadow-[0_0_24px_rgba(255,255,255,0.2)] hover:shadow-[0_0_32px_rgba(255,255,255,0.3)]"
-                >
-                  {CTA_LABEL}
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-                <p className="text-sm text-[#A1A1AA]">
-                  Limited to 3 new sessions per week to ensure hands-on implementation.
-                </p>
-              </div>
-            </FadeInOnScroll>
+            <p className="text-xs text-[#71717A]">Limited to 3 sessions per week.</p>
           </div>
         </div>
       </section>
 
-      {/* Credibility strip — Perceived Likelihood Booster */}
-      <section className="relative px-4 sm:px-6 md:px-8 py-16 sm:py-20">
+      {/* Credibility strip — light bg for separation */}
+      <section className="relative px-4 sm:px-6 md:px-8 py-20 sm:py-24 bg-[#0A0A0A]/50">
         <div className="w-full max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             {credibilityStrip.map((statement, i) => (
@@ -178,56 +169,63 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Problem section */}
-      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-32">
-        <div className="w-full max-w-3xl mx-auto">
+      {/* Problem section — outcome bullets + micro-CTA, alternating bg */}
+      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-28 sm:py-36 border-t border-white/5">
+        <div className="w-full max-w-2xl mx-auto">
           <FadeInOnScroll>
-            <div className="bento-card p-10 sm:p-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8 leading-tight" style={{ letterSpacing: '-0.02em' }}>
-                If You're Not 100% Sure Your Numbers Are Right, That's the Problem
-              </h2>
-              <p className="text-[#A1A1AA] mb-6 max-w-xl leading-relaxed">
-                Manual processes, spreadsheets, and rushed month-end close create hidden errors that scale with volume. What starts as a small mismatch grows. By the time it shows up, it has already undermined your decisions—and sometimes your cash position.
-              </p>
-              <p className="text-[#A1A1AA] max-w-xl leading-relaxed">
-                Wrong numbers lead to wrong decisions. They often show up when it's too late.
-              </p>
-            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10 leading-tight text-center">
+              If You're Not 100% Sure Your Numbers Are Right
+            </h2>
+            <ul className="space-y-4 mb-12">
+              {problemBullets.map((b, i) => (
+                <li key={i} className="flex items-start gap-3 text-[#A1A1AA]">
+                  <XCircle className="w-5 h-5 text-amber-500/80 flex-shrink-0 mt-0.5" />
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              href={CTA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 text-[#A1A1AA] hover:text-white transition-colors"
+            >
+              <span className="font-semibold text-white">See where your numbers break</span>
+              <span>—</span>
+              <span className="underline underline-offset-4">Book a Free Financial Accuracy Snapshot™</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
           </FadeInOnScroll>
         </div>
       </section>
 
-      {/* Solution section — 3 steps + reassurance */}
-      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-32">
+      {/* Solution section — 3 steps with icons */}
+      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-28 sm:py-36 bg-[#0A0A0A]/50 border-t border-white/5">
         <div className="w-full max-w-4xl mx-auto">
           <FadeInOnScroll>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight text-center tracking-tight">
-              We Fix Accuracy First — Then Automate What Actually Matters
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-14 leading-tight text-center">
+              How It Works
             </h2>
           </FadeInOnScroll>
-          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8 mt-12">
+          <div className="grid sm:grid-cols-3 gap-8 sm:gap-10">
             {[
-              { step: "01", title: "Diagnose", body: "Identify accuracy risks in your current setup.", gradient: "from-emerald-950/40 via-emerald-900/35 to-teal-950/40" },
-              { step: "02", title: "Fix", body: "Fix one issue immediately during the session.", gradient: "from-violet-950/40 via-purple-900/35 to-fuchsia-950/40" },
-              { step: "03", title: "Automate", body: "Automate the root cause so numbers stay right.", gradient: "from-blue-950/40 via-indigo-900/35 to-cyan-950/40" },
+              { icon: Search, title: "Diagnose Risk", benefit: "Find hidden accuracy risks in your setup." },
+              { icon: Wrench, title: "Fix One Issue Live", benefit: "Leave the session with one real win." },
+              { icon: Map, title: "Roadmap Next Steps", benefit: "Clear priority list for what to automate." },
             ].map((item, i) => (
-              <FadeInOnScroll key={item.step} delay={i * 100}>
-                <div className={`relative overflow-hidden rounded-2xl border border-white/10 p-8 text-center bg-gradient-to-br ${item.gradient}`}>
-                  <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white/90 bg-white/10 mb-5">
-                    Step {item.step}
-                  </span>
-                  <h3 className="text-lg font-semibold text-white mb-2 tracking-tight">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-white/80 leading-relaxed">
-                    {item.body}
-                  </p>
+              <FadeInOnScroll key={item.title} delay={i * 100}>
+                <div className="interactive-card flex flex-col items-center text-center p-8 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-white/20 transition-all duration-300">
+                  <div className="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center mb-5">
+                    <item.icon className="w-7 h-7 text-white/80" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                  <p className="text-sm text-[#A1A1AA]">{item.benefit}</p>
                 </div>
               </FadeInOnScroll>
             ))}
           </div>
           <FadeInOnScroll delay={150}>
-            <p className="text-center text-[#A1A1AA] mt-10 text-base font-medium">
+            <p className="text-center text-[#71717A] mt-10 text-sm">
               No system rebuilds. No new tools. No extra hires.
             </p>
           </FadeInOnScroll>
@@ -235,73 +233,88 @@ export default function Home() {
       </section>
 
       {/* Lead magnet section */}
-      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-32">
+      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-28 sm:py-36 border-t border-white/5">
         <div className="w-full max-w-5xl mx-auto">
           <FadeInOnScroll>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
               Free Financial Accuracy Snapshot™
             </h2>
-            <p className="text-[#A1A1AA] text-center mb-10 max-w-2xl mx-auto leading-relaxed">
-              A live diagnostic + quick win that shows you exactly where your numbers are at risk — and what to automate next.
+            <p className="text-[#A1A1AA] text-center mb-12 max-w-2xl mx-auto">
+              A live diagnostic + quick win that shows where your numbers are at risk.
             </p>
           </FadeInOnScroll>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
             <FadeInOnScroll delay={0}>
-              <div className="flex flex-col justify-center text-left">
-                <p className="text-white font-semibold mb-4">Get clarity in one session.</p>
+              <div className="flex flex-col justify-center">
+                <ul className="space-y-3 mb-8">
+                  {leadMagnetBullets.map((b, i) => (
+                    <li key={i} className="flex items-start gap-3 text-[#A1A1AA]">
+                      <CheckCircle2 className="w-5 h-5 text-emerald-500/80 flex-shrink-0 mt-0.5" />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
                 <a
                   href={CTA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="premium-button btn-agency inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 sm:px-8 py-3.5 bg-white text-black font-semibold rounded-full hover:shadow-[0_0_24px_rgba(255,255,255,0.25)]"
+                  className="premium-button btn-agency inline-flex items-center gap-2 w-full sm:w-auto justify-center px-8 py-4 bg-white text-black font-semibold rounded-full"
                 >
                   {CTA_LABEL}
                   <ArrowRight className="w-4 h-4" />
                 </a>
-                <p className="text-sm text-[#71717A] mt-4">Weekly availability is limited.</p>
               </div>
             </FadeInOnScroll>
             <FadeInOnScroll delay={80}>
-              <div className="rounded-xl p-6 sm:p-8 border border-white/10 bg-white/5 backdrop-blur-sm flex flex-col gap-4">
-                {leadMagnetBullets.map((bullet, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-white/80 flex-shrink-0 mt-0.5" />
-                    <span className="text-[#A1A1AA] text-sm sm:text-base leading-relaxed">
-                      {bullet}
-                    </span>
-                  </div>
-                ))}
+              <div>
+                <p className="text-sm font-semibold text-white/90 mb-4">What We Can Do After the Snapshot</p>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {capabilityBlocks.map((c, i) => (
+                    <div key={i} className="flex items-center gap-3 p-4 rounded-xl border border-white/10 bg-white/[0.02]">
+                      <c.icon className="w-5 h-5 text-white/70 flex-shrink-0" />
+                      <span className="text-sm text-[#A1A1AA]">{c.text}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </FadeInOnScroll>
           </div>
         </div>
       </section>
 
-      {/* Proof — micro-cases (Issue → Fix → Result) */}
-      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-32">
+      {/* Proof — simplified with icons, alternating bg */}
+      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-28 sm:py-36 bg-[#0A0A0A]/50 border-t border-white/5">
         <div className="w-full max-w-4xl mx-auto">
-          <div className="space-y-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-12 text-center">Proof</h2>
+          <div className="grid sm:grid-cols-3 gap-6">
             {proofBlocks.map((block, i) => (
               <FadeInOnScroll key={i} delay={i * 80}>
-                <div className="bento-card p-6 sm:p-8">
-                  <p className="text-[#A1A1AA] text-sm sm:text-base mb-2">
-                    <span className="font-semibold text-white">Issue: </span>{block.issue}
-                  </p>
-                  <p className="text-[#A1A1AA] text-sm sm:text-base mb-2">
-                    <span className="font-semibold text-white">Fix: </span>{block.fix}
-                  </p>
-                  <p className="text-[#A1A1AA] text-sm sm:text-base">
-                    <span className="font-semibold text-white">Result: </span>{block.result}
-                  </p>
+                <div className="bento-card interactive-card p-6 flex flex-col">
+                  <block.icon className="w-8 h-8 text-white/70 mb-4" />
+                  <h3 className="font-semibold text-white mb-2">{block.title}</h3>
+                  <p className="text-sm text-[#A1A1AA]">{block.result}</p>
                 </div>
               </FadeInOnScroll>
             ))}
           </div>
+          <FadeInOnScroll delay={200}>
+            <div className="mt-12 text-center">
+              <a
+                href={CTA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="premium-button btn-agency inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full"
+              >
+                {CTA_LABEL}
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </FadeInOnScroll>
         </div>
       </section>
 
       {/* Who it's for / not for */}
-      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-32">
+      <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-28 sm:py-36 border-t border-white/5">
         <div className="w-full max-w-4xl mx-auto">
           <FadeInOnScroll>
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10 text-center tracking-tight">
@@ -349,8 +362,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="relative px-4 sm:px-6 md:px-8 py-24 sm:py-32">
+      {/* FAQ — alternating bg */}
+      <section className="relative px-4 sm:px-6 md:px-8 py-28 sm:py-36 bg-[#0A0A0A]/50 border-t border-white/5">
         <div className="w-full max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10 text-center tracking-tight">
             FAQ
@@ -362,7 +375,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative px-4 sm:px-6 md:px-8 py-24 sm:py-32">
+      <section className="relative px-4 sm:px-6 md:px-8 py-28 sm:py-36 border-t border-white/5">
         <div className="w-full max-w-2xl mx-auto text-center">
           <FadeInOnScroll>
             <div className="bento-card p-12 sm:p-16">
@@ -386,21 +399,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer CTA reminder */}
-      <section className="relative px-4 sm:px-6 py-8 border-t border-[#262626]">
-        <div className="w-full max-w-2xl mx-auto text-center">
-          <p className="text-[#A1A1AA] text-sm">
-            Still unsure?{" "}
-            <a
-              href={CTA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-white hover:underline underline-offset-2"
-            >
-              Book Your Free Financial Accuracy Snapshot™
-            </a>{" "}
-            — weekly availability is limited.
-          </p>
+      {/* Footer CTA */}
+      <section className="relative px-4 sm:px-6 py-12 md:py-16 border-t border-[#262626] bg-[#0A0A0A]/30">
+        <div className="w-full max-w-2xl mx-auto text-center space-y-4">
+          <a
+            href={CTA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="premium-button btn-agency inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full"
+          >
+            {CTA_LABEL}
+            <ArrowRight className="w-4 h-4" />
+          </a>
+          <p className="text-[#71717A] text-sm">Weekly availability is limited.</p>
         </div>
       </section>
 
