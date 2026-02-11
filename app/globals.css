@@ -434,16 +434,16 @@ a.premium-button {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
-/* Bento grid cards - High-end dark agency */
+/* Bento grid cards - subtle border when has background */
 .bento-card {
   background: #0F0F0F;
-  border: 1px solid #262626;
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 0.75rem;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .bento-card:hover {
-  border-color: #404040;
-  box-shadow: 0 0 24px rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.04);
 }
 
 /* Navbar glassmorphism */
