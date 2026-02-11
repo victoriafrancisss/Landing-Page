@@ -25,11 +25,11 @@ const CTA_LABEL = "Book a Free Financial Risk Audit™";
 const NAVBAR_CTA_LABEL = "Book a Free Financial Risk Audit™";
 
 const techStackLogos = [
-  { name: "Excel", src: "https://www.vectorlogo.zone/logos/microsoft_excel/microsoft_excel-icon.svg" },
-  { name: "Python", src: "https://www.vectorlogo.zone/logos/python/python-icon.svg" },
-  { name: "Google Sheets", src: "https://www.vectorlogo.zone/logos/google_sheets/google_sheets-icon.svg" },
-  { name: "Xero", src: "https://www.vectorlogo.zone/logos/xero/xero-icon.svg" },
-  { name: "QuickBooks", src: "https://cdn.worldvectorlogo.com/logos/quickbooks.svg" },
+  { name: "Excel", src: "/logos/excel.svg" },
+  { name: "Python", src: "/logos/python.svg" },
+  { name: "Google Sheets", src: "/logos/google-sheets.svg" },
+  { name: "Xero", src: "/logos/xero.svg" },
+  { name: "QuickBooks", src: "/logos/quickbooks.svg" },
 ];
 
 const heroMetrics = [
@@ -136,23 +136,30 @@ export default function Home() {
       </nav>
 
       {/* Hero — Dumo-inspired: aurora glow, dual buttons, POWERED BY, metrics */}
-      <section className="relative flex min-h-screen flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-32 pt-36 sm:pt-40 bg-[#050505]">
-        {/* Aurora glow — teal/blue radial gradient, low opacity */}
+      <section className="relative flex min-h-screen flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-32 pt-36 sm:pt-40 bg-[#050505] overflow-hidden">
+        {/* Aurora glow — stronger teal/blue radial gradients */}
         <div
           className="absolute inset-0 pointer-events-none z-0"
           style={{
-            background: 'radial-gradient(ellipse 100% 80% at 50% 30%, rgba(20, 184, 166, 0.08) 0%, rgba(59, 130, 246, 0.05) 40%, transparent 70%)',
+            background: 'radial-gradient(ellipse 100% 80% at 50% 25%, rgba(20, 184, 166, 0.15) 0%, rgba(59, 130, 246, 0.08) 35%, transparent 65%)',
           }}
         />
         <div
           className="absolute inset-0 pointer-events-none z-0"
           style={{
-            background: 'radial-gradient(ellipse 120% 100% at 50% 50%, rgba(96, 165, 250, 0.06) 0%, transparent 60%)',
+            background: 'radial-gradient(ellipse 140% 120% at 50% 45%, rgba(96, 165, 250, 0.12) 0%, rgba(99, 102, 241, 0.05) 50%, transparent 70%)',
+          }}
+        />
+        {/* Subtle noise texture overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none z-0 opacity-[0.015]"
+          style={{
+            backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\'/%3E%3C/svg%3E")',
           }}
         />
         <div className="w-full max-w-4xl mx-auto relative z-10 flex flex-col items-center text-center">
           <FadeInOnScroll delay={80}>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] tracking-tight mb-6" style={{ letterSpacing: '-0.03em' }}>
               Not Sure If Your Financial Numbers Are Actually Accurate?
             </h1>
           </FadeInOnScroll>
@@ -172,14 +179,14 @@ export default function Home() {
                 href={CTA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="premium-button btn-agency inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full shadow-[0_0_28px_rgba(255,255,255,0.25)] hover:shadow-[0_0_36px_rgba(255,255,255,0.35)] transition-all"
+                className="premium-button btn-agency inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full shadow-[0_0_28px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] hover:-translate-y-0.5 transition-all duration-300"
               >
                 {CTA_LABEL}
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="#who-are-we"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/60 bg-white/5 backdrop-blur-sm text-white font-semibold hover:bg-white/10 hover:border-white/80 transition-all"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/70 bg-white/[0.08] backdrop-blur-xl text-white font-semibold hover:bg-white/[0.15] hover:border-white/90 hover:-translate-y-0.5 transition-all duration-300"
               >
                 Who Are We
                 <ArrowRight className="w-4 h-4" />
@@ -194,18 +201,18 @@ export default function Home() {
           {/* POWERED BY — tech stack bar */}
           <FadeInOnScroll delay={200}>
             <p className="text-xs font-medium text-[#71717A] uppercase tracking-widest mb-6">Powered by</p>
-            <div className="flex flex-wrap items-center justify-center gap-x-10 sm:gap-x-12 gap-y-6 mb-20">
+            <div className="flex flex-wrap items-center justify-center gap-x-8 sm:gap-x-10 gap-y-6 mb-16">
               {techStackLogos.map((logo, i) => (
-                <span key={logo.name} className="flex items-center">
+                <span key={logo.name} className="flex items-center group">
                   <img
                     src={logo.src}
                     alt={logo.name}
-                    className="h-8 w-auto object-contain opacity-50 grayscale"
-                    width={80}
-                    height={32}
+                    className="h-9 w-auto object-contain opacity-60 grayscale group-hover:opacity-80 transition-opacity duration-300"
+                    width={90}
+                    height={36}
                   />
                   {i < techStackLogos.length - 1 && (
-                    <span className="hidden sm:inline w-px h-6 bg-white/20 mx-2" aria-hidden />
+                    <span className="hidden sm:inline w-px h-6 bg-white/25 mx-4" aria-hidden />
                   )}
                 </span>
               ))}
@@ -214,7 +221,8 @@ export default function Home() {
 
           {/* Metrics row — footer of hero */}
           <FadeInOnScroll delay={220}>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-16 w-full max-w-2xl">
+            <div className="w-full max-w-2xl border-t border-white/10 pt-10 mt-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-16">
               {heroMetrics.map((m, i) => (
                 <div key={i} className="text-center">
                   <p className={`text-2xl sm:text-3xl font-bold ${i === 1 ? 'text-[#60A5FA]' : 'text-white'}`}>
@@ -223,6 +231,7 @@ export default function Home() {
                   <p className="text-sm text-[#A1A1AA] mt-1">{m.label}</p>
                 </div>
               ))}
+              </div>
             </div>
           </FadeInOnScroll>
         </div>
