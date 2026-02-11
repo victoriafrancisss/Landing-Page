@@ -5,7 +5,7 @@ const LOGOS = [
   { name: 'Google Sheets', src: 'https://www.vectorlogo.zone/logos/google_sheets/google_sheets-icon.svg' },
   { name: 'Python', src: 'https://www.vectorlogo.zone/logos/python/python-icon.svg' },
   { name: 'Xero', src: 'https://www.vectorlogo.zone/logos/xero/xero-icon.svg' },
-  { name: 'PostgreSQL', src: 'https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg' },
+  { name: 'QuickBooks', src: 'https://cdn.worldvectorlogo.com/logos/quickbooks.svg' },
 ] as const;
 
 export function InfiniteMarquee() {

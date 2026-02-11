@@ -58,31 +58,12 @@ const trustStripItems = [
   { icon: Activity, label: "Spot problems early", outcome: "See when something looks wrong." },
 ];
 
-const proofBlocks = [
-  { title: "Board numbers matched in 2 weeks.", line1: "Board report and P&L did not match.", line2: "We fixed it. One number everywhere now." },
-  { title: "Month-end close in 5 days.", line1: "Close used to take 2 weeks.", line2: "We fixed it. Far fewer fixes each quarter." },
-  { title: "Cash forecast within 3%.", line1: "Forecasts were wrong. Two cash shortfalls in 6 months.", line2: "We fixed it. No more surprise shortfalls." },
-];
-
-const microCases = [
-  {
-    title: "Board numbers matched in 2 weeks.",
-    issue: "Revenue in the board deck didn’t match the P&L; no one knew which was right.",
-    fix: "We found the broken link and fixed it.",
-    result: "Both matched. One number for every board meeting now.",
-  },
-  {
-    title: "Month-end close in 5 days.",
-    issue: "Close took 2 weeks. Lots of fixes every quarter.",
-    fix: "We fixed the step that caused most errors.",
-    result: "Close in 5 days. Far fewer fixes each quarter.",
-  },
-  {
-    title: "Cash forecast within 3%.",
-    issue: "Founders couldn’t trust cash forecasts—spreadsheet errors had caused two surprise shortfalls in 6 months.",
-    fix: "We fixed the main formula and added a check.",
-    result: "Next forecasts were within 3%. No more surprise shortfalls.",
-  },
+const servicesBlocks = [
+  { logo: "https://www.vectorlogo.zone/logos/microsoft_excel/microsoft_excel-icon.svg", name: "Excel", title: "Spreadsheet Cleanup", body: "Fix broken formulas. One number everywhere. No more mismatches." },
+  { logo: "https://www.vectorlogo.zone/logos/google_sheets/google_sheets-icon.svg", name: "Google Sheets", title: "Sheets & Reporting", body: "Same clarity for Google Workspace. Clean reports. Fewer errors." },
+  { logo: "https://www.vectorlogo.zone/logos/xero/xero-icon.svg", name: "Xero", title: "Xero Integration", body: "Reconciliation and reporting. Numbers that match your books." },
+  { logo: "https://cdn.worldvectorlogo.com/logos/quickbooks.svg", name: "QuickBooks", title: "QuickBooks Accuracy", body: "Clean books. Correct reporting. Numbers you can trust." },
+  { logo: "https://www.vectorlogo.zone/logos/python/python-icon.svg", name: "Python", title: "Automation", body: "Custom scripts and pipelines. Less manual work. Fewer mistakes." },
 ];
 
 const forYou = [
@@ -406,23 +387,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Proof */}
+      {/* What We Do — services with tool logos */}
       <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-32">
-        <div className="w-full max-w-4xl mx-auto">
+        <div className="w-full max-w-5xl mx-auto">
           <FadeInOnScroll>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10 text-center tracking-tight">
-              Proof
+            <p className="text-xs sm:text-sm font-medium text-[#71717A] uppercase tracking-widest mb-3 text-center">
+              What We Do
+            </p>
+            <h2 className="text-2xl sm:text-4xl font-bold text-white mb-4 leading-tight text-center tracking-tight">
+              Tools you use. <span className="text-[#60A5FA]">Numbers you trust.</span>
             </h2>
+            <p className="text-[#A1A1AA] text-center mb-12 max-w-xl mx-auto">
+              We fix accuracy and automation in the stack you already have.
+            </p>
           </FadeInOnScroll>
-          <div className="space-y-6">
-            {proofBlocks.map((block, i) => (
-              <FadeInOnScroll key={i} delay={i * 80}>
-                <div className="bento-card p-6 sm:p-8">
-                  <h3 className="text-base sm:text-lg font-semibold text-white mb-3 tracking-tight">
-                    {block.title}
-                  </h3>
-                  <p className="text-[#A1A1AA] text-sm sm:text-base mb-2">{block.line1}</p>
-                  <p className="text-[#A1A1AA] text-sm sm:text-base">{block.line2}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
+            {servicesBlocks.map((block, i) => (
+              <FadeInOnScroll key={block.name} delay={i * 80}>
+                <div className="rounded-xl border border-white/10 p-6 sm:p-6 bg-white/[0.02] hover:border-white/20 hover:bg-white/[0.04] transition-all duration-300 flex flex-col">
+                  <div className="flex items-center gap-3 mb-4">
+                    <img
+                      src={block.logo}
+                      alt=""
+                      className="h-10 w-10 object-contain opacity-80"
+                      width={40}
+                      height={40}
+                    />
+                    <h3 className="text-base sm:text-lg font-semibold text-white tracking-tight">
+                      {block.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-[#A1A1AA] leading-relaxed flex-1">
+                    {block.body}
+                  </p>
                 </div>
               </FadeInOnScroll>
             ))}
