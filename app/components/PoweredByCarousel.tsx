@@ -2,7 +2,7 @@
 
 const LOGOS = [
   { name: 'Python', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-  { name: 'Google Sheets', src: 'https://cdn.worldvectorlogo.com/logos/google-sheets.svg' },
+  { name: 'Google Sheets', src: 'https://www.vectorlogo.zone/logos/google_sheets/google_sheets-icon.svg' },
   { name: 'Excel', src: 'https://cdn.worldvectorlogo.com/logos/excel-4.svg' },
   { name: 'Xero', src: 'https://cdn.worldvectorlogo.com/logos/xero-1.svg' },
   { name: 'QuickBooks', src: 'https://cdn.worldvectorlogo.com/logos/quickbooks-1.svg' },
