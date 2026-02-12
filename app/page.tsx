@@ -104,23 +104,23 @@ const faqItems = [
 export default function Home() {
   return (
     <main
-      className="min-h-screen relative w-full max-w-full bg-[#050505] pb-20 md:pb-0"
+      className="min-h-screen relative w-full max-w-full bg-[#050505] pb-24 md:pb-0"
       style={{ overflowX: "hidden" }}
     >
       <PremiumBackground />
       <StickyCtaBar />
 
-      {/* Floating Navbar — Dumo-style glass pill */}
+      {/* Floating Navbar — compact on mobile (StickyCtaBar handles CTA) */}
       <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl rounded-full backdrop-blur-xl bg-[#050505]/70 border border-[#262626] shadow-xl transition-all duration-300 ease-smooth">
-        <div className="w-full mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
-          <span className="text-white font-bold tracking-tight text-lg">
+        <div className="w-full mx-auto px-4 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
+          <span className="text-white font-bold tracking-tight text-base sm:text-lg truncate">
             BOLDSCALE
           </span>
           <a
             href={CTA_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="premium-button btn-agency group inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full bg-white text-black hover:shadow-[0_0_28px_rgba(255,255,255,0.4)] transition-all duration-300 ease-smooth"
+            className="hidden sm:inline-flex premium-button btn-agency group items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full bg-white text-black hover:shadow-[0_0_28px_rgba(255,255,255,0.4)] transition-all duration-300 ease-smooth"
           >
             {NAVBAR_CTA_LABEL}
             <ArrowRight className="w-4 h-4 transition-transform duration-300 ease-smooth group-hover:translate-x-0.5" />
@@ -129,7 +129,7 @@ export default function Home() {
       </nav>
 
       {/* Hero — Dumo-inspired: aurora glow, dual buttons, POWERED BY, metrics */}
-      <section className="hero-section relative flex min-h-[120vh] flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-28 sm:py-40 pt-40 sm:pt-48 pb-32 sm:pb-40 bg-[#050505] overflow-x-hidden overflow-y-visible">
+      <section className="hero-section relative flex min-h-screen sm:min-h-[120vh] flex-col items-center justify-start sm:justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-24 sm:py-40 pt-32 sm:pt-48 pb-24 sm:pb-40 bg-[#050505] overflow-x-hidden overflow-y-visible">
         {/* Aurora glow — stronger teal/blue radial gradients, subtle animation */}
         <div
           className="absolute inset-0 pointer-events-none z-0 animate-aurora-pulse"
@@ -163,19 +163,19 @@ export default function Home() {
             </p>
           </FadeInOnScroll>
           <FadeInOnScroll delay={120}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 w-full max-w-[300px] sm:max-w-none mx-auto">
               <a
                 href={CTA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="premium-button btn-agency group inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full shadow-[0_0_28px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] hover:-translate-y-0.5 transition-all duration-300 ease-smooth"
+                className="hero-cta premium-button btn-agency group inline-flex items-center justify-center gap-2 px-5 sm:px-8 py-3 sm:py-4 w-full sm:w-auto text-sm sm:text-base font-semibold rounded-full bg-white text-black shadow-[0_0_28px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] hover:-translate-y-0.5 transition-all duration-300 ease-smooth"
               >
                 {CTA_LABEL}
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 ease-smooth group-hover:translate-x-1" />
               </a>
               <a
                 href="#who-are-we"
-                className="group inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/70 bg-white/[0.08] backdrop-blur-xl text-white font-semibold hover:bg-white/[0.15] hover:border-white/90 hover:-translate-y-0.5 transition-all duration-300 ease-smooth"
+                className="group inline-flex items-center justify-center gap-2 px-5 sm:px-8 py-3 sm:py-4 w-full sm:w-auto rounded-full border border-white/70 bg-white/[0.08] backdrop-blur-xl text-white text-sm sm:text-base font-semibold hover:bg-white/[0.15] hover:border-white/90 hover:-translate-y-0.5 transition-all duration-300 ease-smooth"
               >
                 Who Are We
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 ease-smooth group-hover:translate-x-1" />

@@ -8,7 +8,7 @@ const CTA_LABEL = "Book a Free Financial Risk Audit™";
 export function StickyCtaBar() {
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 z-40 md:hidden px-4 py-3 backdrop-blur-xl bg-[#0A0A0A]/95 border-t border-[#262626] shadow-[0_-4px_24px_rgba(0,0,0,0.3)] transition-transform duration-300"
+      className="fixed bottom-0 left-0 right-0 z-40 md:hidden px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-xl bg-[#0A0A0A]/95 border-t border-[#262626] shadow-[0_-4px_24px_rgba(0,0,0,0.3)] transition-transform duration-300"
       role="banner"
       aria-label="Book your free snapshot"
     >

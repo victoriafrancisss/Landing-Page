@@ -168,9 +168,9 @@ a.premium-button {
   white-space: nowrap !important;
 }
 
-/* Ensure buttons can expand on mobile */
+/* Ensure buttons can expand on mobile (but not hero CTAs - they're constrained) */
 @media (max-width: 640px) {
-  .premium-button {
+  .premium-button:not(.hero-cta) {
     width: auto !important;
     min-width: fit-content !important;
     max-width: calc(100vw - 3rem) !important;
@@ -178,6 +178,13 @@ a.premium-button {
     padding-right: 1rem !important;
     font-size: 0.875rem !important;
     display: inline-flex !important;
+  }
+
+  /* Hero CTAs: keep compact, allow text wrap on very small screens */
+  .hero-cta {
+    max-width: 100% !important;
+    white-space: normal !important;
+    text-align: center !important;
   }
   
   /* Ensure parent containers don't constrain button */
@@ -250,9 +257,9 @@ a.premium-button {
     font-weight: 700 !important;
   }
   
-  /* Buttons */
-  .premium-button,
-  a.premium-button {
+  /* Buttons (hero-cta uses its own padding/size from page) */
+  .premium-button:not(.hero-cta),
+  a.premium-button:not(.hero-cta) {
     font-size: 1rem !important;
     padding: 1rem 2rem !important;
     font-weight: 700 !important;
