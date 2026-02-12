@@ -2,8 +2,8 @@
 
 const LOGOS = [
   { name: 'Python', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-  { name: 'Google Sheets', src: 'https://upload.wikimedia.org/wikipedia/commons/3/30/Google_Sheets_2020_Logo.svg' },
-  { name: 'Excel', src: 'https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg' },
+  { name: 'Google Sheets', src: 'https://cdn.worldvectorlogo.com/logos/google-sheets.svg' },
+  { name: 'Excel', src: 'https://cdn.worldvectorlogo.com/logos/excel-4.svg' },
   { name: 'Xero', src: 'https://cdn.worldvectorlogo.com/logos/xero-1.svg' },
   { name: 'QuickBooks', src: 'https://cdn.worldvectorlogo.com/logos/quickbooks-1.svg' },
 ];
@@ -23,7 +23,7 @@ export function PoweredByCarousel() {
                   <img
                     src={logo.src}
                     alt={logo.name}
-                    className="h-8 w-auto object-contain opacity-50 transition-opacity duration-300 ease-out group-hover:opacity-100"
+                    className="h-8 w-auto object-contain opacity-50 grayscale transition-all duration-300 ease-out group-hover:opacity-100 group-hover:grayscale-0"
                     width={80}
                     height={32}
                   />
